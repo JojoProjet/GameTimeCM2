@@ -11,16 +11,23 @@ namespace GameTimeCM2.Src.Game
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Score { get; set; }
-        public string Time { get; set; }
+        public int Score { get; set; }
+        public int Time { get; set; }
 
-        public User(int id, string name, string score, string time)
+        public User(int id, string name, int score, int time)
         {
             Id = id;
             Name = name;
             Score = score;
             Time = time;
         }
-            
+
+
+        // Str
+        public string strUserScoreFinal
+        {
+            get => $"{Name} {Score} points";
+        }
+
     }
 }

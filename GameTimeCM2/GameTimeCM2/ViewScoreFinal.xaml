@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="GameTimeCM2.ViewScoreFinal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GameTimeCM2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,150,0,150">
+        <TextBlock Text="Score Finale" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ListView x:Name="listUserScoreFinal" Width="500" Height="500" Margin="0,50,0,50" DisplayMemberPath="strUserScoreFinal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <ListViewItem Width="400" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel Width="400" Height="50" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock x:Name="user" Width="200" Text="User 1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="score" Width="200" Text="SCORE" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                </StackPanel>
+            </ListViewItem>
+
+        </ListView>
+
+        <Button Content="Retour" Click="btn_ReturnAccueil" HorizontalAlignment="Center"/>
+    </StackPanel>
+</Page>

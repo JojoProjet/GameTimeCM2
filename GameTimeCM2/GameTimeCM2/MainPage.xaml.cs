@@ -1,5 +1,9 @@
-﻿using System;
+﻿using GameTimeCM2.Src.Utils;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -27,15 +31,11 @@ namespace GameTimeCM2
             this.InitializeComponent();
         }
 
-        private void initData()
-        {
-            
-        }
 
         private void Btn_LaunchGame(object sender, RoutedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
-            rootFrame.Navigate(typeof(AccueilGame));
+            rootFrame.Navigate(typeof(ViewScoreFinal));
         }
     }
 }
