@@ -8,7 +8,26 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
-    </Grid>
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <StackPanel Margin="30,0,30,0">
+                <Image Width="200" Source="Assets/StoreLogo.png" />
+                <Button x:Name="btn_pendu" Width="250" Height="75" FontSize="30" Content="Pendu" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Btn_LaunchGamePendu" Margin="0,0,0,30"/>
+            </StackPanel>
+            <StackPanel Margin="30,0,30,0">
+                <Image Width="200" Source="Assets/StoreLogo.png" />
+                <Button x:Name="btn_memoire" Width="250" Height="75" FontSize="30" Content="Memoire" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Btn_LaunchGameMemoire" Margin="0,0,0,30"/>
+            </StackPanel>
+            <StackPanel Margin="30,0,30,0">
+                <Image Width="200" Source="Assets/StoreLogo.png" />
+                <Button x:Name="btn_conjugaison" Width="250" Height="75" FontSize="30" Content="Conjugaison" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Btn_LaunchGameConjugaison" Margin="0,0,0,30"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel>
+                <Image Width="200" Source="Assets/StoreLogo.png" />
+                <Button x:Name="btn_escape_game" Width="250" Height="75" FontSize="30" Content="Escape Game" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Btn_LaunchGameEscape" Margin="0,0,0,30"/>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
 </Page>

@@ -116,13 +116,31 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AccueilGame.xaml.cs">
+      <DependentUpon>AccueilGame.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EscapeGame.xaml.cs">
+      <DependentUpon>EscapeGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameConjugaison.xaml.cs">
+      <DependentUpon>GameConjugaison.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameMemoire.xaml.cs">
+      <DependentUpon>GameMemoire.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GamePendu.xaml.cs">
+      <DependentUpon>GamePendu.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Src\Game\User.cs" />
+    <Compile Include="Src\Utils\InitJson.cs" />
+    <Compile Include="Src\Utils\UTimer.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -144,6 +162,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AccueilGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EscapeGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameConjugaison.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameMemoire.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GamePendu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -153,6 +191,15 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.10</Version>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Src\Game\GConjugaison\" />
+    <Folder Include="Src\Game\GEscapeGame\" />
+    <Folder Include="Src\Game\GMemoire\" />
+    <Folder Include="Src\Game\GPendu\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

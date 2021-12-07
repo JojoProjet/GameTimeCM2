@@ -26,5 +26,16 @@ namespace GameTimeCM2
         {
             this.InitializeComponent();
         }
+
+        private void initData()
+        {
+            
+        }
+
+        private void Btn_LaunchGame(object sender, RoutedEventArgs e)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+            rootFrame.Navigate(typeof(AccueilGame));
+        }
     }
 }

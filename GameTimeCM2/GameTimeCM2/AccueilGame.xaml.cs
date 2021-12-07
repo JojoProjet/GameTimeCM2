@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameTimeCM2.Src.Utils;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,30 @@ namespace GameTimeCM2
     /// </summary>
     public sealed partial class AccueilGame : Page
     {
+        Frame rootFrame = Window.Current.Content as Frame;
+
         public AccueilGame()
         {
             this.InitializeComponent();
+            btn_escape_game.IsEnabled = false;
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            // Voir ce qu'on met ici y'aura un truc
+        }
+
+        public void init()
+        {
+            //InitJson.UJsonTextReader()
+        }
+
+        private void Btn_LaunchGamePendu(object sender, RoutedEventArgs e) => rootFrame.Navigate(typeof(GamePendu));
+        private void Btn_LaunchGameMemoire(object sender, RoutedEventArgs e) => rootFrame.Navigate(typeof(GameMemoire));
+        private void Btn_LaunchGameConjugaison(object sender, RoutedEventArgs e) => rootFrame.Navigate(typeof(GameConjugaison));
+        private void Btn_LaunchGameEscape(object sender, RoutedEventArgs e) => rootFrame.Navigate(typeof(EscapeGame));
+
+
     }
 }
