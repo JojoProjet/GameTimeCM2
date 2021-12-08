@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using GameTimeCM2.Src.Game;
 using GameTimeCM2.Src.Utils;
 using MySql.Data.MySqlClient;
+using GameTimeCM2.Src;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,63 +27,63 @@ namespace GameTimeCM2
     
     public sealed partial class ViewScoreFinal : Page
     {
-        private List<User> ListUser { get; set; }
 
         private Db db = new Db();
 
         public ViewScoreFinal()
         {
             this.InitializeComponent();
-            ListUser = new List<User>();
-            initData();
-            //listUserScoreFinal.Items.Add(ListUser.OrderBy(item => item.Score));
+            init();
         }
 
-        private void initData()
+        private void init()
         {
             ListViewItem listViewItem = new ListViewItem();
             StackPanel stackPanel = new StackPanel();
             TextBlock textBlockUser = new TextBlock();
             TextBlock textBlockScore = new TextBlock();
 
+            // Props
+            int P_WIDTH_1 = 400;
+            int P_WIDTH_2 = 200;
+            int P_HEIGHT_1 = 50;
 
+            listViewItem.Width = P_WIDTH_1;
+            listViewItem.Height = P_HEIGHT_1;
             listViewItem.VerticalAlignment = VerticalAlignment.Center;
             listViewItem.HorizontalAlignment = HorizontalAlignment.Center;
 
-            stackPanel.Width = 400;
-            stackPanel.Height = 50;
+            stackPanel.Width = P_WIDTH_1;
+            stackPanel.Height = P_HEIGHT_1;
             stackPanel.Orientation = Orientation.Horizontal;
-            stackPanel.HorizontalAlignment = HorizontalAlignment.Stretch;
             stackPanel.VerticalAlignment = VerticalAlignment.Stretch;
+            stackPanel.HorizontalAlignment = HorizontalAlignment.Stretch;
 
-            textBlockUser.Name = "user";
-            textBlockUser.Width = 200;
-            textBlockUser.Height = 50;
-            textBlockUser.HorizontalAlignment = HorizontalAlignment.Stretch;
+            textBlockUser.Width = P_WIDTH_2;
             textBlockUser.VerticalAlignment = VerticalAlignment.Center;
+            textBlockUser.HorizontalAlignment = HorizontalAlignment.Stretch;
 
-            textBlockScore.Name = "score";
-            textBlockScore.Width = 200;
-            textBlockScore.Height = 50;
-            textBlockScore.HorizontalAlignment = HorizontalAlignment.Stretch;
+            textBlockScore.Width = P_WIDTH_2;
             textBlockScore.VerticalAlignment = VerticalAlignment.Center;
+            textBlockScore.HorizontalAlignment = HorizontalAlignment.Stretch;
 
-            MySqlDataReader mysqlread = db.GetDataDb(db.SetCommandDb("SELECT * FROM User;"));
-            while (mysqlread.Read())
+            db.GetUsers().ForEach(item =>
             {
-                textBlockUser.Text = mysqlread["Name"].ToString();
-                textBlockScore.Text = mysqlread["Score"].ToString();
+                textBlockUser.Text = item.Name;
+                textBlockScore.Text = item.Score.ToString();
 
                 stackPanel.Children.Add(textBlockUser);
                 stackPanel.Children.Add(textBlockScore);
+                listViewItem.Content = stackPanel;
+
                 listUserScoreFinal.Items.Add(listViewItem);
-               // ListUser.Add(new User(int.Parse(mysqlread["Id"].ToString()), mysqlread["Name"].ToString(), int.Parse(mysqlread["Score"].ToString()), int.Parse(mysqlread["Time"].ToString()) ) );
-            }
+            });
+
         }
 
         private void btn_ReturnAccueil(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(AccueilGame));
         }
     }
 }

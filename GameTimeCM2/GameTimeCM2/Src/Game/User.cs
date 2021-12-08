@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameTimeCM2.Src.Game
 {
-    class User
+    public class User
     {
 
         public int Id { get; set; }
@@ -20,13 +20,6 @@ namespace GameTimeCM2.Src.Game
             Name = name;
             Score = score;
             Time = time;
-        }
-
-
-        // Str
-        public string strUserScoreFinal
-        {
-            get => $"{Name} {Score} points";
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using GameTimeCM2.Src.Utils;
+﻿using GameTimeCM2.Src.Game;
+using GameTimeCM2.Src.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -25,6 +26,8 @@ namespace GameTimeCM2
     {
         Frame rootFrame = Window.Current.Content as Frame;
 
+        public User user;
+
         public AccueilGame()
         {
             this.InitializeComponent();
@@ -34,7 +37,7 @@ namespace GameTimeCM2
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            // Voir ce qu'on met ici y'aura un truc
+            user = (User)Application.Current.Resources["User"];
         }
 
         public void init()

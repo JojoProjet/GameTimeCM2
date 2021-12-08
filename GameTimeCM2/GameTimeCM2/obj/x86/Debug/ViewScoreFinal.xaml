@@ -6,19 +6,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ContentDialogBorderThemeBrush}">
 
-    <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,150,0,150">
+    <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,150,0,150" Background="{ThemeResource ComboBoxSelectedBackgroundThemeBrush}">
         <TextBlock Text="Score Finale" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <ListView x:ConnectionId='2' x:Name="listUserScoreFinal" Width="500" Height="500" Margin="0,50,0,50" DisplayMemberPath="strUserScoreFinal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <ListViewItem VerticalAlignment="Center" HorizontalAlignment="Center">
-                <StackPanel Width="400" Height="50" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <TextBlock x:ConnectionId='4' x:Name="user" Width="200" Text="User 1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-                    <TextBlock x:ConnectionId='5' x:Name="score" Width="200" Text="SCORE" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-                </StackPanel>
-            </ListViewItem>
+        <ListView x:ConnectionId='2' x:Name="listUserScoreFinal" Width="500" Height="500" Margin="0,50,0,50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         </ListView>
-
         <Button x:ConnectionId='3' Content="Retour"                           HorizontalAlignment="Center"/>
     </StackPanel>
 </Page>

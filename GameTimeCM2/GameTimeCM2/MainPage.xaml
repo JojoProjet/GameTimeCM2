@@ -10,8 +10,9 @@
 
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
         <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <TextBlock x:Name="Title" Text="Bienvenue sur Game Time CM2" TextWrapping="Wrap" FontSize="70" Margin="0,0,0,30"/>
-            <Button Width="250" Height="75" FontSize="30" Content="Lancer la partie" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Btn_LaunchGame"/>
+            <TextBlock x:Name="Title" Text="Entrez votre nom" TextWrapping="Wrap" FontSize="70" Margin="0,0,0,30"/>
+            <TextBox x:Name="IName" PlaceholderText="Nom" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Button Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="75" FontSize="30" Content="Lancer la partie" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Btn_LaunchGame"/>
         </StackPanel>
     </StackPanel>    
 </Page>

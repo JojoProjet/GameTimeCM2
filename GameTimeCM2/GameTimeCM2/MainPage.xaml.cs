@@ -1,4 +1,5 @@
-﻿using GameTimeCM2.Src.Utils;
+﻿using GameTimeCM2.Src.Game;
+using GameTimeCM2.Src.Utils;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -34,8 +35,10 @@ namespace GameTimeCM2
 
         private void Btn_LaunchGame(object sender, RoutedEventArgs e)
         {
-            Frame rootFrame = Window.Current.Content as Frame;
-            rootFrame.Navigate(typeof(ViewScoreFinal));
+            Db db = new Db();
+            db.InsertUser(IName.Text);
+            Application.Current.Resources["User"] = db.GetUser(IName.Text);
+            Frame.Navigate(typeof(AccueilGame));
         }
     }
 }
