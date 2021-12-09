@@ -32,12 +32,16 @@ namespace GameTimeCM2
             this.InitializeComponent();
         }
 
+        private void Btn_Register(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ViewRegister));
+        }
 
         private void Btn_LaunchGame(object sender, RoutedEventArgs e)
         {
-            Db db = new Db();
-            db.InsertUser(IName.Text);
-            Application.Current.Resources["User"] = db.GetUser(IName.Text);
+        //    Db db = new Db();
+         //   db.InsertUser(IName.Text);
+           // Application.Current.Resources["User"] = db.GetUser(IName.Text);
             Frame.Navigate(typeof(AccueilGame));
         }
     }

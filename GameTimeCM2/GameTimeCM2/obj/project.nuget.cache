@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ByaQnWUKbjIAfbZyeok4vuW+qXAo3Fl4EDeBCBXaGRLceCyoq7nvAxYopP6CRUnF5YoX+S9qZDPpITszV8MUaQ==",
+  "dgSpecHash": "Nve5Y/smmVF5y1y5BZcy4xl6uMWxvmJYawQUZeI3h4PPQf11XNZgHsAQG532F3M56VI754yWo3LWPWFZ5ZL7lA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jonat\\OneDrive\\Bureau\\trunk\\dev\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jonat\\.nuget\\packages\\bcrypt\\1.0.0\\bcrypt.1.0.0.nupkg.sha512",
+    "C:\\Users\\jonat\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\jonat\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\jonat\\.nuget\\packages\\colorcode.core\\2.0.6\\colorcode.core.2.0.6.nupkg.sha512",
     "C:\\Users\\jonat\\.nuget\\packages\\colorcode.uwp\\2.0.6\\colorcode.uwp.2.0.6.nupkg.sha512",
@@ -63,5 +65,16 @@
     "C:\\Users\\jonat\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\jonat\\.nuget\\packages\\win2d.uwp\\1.25.0\\win2d.uwp.1.25.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Le package 'BCrypt 1.0.0' a été restauré en utilisant '.NETFramework,Version=v4.6.1' au lieu du framework cible du projet 'UAP,Version=v10.0.17763'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
+      "libraryId": "BCrypt",
+      "targetGraphs": [
+        "UAP,Version=v10.0.17763"
+      ]
+    }
+  ]
 }

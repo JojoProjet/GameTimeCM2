@@ -6,6 +6,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
 namespace GameTimeCM2.Src.Utils
 {
@@ -44,22 +46,31 @@ namespace GameTimeCM2.Src.Utils
 
         public User GetUser(string name)
         {
-            MySqlCommand mysqlCom = SetCommandDb(Constants.DB_INSERT_USER);
+            MySqlCommand mysqlCom = SetCommandDb(Constants.DB_SELECT_USER);
             mysqlCom.Parameters.Add("?name", MySqlDbType.VarChar).Value = name;
             MySqlDataReader mysqlread = GetDataDb(mysqlCom);
+            
+            if(mysqlread.FieldCount == 0) return null;
+            
             while(mysqlread.Read())
-                return new User(int.Parse(mysqlread["Id"].ToString()), mysqlread["Name"].ToString(), int.Parse(mysqlread["Score"].ToString()), int.Parse(mysqlread["Time"].ToString()));
+            {
+                User user = new User(int.Parse(mysqlread["Id"].ToString()), mysqlread["Name"].ToString(), int.Parse(mysqlread["Score"].ToString()), int.Parse(mysqlread["Time"].ToString()));
+                mysqlcon.Close();
+                return user;
+            }
+       
             return null;
         }
 
-        public void InsertUser(string name)
+        public void InsertUser(string name, string password)
         {
             mysqlcon.Open();
             MySqlCommand mysqlCom = SetCommandDb(Constants.DB_INSERT_USER);
             mysqlCom.Parameters.Add("?name", MySqlDbType.VarChar).Value = name;
+            mysqlCom.Parameters.Add("?password", MySqlDbType.VarChar).Value = password;
             mysqlCom.ExecuteNonQuery();
+            mysqlcon.Close();
         }
-
 
     }
 }

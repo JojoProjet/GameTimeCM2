@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="GameTimeCM2.ViewRegister"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GameTimeCM2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        
+        <Popup x:ConnectionId='2' VerticalOffset="10" HorizontalOffset="250" x:Name="StandardPopup">
+            <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="300" Height="300" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock x:ConnectionId='7' x:Name="TextError" FontSize="24.667" HorizontalAlignment="Center"/>
+                    <Button x:ConnectionId='8' Content="Close"                           HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </Popup>
+        
+        <StackPanel Width="800" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <TextBlock x:ConnectionId='3' x:Name="TitleRegister" Text="Inscription" TextWrapping="Wrap" FontSize="70" Margin="0,0,0,50" FontStyle="Italic" TextDecorations="Underline" TextAlignment="Center"/>
+            <TextBox x:ConnectionId='4' x:Name="IName" PlaceholderText="Nom" Width="500" Margin="0,0,0,30" />
+            <TextBox x:ConnectionId='5' x:Name="IMotDePasse" PlaceholderText="Mot de passe" Width="500" />
+            <Button x:ConnectionId='6' x:Name="BtnRegister" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="75" FontSize="30" Content="S'inscrire"                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+        </StackPanel>
+        
+    </StackPanel>
+    
+</Page>
+

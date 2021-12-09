@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="GameTimeCM2.GameConjugaison"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GameTimeCM2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Grid x:ConnectionId='2' x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Rectangle x:ConnectionId='3' x:Name="rectangle" Fill="#FF2525CD" HorizontalAlignment="Left" Height="221" Margin="207,182,0,0" Stroke="Black" VerticalAlignment="Top" Width="145">
+            <Rectangle.Projection>
+                <PlaneProjection/>
+            </Rectangle.Projection>
+        </Rectangle>
+
+    </Grid>
+
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup x:ConnectionId='4' x:Name="VisualStateGroup">
+            <VisualStateGroup.Transitions>
+                <VisualTransition GeneratedDuration="0:0:0.5"/>
+            </VisualStateGroup.Transitions>
+            <VisualState x:ConnectionId='5' x:Name="NotFliped"/>
+            <VisualState x:ConnectionId='6' x:Name="Fliped">
+                <Storyboard>
+                    <DoubleAnimation Duration="0" To="-180" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+                </Storyboard>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+
+
+
+</Page>
+
