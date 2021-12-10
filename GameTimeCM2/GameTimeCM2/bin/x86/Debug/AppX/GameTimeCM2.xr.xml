@@ -18,6 +18,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Source" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
@@ -44,15 +45,15 @@
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="GameTimeCM2.AccueilGame" />
+    <RootType FullName="GameTimeCM2.EscapeGame" />
+    <RootType FullName="Windows.UI.Xaml.VisualStateManager">
+      <RootMethod Name="GetVisualStateGroups" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
-    </RootType>
-    <RootType FullName="GameTimeCM2.EscapeGame" />
-    <RootType FullName="Windows.UI.Xaml.VisualStateManager">
-      <RootMethod Name="GetVisualStateGroups" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="Fill" />
@@ -89,16 +90,15 @@
     <RootType FullName="GameTimeCM2.GameConjugaison" />
     <RootType FullName="GameTimeCM2.GameMemoire" />
     <RootType FullName="GameTimeCM2.GamePendu" />
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Margin" />
-    </RootType>
-    <RootType FullName="GameTimeCM2.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Primitives.Popup">
       <RootProperty Name="VerticalOffset" />
       <RootProperty Name="HorizontalOffset" />
       <RootProperty Name="Child" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="BorderBrush" />
@@ -111,6 +111,7 @@
       <RootProperty Name="Child" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="GameTimeCM2.MainPage" />
     <RootType FullName="GameTimeCM2.ViewRegister" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Width" />

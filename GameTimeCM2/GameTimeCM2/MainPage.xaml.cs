@@ -1,4 +1,5 @@
-﻿using GameTimeCM2.Src.Game;
+﻿using GameTimeCM2.Src;
+using GameTimeCM2.Src.Game;
 using GameTimeCM2.Src.Utils;
 using MySql.Data.MySqlClient;
 using System;
@@ -32,6 +33,16 @@ namespace GameTimeCM2
             this.InitializeComponent();
         }
 
+        public void UBoolEnable(bool enable)
+        {
+            IName.IsEnabled = enable;
+            IMotDePasse.IsEnabled = enable;
+            BtnRegister.IsEnabled = enable;
+            BtnLaunchGame.IsEnabled = enable;
+            ErrorPopup.IsOpen = !enable;
+
+        }
+
         private void Btn_Register(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(ViewRegister));
@@ -39,10 +50,21 @@ namespace GameTimeCM2
 
         private void Btn_LaunchGame(object sender, RoutedEventArgs e)
         {
-        //    Db db = new Db();
-         //   db.InsertUser(IName.Text);
-           // Application.Current.Resources["User"] = db.GetUser(IName.Text);
-            Frame.Navigate(typeof(AccueilGame));
+            Db db = new Db();
+            AccountService accountService = new AccountService();
+            User user = accountService.Login(IName.Text, IMotDePasse.Text);
+            if(user != null)
+            {
+                Application.Current.Resources["User"] = user;
+                Frame.Navigate(typeof(AccueilGame));
+            }
+            else 
+                UBoolEnable(false);
+        }
+
+        private void ClosePopupClicked(object sender, RoutedEventArgs e)
+        {
+            UBoolEnable(true);
         }
     }
 }

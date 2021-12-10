@@ -15,12 +15,13 @@ namespace GameTimeCM2.Src.Game
         public int Score { get; set; }
         public int Time { get; set; }
 
-        public User(int id, string name, int score, int time)
+        public User(int id, string name, int score, int time, string password)
         {
             Id = id;
             Name = name;
             Score = score;
             Time = time;
+            Password = password;
         }
 
     }

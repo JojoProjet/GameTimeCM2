@@ -18,8 +18,8 @@ namespace GameTimeCM2.Src
 
     class AccountService
     {
-
-        private readonly Db db = new Db();
+        private Db db = new Db();
+        
 
         public AccountService() { }
 
@@ -29,9 +29,7 @@ namespace GameTimeCM2.Src
             {
                 if (db.GetUser(name) == null)
                 {
-                    string passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
-                    db.InsertUser(name, passwordHash);
-                    Application.Current.Resources["regi"] = Constants.STRING_INSCRIPTION_GOOD; ;
+                    db.InsertUser(name, password);
                     return Constants.STRING_INSCRIPTION_GOOD;
                 }
                 throw new Exception(Constants.STRING_INSCRIPTION_ERROR);
@@ -43,10 +41,12 @@ namespace GameTimeCM2.Src
 
         }
 
-        public bool Login(string name, string password)
+        public User Login(string name, string password)
         {
             User user = db.GetUser(name);
-            return (user != null && user.Name == name && BCrypt.Net.BCrypt.Verify(password, user.Password));
+            if (user != null && user.Name == name && BCrypt.Net.BCrypt.Verify(password, user.Password))
+                return user;
+            return null;
         }
 
     }

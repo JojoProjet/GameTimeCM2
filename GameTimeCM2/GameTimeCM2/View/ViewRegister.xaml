@@ -10,22 +10,34 @@
     
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
         
-        <Popup VerticalOffset="10" HorizontalOffset="250" x:Name="StandardPopup">
+        <Popup VerticalOffset="10" HorizontalOffset="250" x:Name="ErrorPopup">
             <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
                 BorderThickness="2" Width="300" Height="300" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBlock x:Name="TextError" FontSize="24.667" HorizontalAlignment="Center"/>
-                    <Button Content="Close" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
+                    <Button Content="Fermer" Click="ClosePopupClicked" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Border>
         </Popup>
-        
+
+        <Popup VerticalOffset="10" HorizontalOffset="250" x:Name="SuccessPopup">
+            <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="300" Height="300" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock x:Name="TextSuccess" FontSize="24.667" HorizontalAlignment="Center"/>
+                    <Button Content="Se connectez" Click="Btn_PopupLoginClick" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </Popup>
+
         <StackPanel Width="800" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <TextBlock x:Name="TitleRegister" Text="Inscription" TextWrapping="Wrap" FontSize="70" Margin="0,0,0,50" FontStyle="Italic" TextDecorations="Underline" TextAlignment="Center"/>
             <TextBox x:Name="IName" PlaceholderText="Nom" Width="500" Margin="0,0,0,30" />
             <TextBox x:Name="IMotDePasse" PlaceholderText="Mot de passe" Width="500" />
             <Button x:Name="BtnRegister" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="75" FontSize="30" Content="S'inscrire" Click="Btn_Register" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+            <Button Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="75" FontSize="30" Content="Retour" Click="Btn_ReturnMain" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
         </StackPanel>
         
     </StackPanel>

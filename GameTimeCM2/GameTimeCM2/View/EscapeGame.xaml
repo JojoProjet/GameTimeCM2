@@ -1,14 +1,19 @@
 ﻿<Page
     x:Class="GameTimeCM2.EscapeGame"
+    x:Name="main"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:GameTimeCM2"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
-    <Grid>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <TextBlock Text="Escape Game" />
+            <Button x:Name="BtnLaunchGameSolo" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="75" FontSize="30" Content="Solo" Click="Btn_LaunchGameSolo" Margin="0,30,0,0"/>
+            <Button x:Name="BtnLaunchGameMultiPlayer" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="75" FontSize="30" Content="MultiJoueur" Click="Btn_LaunchGameMultiPlayer" Margin="0,30,0,0"/>
+        </StackPanel>
+    </StackPanel>
 
-    </Grid>
 </Page>

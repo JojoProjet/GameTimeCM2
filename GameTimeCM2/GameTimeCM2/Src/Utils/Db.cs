@@ -14,48 +14,63 @@ namespace GameTimeCM2.Src.Utils
     class Db
     {
 
-        private MySqlConnection mysqlcon = new MySqlConnection("server=gametimecm2db.southcentralus.azurecontainer.io;user id=root;password=gametimecm2;database=gametimecm2");
+        private MySqlConnection MysqlCon { get; set; }
 
-        public Db() { }
+        public Db() 
+        {
+            MysqlCon = new MySqlConnection("server=gametimecm2db.southcentralus.azurecontainer.io;user id=root;password=gametimecm2;database=gametimecm2");
+        }
+
+        public void DbDestroy()
+        {
+        }
 
         public MySqlCommand SetCommandDb(string command)
         {
-            MySqlCommand mysqlcom = new MySqlCommand(command, mysqlcon);
+            MySqlCommand mysqlcom = new MySqlCommand(command, MysqlCon);
             return mysqlcom;
         }
 
         public MySqlDataReader GetDataDb(MySqlCommand mysqlcom)
         {
-            mysqlcon.Open();
             MySqlDataReader mysqlread = mysqlcom.ExecuteReader(CommandBehavior.CloseConnection);
             return mysqlread;
-        }
+        } 
 
         public List<User> GetUsers()
         {
+            MysqlCon.Open();
             MySqlDataReader mysqlread = GetDataDb(SetCommandDb(Constants.DB_SELECT_USERS));
             List<User> listUser = new List<User>();
 
             while (mysqlread.Read())
-                listUser.Add(new User(int.Parse(mysqlread["Id"].ToString()), mysqlread["Name"].ToString(), int.Parse(mysqlread["Score"].ToString()), int.Parse(mysqlread["Time"].ToString())));
-
-            mysqlcon.Close();
+                listUser.Add(new User(int.Parse(mysqlread["Id"].ToString()), mysqlread["Name"].ToString(), int.Parse(mysqlread["Score"].ToString()), int.Parse(mysqlread["Time"].ToString()), mysqlread["Password"].ToString()));
+            
+            mysqlread.Close();
+            MysqlCon.Close();
 
             return listUser;
         }
 
         public User GetUser(string name)
         {
+            MysqlCon.Open();
             MySqlCommand mysqlCom = SetCommandDb(Constants.DB_SELECT_USER);
             mysqlCom.Parameters.Add("?name", MySqlDbType.VarChar).Value = name;
-            MySqlDataReader mysqlread = GetDataDb(mysqlCom);
-            
-            if(mysqlread.FieldCount == 0) return null;
-            
+            MySqlDataReader mysqlread = mysqlCom.ExecuteReader(CommandBehavior.CloseConnection);
+
+            if (!mysqlread.HasRows)
+            {
+                mysqlread.Close();
+                MysqlCon.Close();
+                return null;
+            }
+
             while(mysqlread.Read())
             {
-                User user = new User(int.Parse(mysqlread["Id"].ToString()), mysqlread["Name"].ToString(), int.Parse(mysqlread["Score"].ToString()), int.Parse(mysqlread["Time"].ToString()));
-                mysqlcon.Close();
+                User user = new User(int.Parse(mysqlread["Id"].ToString()), mysqlread["Name"].ToString(), int.Parse(mysqlread["Score"].ToString()), int.Parse(mysqlread["Time"].ToString()), mysqlread["Password"].ToString());
+                mysqlread.Close();
+                MysqlCon.Close();
                 return user;
             }
        
@@ -64,12 +79,13 @@ namespace GameTimeCM2.Src.Utils
 
         public void InsertUser(string name, string password)
         {
-            mysqlcon.Open();
+            MysqlCon.Open();
             MySqlCommand mysqlCom = SetCommandDb(Constants.DB_INSERT_USER);
+            string passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
             mysqlCom.Parameters.Add("?name", MySqlDbType.VarChar).Value = name;
-            mysqlCom.Parameters.Add("?password", MySqlDbType.VarChar).Value = password;
+            mysqlCom.Parameters.Add("?password", MySqlDbType.VarChar).Value = passwordHash;
             mysqlCom.ExecuteNonQuery();
-            mysqlcon.Close();
+            MysqlCon.Close();
         }
 
     }

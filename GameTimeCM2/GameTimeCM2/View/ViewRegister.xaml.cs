@@ -32,11 +32,18 @@ namespace GameTimeCM2
             this.InitializeComponent();
         }
 
-        public void UVEnable(bool enable)
+        public void UBoolEnable(bool enable)
         {
             IName.IsEnabled = enable;
             IMotDePasse.IsEnabled = enable;
             BtnRegister.IsEnabled = enable;
+        }
+
+        public void UAllEnable(bool enable, TextBlock textBlock, Popup popup, string regi)
+        {
+            UBoolEnable(enable);
+            textBlock.Text = regi;
+            popup.IsOpen = !enable;
         }
 
         public void Btn_Register(object sender, RoutedEventArgs e)
@@ -45,20 +52,25 @@ namespace GameTimeCM2
             string password = IMotDePasse.Text;
             string regi = accountService.Register(name, password);
             if(regi == Constants.STRING_INSCRIPTION_GOOD && regi != Constants.STRING_INSCRIPTION_ERROR)
-                Frame.Navigate(typeof(MainPage));
+                UAllEnable(false, TextSuccess, SuccessPopup, regi);
             else
-            {
-                UVEnable(false);
-                TextError.Text = regi;
-                StandardPopup.IsOpen = true;
-            }
-
+                UAllEnable(false, TextError, ErrorPopup, regi);
         }
 
+        private void Btn_ReturnMain(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
+
+        private void Btn_PopupLoginClick(object sender, RoutedEventArgs e)
+        {
+            SuccessPopup.IsOpen = false;
+            Frame.Navigate(typeof(MainPage));
+        }
         private void ClosePopupClicked(object sender, RoutedEventArgs e)
         {
-            StandardPopup.IsOpen = false;
-            UVEnable(true);
+            ErrorPopup.IsOpen = false;
+            UBoolEnable(true);
         }
 
     }

@@ -9,28 +9,43 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        
         <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Center">
-            <TextBlock x:Name="Title" Text="Entrez votre nom" TextWrapping="Wrap" FontSize="70" Margin="0,0,0,30"/>
+            <TextBlock x:Name="Title" TextWrapping="Wrap" FontSize="70" Margin="0,0,0,30"/>
         </StackPanel>
+        
+        <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Center">
+            <TextBlock x:Name="ExpainButGame" Text="Expliquez le but du jeu" TextWrapping="Wrap" FontSize="35" Margin="0,0,0,30"/>
+        </StackPanel>
+        
         <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            
             <StackPanel Margin="30,0,30,0">
-                <Image Width="200" Source="Assets/StoreLogo.png" />
+                <Image Width="200" Height="200" Source="/Assets/AGames/pendu.png" />
                 <Button x:Name="btn_pendu" Width="250" Height="75" FontSize="30" Content="Pendu" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Btn_LaunchGamePendu" Margin="0,0,0,30"/>
             </StackPanel>
+            
             <StackPanel Margin="30,0,30,0">
-                <Image Width="200" Source="Assets/StoreLogo.png" />
+                <Image Width="200" Height="200" Source="/Assets/AGames/memoire.png" />
                 <Button x:Name="btn_memoire" Width="250" Height="75" FontSize="30" Content="Memoire" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Btn_LaunchGameMemoire" Margin="0,0,0,30"/>
             </StackPanel>
+            
             <StackPanel Margin="30,0,30,0">
-                <Image Width="200" Source="Assets/StoreLogo.png" />
+                <Image Width="200" Height="200" Source="/Assets/AGames/conjugaison.png" />
                 <Button x:Name="btn_conjugaison" Width="250" Height="75" FontSize="30" Content="Conjugaison" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Btn_LaunchGameConjugaison" Margin="0,0,0,30"/>
             </StackPanel>
+            
         </StackPanel>
+        
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+           
             <StackPanel>
-                <Image Width="200" Source="Assets/StoreLogo.png" />
+                <Image Width="200" Height="200" Source="/Assets/AGames/escapegame.jpg" />
                 <Button x:Name="btn_escape_game" Width="250" Height="75" FontSize="30" Content="Escape Game" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Btn_LaunchGameEscape" Margin="0,0,0,30"/>
             </StackPanel>
+            
         </StackPanel>
+        
     </StackPanel>
+    
 </Page>

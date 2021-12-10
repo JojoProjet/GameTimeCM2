@@ -9,29 +9,44 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        
         <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Center">
-            <TextBlock x:ConnectionId='6' x:Name="Title" Text="Entrez votre nom" TextWrapping="Wrap" FontSize="70" Margin="0,0,0,30"/>
+            <TextBlock x:ConnectionId='7' x:Name="Title" TextWrapping="Wrap" FontSize="70" Margin="0,0,0,30"/>
         </StackPanel>
+        
+        <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Center">
+            <TextBlock x:ConnectionId='6' x:Name="ExpainButGame" Text="Expliquez le but du jeu" TextWrapping="Wrap" FontSize="35" Margin="0,0,0,30"/>
+        </StackPanel>
+        
         <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            
             <StackPanel Margin="30,0,30,0">
-                <Image Width="200" Source="Assets/StoreLogo.png" />
+                <Image Width="200" Height="200" Source="/Assets/AGames/pendu.png" />
                 <Button x:ConnectionId='5' x:Name="btn_pendu" Width="250" Height="75" FontSize="30" Content="Pendu" HorizontalAlignment="Center" VerticalAlignment="Bottom"                             Margin="0,0,0,30"/>
             </StackPanel>
+            
             <StackPanel Margin="30,0,30,0">
-                <Image Width="200" Source="Assets/StoreLogo.png" />
+                <Image Width="200" Height="200" Source="/Assets/AGames/memoire.png" />
                 <Button x:ConnectionId='4' x:Name="btn_memoire" Width="250" Height="75" FontSize="30" Content="Memoire" HorizontalAlignment="Center" VerticalAlignment="Bottom"                               Margin="0,0,0,30"/>
             </StackPanel>
+            
             <StackPanel Margin="30,0,30,0">
-                <Image Width="200" Source="Assets/StoreLogo.png" />
+                <Image Width="200" Height="200" Source="/Assets/AGames/conjugaison.png" />
                 <Button x:ConnectionId='3' x:Name="btn_conjugaison" Width="250" Height="75" FontSize="30" Content="Conjugaison" HorizontalAlignment="Center" VerticalAlignment="Bottom"                                   Margin="0,0,0,30"/>
             </StackPanel>
+            
         </StackPanel>
+        
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+           
             <StackPanel>
-                <Image Width="200" Source="Assets/StoreLogo.png" />
+                <Image Width="200" Height="200" Source="/Assets/AGames/escapegame.jpg" />
                 <Button x:ConnectionId='2' x:Name="btn_escape_game" Width="250" Height="75" FontSize="30" Content="Escape Game" HorizontalAlignment="Center" VerticalAlignment="Bottom"                              Margin="0,0,0,30"/>
             </StackPanel>
+            
         </StackPanel>
+        
     </StackPanel>
+    
 </Page>
 

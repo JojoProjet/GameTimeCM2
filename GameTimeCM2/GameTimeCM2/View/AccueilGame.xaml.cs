@@ -24,20 +24,23 @@ namespace GameTimeCM2
     /// </summary>
     public sealed partial class AccueilGame : Page
     {
-        Frame rootFrame = Window.Current.Content as Frame;
+        readonly Frame rootFrame = Window.Current.Content as Frame;
 
         public User user;
 
         public AccueilGame()
         {
             this.InitializeComponent();
-            btn_escape_game.IsEnabled = false;
+            
+            // Disable escape game when only one win in three game
+            //btn_escape_game.IsEnabled = false;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            //user = (User)Application.Current.Resources["User"];
+            user = (User)Application.Current.Resources["User"];
+            Title.Text = $"Bonjour {user.Name}";
         }
 
         public void init()

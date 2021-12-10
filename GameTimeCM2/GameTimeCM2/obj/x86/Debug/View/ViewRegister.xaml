@@ -10,22 +10,34 @@
     
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
         
-        <Popup x:ConnectionId='2' VerticalOffset="10" HorizontalOffset="250" x:Name="StandardPopup">
+        <Popup x:ConnectionId='2' VerticalOffset="10" HorizontalOffset="250" x:Name="ErrorPopup">
             <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
                 BorderThickness="2" Width="300" Height="300" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock x:ConnectionId='7' x:Name="TextError" FontSize="24.667" HorizontalAlignment="Center"/>
-                    <Button x:ConnectionId='8' Content="Close"                           HorizontalAlignment="Center"/>
+                    <TextBlock x:ConnectionId='11' x:Name="TextError" FontSize="24.667" HorizontalAlignment="Center"/>
+                    <Button x:ConnectionId='12' Content="Fermer"                           HorizontalAlignment="Center"/>
                 </StackPanel>
             </Border>
         </Popup>
-        
+
+        <Popup x:ConnectionId='3' VerticalOffset="10" HorizontalOffset="250" x:Name="SuccessPopup">
+            <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="300" Height="300" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock x:ConnectionId='9' x:Name="TextSuccess" FontSize="24.667" HorizontalAlignment="Center"/>
+                    <Button x:ConnectionId='10' Content="Se connectez"                             HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </Popup>
+
         <StackPanel Width="800" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <TextBlock x:ConnectionId='3' x:Name="TitleRegister" Text="Inscription" TextWrapping="Wrap" FontSize="70" Margin="0,0,0,50" FontStyle="Italic" TextDecorations="Underline" TextAlignment="Center"/>
-            <TextBox x:ConnectionId='4' x:Name="IName" PlaceholderText="Nom" Width="500" Margin="0,0,0,30" />
-            <TextBox x:ConnectionId='5' x:Name="IMotDePasse" PlaceholderText="Mot de passe" Width="500" />
-            <Button x:ConnectionId='6' x:Name="BtnRegister" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="75" FontSize="30" Content="S'inscrire"                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+            <TextBlock x:ConnectionId='4' x:Name="TitleRegister" Text="Inscription" TextWrapping="Wrap" FontSize="70" Margin="0,0,0,50" FontStyle="Italic" TextDecorations="Underline" TextAlignment="Center"/>
+            <TextBox x:ConnectionId='5' x:Name="IName" PlaceholderText="Nom" Width="500" Margin="0,0,0,30" />
+            <TextBox x:ConnectionId='6' x:Name="IMotDePasse" PlaceholderText="Mot de passe" Width="500" />
+            <Button x:ConnectionId='7' x:Name="BtnRegister" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="75" FontSize="30" Content="S'inscrire"                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
+            <Button x:ConnectionId='8' Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="75" FontSize="30" Content="Retour"                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0"/>
         </StackPanel>
         
     </StackPanel>
