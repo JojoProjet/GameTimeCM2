@@ -116,6 +116,8 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Src\Game\GConjugaison\Card.cs" />
+    <Compile Include="Src\Game\GConjugaison\Cards.cs" />
     <Compile Include="Src\Services\AccountService.cs" />
     <Compile Include="Src\Services\UserService.cs" />
     <Compile Include="Src\Utils\Component.cs" />
@@ -247,7 +249,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Src\Game\GConjugaison\" />
     <Folder Include="Src\Game\GEscapeGame\" />
     <Folder Include="Src\Game\GMemoire\" />
     <Folder Include="Src\Game\GPendu\" />
