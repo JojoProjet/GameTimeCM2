@@ -155,3 +155,9 @@ C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj
 C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\DevOne.Security.Cryptography.BCrypt.dll
 C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\BCrypt.Net-Core.dll
 C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\BCrypt.Net-Core.pdb
+C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_637552292420000000.json
+C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\ViewBeginGameConjugaison.xbf
+C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\View\ViewBeginGameConjugaison.g.i.cs
+C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\View\ViewBeginGameConjugaison.g.cs
+C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\View\ViewBeginGameConjugaison.xaml
+C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\View\ViewBeginGameConjugaison.xbf

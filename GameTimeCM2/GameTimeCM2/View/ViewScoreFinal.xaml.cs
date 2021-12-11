@@ -33,45 +33,51 @@ namespace GameTimeCM2
         public ViewScoreFinal()
         {
             this.InitializeComponent();
-            init();
+            Init();
         }
 
-        private void init()
+        public void InitStackPanel(StackPanel stackPanel)
         {
-            ListViewItem listViewItem = new ListViewItem();
-            StackPanel stackPanel = new StackPanel();
-            TextBlock textBlockUser = new TextBlock();
-            TextBlock textBlockScore = new TextBlock();
+            stackPanel.Width = 400;
+            stackPanel.Height = 50;
+            stackPanel.Orientation = Orientation.Horizontal;
+            stackPanel.VerticalAlignment = VerticalAlignment.Stretch;
+            stackPanel.HorizontalAlignment = HorizontalAlignment.Stretch;
+        }
 
-            // Props
-            int P_WIDTH_1 = 400;
-            int P_WIDTH_2 = 200;
-            int P_HEIGHT_1 = 50;
+        public void InitListViewItem(ListViewItem listViewItem)
+        {
+            listViewItem.Width = 400;
+            listViewItem.Height = 50;
+            listViewItem.VerticalAlignment = VerticalAlignment.Center;
+            listViewItem.HorizontalAlignment = HorizontalAlignment.Center;
+        }
+
+        public void InitTextBlock(TextBlock textBlock)
+        {
+            textBlock.Width = 200;
+            textBlock.VerticalAlignment = VerticalAlignment.Center;
+            textBlock.HorizontalAlignment = HorizontalAlignment.Stretch;
+        }
+             
+        private void Init()
+        {
 
             TitleScoreFinale.Text = Constants.TEXT_TITLE_SCORE_FINALE;
             ButtonReturnAccueil.Content = Constants.BUTTON_CONTENT_RETURN_HOME;
 
-            listViewItem.Width = P_WIDTH_1;
-            listViewItem.Height = P_HEIGHT_1;
-            listViewItem.VerticalAlignment = VerticalAlignment.Center;
-            listViewItem.HorizontalAlignment = HorizontalAlignment.Center;
-
-            stackPanel.Width = P_WIDTH_1;
-            stackPanel.Height = P_HEIGHT_1;
-            stackPanel.Orientation = Orientation.Horizontal;
-            stackPanel.VerticalAlignment = VerticalAlignment.Stretch;
-            stackPanel.HorizontalAlignment = HorizontalAlignment.Stretch;
-
-            textBlockUser.Width = P_WIDTH_2;
-            textBlockUser.VerticalAlignment = VerticalAlignment.Center;
-            textBlockUser.HorizontalAlignment = HorizontalAlignment.Stretch;
-
-            textBlockScore.Width = P_WIDTH_2;
-            textBlockScore.VerticalAlignment = VerticalAlignment.Center;
-            textBlockScore.HorizontalAlignment = HorizontalAlignment.Stretch;
-
             db.GetUsers().ForEach(item =>
             {
+                StackPanel stackPanel = new StackPanel();
+                ListViewItem listViewItem = new ListViewItem();
+                TextBlock textBlockUser = new TextBlock();
+                TextBlock textBlockScore = new TextBlock();
+
+                InitStackPanel(stackPanel);
+                InitListViewItem(listViewItem);
+                InitTextBlock(textBlockUser);
+                InitTextBlock(textBlockScore);
+
                 textBlockUser.Text = item.Name;
                 textBlockScore.Text = item.Score.ToString();
 

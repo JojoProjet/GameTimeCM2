@@ -5,33 +5,104 @@
     xmlns:local="using:GameTimeCM2"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d" d:DesignHeight="1318">
 
+    
+    <Page.Resources>
+        <Storyboard x:Name="story">
+            <DoubleAnimation Duration="0:0:10" From="-10" To="-190" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="Card" d:IsOptimized="True"/>
+        </Storyboard>
+    </Page.Resources>
+    
+    <Page.Background>
+        <ThemeResource ResourceKey="ComboBoxBackgroundThemeBrush"/>
+    </Page.Background>
 
-    <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-        <Rectangle x:Name="rectangle" Fill="#FF2525CD" HorizontalAlignment="Left" Height="221" Margin="207,182,0,0" Stroke="Black" VerticalAlignment="Top" Width="145">
-            <Rectangle.Projection>
-                <PlaneProjection/>
-            </Rectangle.Projection>
-        </Rectangle>
+    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
-    </Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,96,0,0" Text="Jeu de conjugaison" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="50"/>
 
-    <VisualStateManager.VisualStateGroups>
-        <VisualStateGroup x:Name="VisualStateGroup">
-            <VisualStateGroup.Transitions>
-                <VisualTransition GeneratedDuration="0:0:0.5"/>
-            </VisualStateGroup.Transitions>
-            <VisualState x:Name="NotFliped"/>
-            <VisualState x:Name="Fliped">
-                <Storyboard>
-                    <DoubleAnimation Duration="0" To="-180" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationY)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-                </Storyboard>
-            </VisualState>
-        </VisualStateGroup>
-    </VisualStateManager.VisualStateGroups>
+        <TextBlock x:Name="TextQuestion" HorizontalAlignment="Center" Margin="0,150,0,0" Text="Le texte que tu vas devoir trouvé hiih" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="50"/>
 
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,100,0,0">
 
+            <StackPanel x:Name="Card1" Orientation="Horizontal" Width="250" Height="300" Margin="0,50,50,0" Background="Aqua" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <TextBlock Text="MHH" FocusVisualPrimaryBrush="Red" />
+                <StackPanel.Projection>
+                    <PlaneProjection RotationX="-10" RotationZ="0" RotationY="0" CenterOfRotationX="1"/>
+                </StackPanel.Projection>
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-10"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+
+            <StackPanel x:Name="Card2" Orientation="Horizontal" Width="250" Height="300" Margin="0,0,50,0" Background="Aqua" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBlock Text="MHH" FocusVisualPrimaryBrush="Red" />
+                <StackPanel.Projection>
+                    <PlaneProjection RotationX="-10" RotationZ="0" RotationY="0" CenterOfRotationX="1"/>
+                </StackPanel.Projection>
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+
+            <StackPanel x:Name="Card3" Orientation="Horizontal" Width="250" Height="300" Margin="0,0,50,-4" Background="Aqua" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBlock Text="MHH" FocusVisualPrimaryBrush="Red" />
+                <StackPanel.Projection>
+                    <PlaneProjection RotationX="-10" RotationZ="0" RotationY="0" CenterOfRotationX="1"/>
+                </StackPanel.Projection>
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="1"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+
+            <StackPanel x:Name="Card4" Orientation="Horizontal" Width="250" Height="300" Margin="0,50,0,0" Background="Aqua" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBlock Text="MHH" FocusVisualPrimaryBrush="Red" />
+                <StackPanel.Projection>
+                    <PlaneProjection RotationX="-10" RotationZ="0" RotationY="0" CenterOfRotationX="1"/>
+                </StackPanel.Projection>
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="10"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical">
+            <!--<StackPanel x:Name="Card333" Orientation="Horizontal" Width="250" Height="300" Margin="0,0,50,0" Background="Chocolate" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBlock Text="MHH" FocusVisualPrimaryBrush="Red" />
+                <StackPanel.Projection>
+                    <PlaneProjection RotationX="-10" RotationZ="0" RotationY="0" CenterOfRotationX="1" GlobalOffsetY="-315" GlobalOffsetX="-120" GlobalOffsetZ="0"/>
+                </StackPanel.Projection>
+                <StackPanel.RenderTransform>
+                    <CompositeTransform Rotation="-1" SkewX="0"/>
+                </StackPanel.RenderTransform>
+            </StackPanel>-->
+
+        </StackPanel>
+
+    </StackPanel>
 
 </Page>
+
+    

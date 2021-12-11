@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Nve5Y/smmVF5y1y5BZcy4xl6uMWxvmJYawQUZeI3h4PPQf11XNZgHsAQG532F3M56VI754yWo3LWPWFZ5ZL7lA==",
+  "dgSpecHash": "0rqqh/KpTegVLcBkfscbmMxrrzHV0THSGi0lOir4f5Y611gxsS6SELWIWp/C0ZV1vZoR3sfwOK7v6wvriLSYBA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jonat\\OneDrive\\Bureau\\trunk\\dev\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2.csproj",
   "expectedPackageFiles": [
@@ -63,7 +63,7 @@
     "C:\\Users\\jonat\\.nuget\\packages\\system.text.encodings.web\\5.0.1\\system.text.encodings.web.5.0.1.nupkg.sha512",
     "C:\\Users\\jonat\\.nuget\\packages\\system.text.json\\5.0.2\\system.text.json.5.0.2.nupkg.sha512",
     "C:\\Users\\jonat\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\jonat\\.nuget\\packages\\win2d.uwp\\1.25.0\\win2d.uwp.1.25.0.nupkg.sha512"
+    "C:\\Users\\jonat\\.nuget\\packages\\win2d.uwp\\1.26.0\\win2d.uwp.1.26.0.nupkg.sha512"
   ],
   "logs": [
     {

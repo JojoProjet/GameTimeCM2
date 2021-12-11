@@ -2,7 +2,9 @@ WinMetadata\Windows.winmd
 Assets\AGames\conjugaison.png
 Assets\AGames\escapegame.jpg
 Assets\AGames\memoire.png
+Assets\AGames\nuage.png
 Assets\AGames\pendu.png
+Assets\AGames\robot.png
 Assets\LockScreenLogo.scale-200.png
 Assets\SplashScreen.scale-200.png
 Assets\Square150x150Logo.scale-200.png
@@ -18,6 +20,7 @@ View\EscapeGame.xbf
 View\GameConjugaison.xbf
 View\GameMemoire.xbf
 View\GamePendu.xbf
+View\ViewBeginGameConjugaison.xbf
 View\ViewRegister.xbf
 View\ViewScoreFinal.xbf
 Properties\Default.rd.xml

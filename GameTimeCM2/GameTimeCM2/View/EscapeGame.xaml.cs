@@ -28,5 +28,16 @@ namespace GameTimeCM2
             this.InitializeComponent();
             main.Background = new ImageBrush { ImageSource = new BitmapImage(new Uri(this.BaseUri, "/Assets/AGames/escapegame.jpg")), Stretch = Stretch.Fill };
         }
+
+        private void Btn_LaunchGameSolo(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_LaunchGameMultiPlayer(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

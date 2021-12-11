@@ -13,10 +13,10 @@ namespace GameTimeCM2.Src
     public interface IAccountService
     {
         string Register(string name, string password);
-        bool Login(string name, string password);
+        User Login(string name, string password);
     }
 
-    class AccountService
+    class AccountService : IAccountService
     {
         private Db db = new Db();
         

@@ -5,33 +5,48 @@
     xmlns:local="using:GameTimeCM2"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <StackPanel Width="800" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+    <Page.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="White" Offset="1"/>
+            <GradientStop Color="#FE0E0E0E" Offset="0"/>
+        </LinearGradientBrush>
+    </Page.Background>
 
-            <Popup x:ConnectionId='2' VerticalOffset="10" HorizontalOffset="150" x:Name="ErrorPopup">
-                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,70,0,0">
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <StackPanel Width="800" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Black" Padding="0,0,0,30">
+
+                <Popup x:ConnectionId='2' VerticalOffset="10" HorizontalOffset="150" x:Name="ErrorPopup">
+                    <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
                 BorderThickness="2" Width="500" Height="300" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <TextBlock Text="Nom ou Mot de passe incorrect !" FontSize="24.667" HorizontalAlignment="Center"/>
-                        <Button x:ConnectionId='8' Content="Fermer"                           HorizontalAlignment="Center"/>
-                    </StackPanel>
-                </Border>
-            </Popup>
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="Nom ou Mot de passe incorrect !" FontSize="24.667" HorizontalAlignment="Center"/>
+                            <Button x:ConnectionId='8' Content="Fermer"                           HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+                </Popup>
 
-            <TextBlock x:ConnectionId='3' x:Name="Title" Text="Entrez votre nom et votre mot de passe" TextWrapping="Wrap" FontSize="70" Margin="0,0,0,50" FontStyle="Italic" TextDecorations="Underline" TextAlignment="Center"/>
-            <TextBox x:ConnectionId='4' x:Name="IName" PlaceholderText="Nom" Width="500" Margin="0,0,0,30" />
-            <TextBox x:ConnectionId='5' x:Name="IMotDePasse" PlaceholderText="Mot de passe" Width="500" />
+                <TextBlock x:ConnectionId='3' x:Name="Title" Text="Entrez votre nom et votre mot de passe" TextWrapping="Wrap" FontSize="70" Margin="0,20,0,50" FontStyle="Italic" TextDecorations="Underline" TextAlignment="Center" FocusVisualPrimaryBrush="{x:Null}" Foreground="#FF073A83" />
+                <TextBox x:ConnectionId='4' x:Name="IName" PlaceholderText="Nom" Width="500" Height="45" Margin="0,0,0,30" TextAlignment="Justify" TextWrapping="NoWrap"/>
+                <TextBox x:ConnectionId='5' x:Name="IMotDePasse" PlaceholderText="Mot de passe" Width="500" Height="45" Margin="0,0,0,30" TextWrapping="NoWrap" />
 
-            <StackPanel Width="600"  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button x:ConnectionId='6' x:Name="BtnRegister" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="75" FontSize="30" Content="Inscription"                      Margin="0,30,100,0"/>
-                <Button x:ConnectionId='7' x:Name="BtnLaunchGame" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="75" FontSize="30" Content="Lancer la partie"                        Margin="0,30,0,0"/>
+                <StackPanel Width="600"  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button x:ConnectionId='6' x:Name="BtnRegister" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="55" FontSize="30" Content="Inscription"                      Margin="0,30,100,0" FocusVisualPrimaryBrush="#FF00FFF3"/>
+                    <Button x:ConnectionId='7' x:Name="BtnLaunchGame" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="55" FontSize="30" Content="Lancer la partie"                        Margin="0,30,0,0" FocusVisualPrimaryBrush="#FF00FFF3"/>
+                </StackPanel>
+
             </StackPanel>
             
         </StackPanel>
+        
+        <Image Width="400" Height="400" Source="/Assets/AGames/robot.png" HorizontalAlignment="Left" Margin="20,0,0,0" />
+
     </StackPanel>    
 </Page>
 

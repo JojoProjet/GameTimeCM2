@@ -9,8 +9,10 @@
     mc:Ignorable="d">
 
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Test" />
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <TextBlock Text="Escape Game" />
+            <Button x:ConnectionId='2' x:Name="BtnLaunchGameSolo" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="75" FontSize="30" Content="Solo"                            Margin="0,30,0,0"/>
+            <Button x:ConnectionId='3' x:Name="BtnLaunchGameMultiPlayer" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="75" FontSize="30" Content="MultiJoueur"                                   Margin="0,30,0,0"/>
         </StackPanel>
     </StackPanel>
 

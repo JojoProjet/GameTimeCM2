@@ -749,7 +749,7 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "Win2D.uwp/1.25.0": {
+      "Win2D.uwp/1.26.0": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
@@ -758,7 +758,7 @@
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
         },
         "build": {
-          "build/win10/_._": {}
+          "build/win10/Win2D.uwp.targets": {}
         },
         "runtimeTargets": {
           "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {
@@ -1695,7 +1695,7 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "Win2D.uwp/1.25.0": {
+      "Win2D.uwp/1.26.0": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
@@ -1707,7 +1707,7 @@
           "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
         },
         "build": {
-          "build/win10/_._": {}
+          "build/win10/Win2D.uwp.targets": {}
         }
       }
     },
@@ -2627,7 +2627,7 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "Win2D.uwp/1.25.0": {
+      "Win2D.uwp/1.26.0": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
@@ -2639,7 +2639,7 @@
           "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
         },
         "build": {
-          "build/win10/_._": {}
+          "build/win10/Win2D.uwp.targets": {}
         }
       }
     },
@@ -3559,7 +3559,7 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "Win2D.uwp/1.25.0": {
+      "Win2D.uwp/1.26.0": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
@@ -3571,7 +3571,7 @@
           "runtimes/win10-arm64/native/Microsoft.Graphics.Canvas.dll": {}
         },
         "build": {
-          "build/win10/_._": {}
+          "build/win10/Win2D.uwp.targets": {}
         }
       }
     },
@@ -4490,7 +4490,7 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "Win2D.uwp/1.25.0": {
+      "Win2D.uwp/1.26.0": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
@@ -4502,7 +4502,7 @@
           "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
         },
         "build": {
-          "build/win10/_._": {}
+          "build/win10/Win2D.uwp.targets": {}
         }
       }
     },
@@ -5422,7 +5422,7 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "Win2D.uwp/1.25.0": {
+      "Win2D.uwp/1.26.0": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
@@ -5434,7 +5434,7 @@
           "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
         },
         "build": {
-          "build/win10/_._": {}
+          "build/win10/Win2D.uwp.targets": {}
         }
       }
     },
@@ -6353,7 +6353,7 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "Win2D.uwp/1.25.0": {
+      "Win2D.uwp/1.26.0": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
@@ -6365,7 +6365,7 @@
           "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
         },
         "build": {
-          "build/win10/_._": {}
+          "build/win10/Win2D.uwp.targets": {}
         }
       }
     },
@@ -7285,7 +7285,7 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "Win2D.uwp/1.25.0": {
+      "Win2D.uwp/1.26.0": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
@@ -7297,7 +7297,7 @@
           "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
         },
         "build": {
-          "build/win10/_._": {}
+          "build/win10/Win2D.uwp.targets": {}
         }
       }
     }
@@ -12581,10 +12581,10 @@
         "version.txt"
       ]
     },
-    "Win2D.uwp/1.25.0": {
-      "sha512": "Gll0bGN1DvRpRf2PsxPtrFECfLel2BJhRwSiBaG6GQH+2RypCaR7e9lZXasN5d1ppUlqmza1OiexJ34QBPl5RA==",
+    "Win2D.uwp/1.26.0": {
+      "sha512": "smA/NJWM3ruhWeKPHmCyW8PX8w1ckD9SN7qWEOePe/iuFKvLyC8govCHq/F40hQCRs8zBqHWaWBpekTnQuXx6w==",
       "type": "package",
-      "path": "win2d.uwp/1.25.0",
+      "path": "win2d.uwp/1.26.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -12606,7 +12606,7 @@
         "runtimes/win10-arm64/native/Microsoft.Graphics.Canvas.dll",
         "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll",
         "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll",
-        "win2d.uwp.1.25.0.nupkg.sha512",
+        "win2d.uwp.1.26.0.nupkg.sha512",
         "win2d.uwp.nuspec"
       ]
     }
@@ -12619,7 +12619,8 @@
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.10",
       "Microsoft.Toolkit.Uwp.UI.Controls >= 7.1.2",
       "MySql.Data >= 8.0.27",
-      "Newtonsoft.Json >= 13.0.1"
+      "Newtonsoft.Json >= 13.0.1",
+      "Win2D.uwp >= 1.26.0"
     ]
   },
   "packageFolders": {
@@ -12686,6 +12687,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.1, )"
+          },
+          "Win2D.uwp": {
+            "target": "Package",
+            "version": "[1.26.0, )"
           }
         },
         "imports": [

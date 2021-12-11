@@ -50,16 +50,16 @@ namespace GameTimeCM2
 
         private void Btn_LaunchGame(object sender, RoutedEventArgs e)
         {
-            Db db = new Db();
-            AccountService accountService = new AccountService();
-            User user = accountService.Login(IName.Text, IMotDePasse.Text);
-            if(user != null)
-            {
-                Application.Current.Resources["User"] = user;
+            //Db db = new Db();
+            //AccountService accountService = new AccountService();
+            //User user = accountService.Login(IName.Text, IMotDePasse.Text);
+            //if(user != null)
+            //{
+            //    Application.Current.Resources["User"] = user;
                 Frame.Navigate(typeof(AccueilGame));
-            }
-            else 
-                UBoolEnable(false);
+            //}
+            //else 
+            //    UBoolEnable(false);
         }
 
         private void ClosePopupClicked(object sender, RoutedEventArgs e)

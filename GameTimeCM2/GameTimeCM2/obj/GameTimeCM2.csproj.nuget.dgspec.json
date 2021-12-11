@@ -64,6 +64,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "Win2D.uwp": {
+              "target": "Package",
+              "version": "[1.26.0, )"
             }
           },
           "imports": [

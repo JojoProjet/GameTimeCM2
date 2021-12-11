@@ -21,6 +21,16 @@ namespace GameTimeCM2.Src.Utils
             MysqlCon = new MySqlConnection("server=gametimecm2db.southcentralus.azurecontainer.io;user id=root;password=gametimecm2;database=gametimecm2");
         }
 
+        public void Connect()
+        {
+
+        }
+
+        public void Closed()
+        {
+
+        }
+
         public void DbDestroy()
         {
         }

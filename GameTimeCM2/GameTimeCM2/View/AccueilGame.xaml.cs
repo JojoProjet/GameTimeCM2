@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using GameTimeCM2.View;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -39,8 +40,8 @@ namespace GameTimeCM2
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            user = (User)Application.Current.Resources["User"];
-            Title.Text = $"Bonjour {user.Name}";
+            //user = (User)Application.Current.Resources["User"];
+            //Title.Text = $"Bonjour {user.Name}";
         }
 
         public void init()
@@ -50,8 +51,9 @@ namespace GameTimeCM2
 
         private void Btn_LaunchGamePendu(object sender, RoutedEventArgs e) => rootFrame.Navigate(typeof(GamePendu));
         private void Btn_LaunchGameMemoire(object sender, RoutedEventArgs e) => rootFrame.Navigate(typeof(GameMemoire));
-        private void Btn_LaunchGameConjugaison(object sender, RoutedEventArgs e) => rootFrame.Navigate(typeof(GameConjugaison));
+        private void Btn_LaunchGameConjugaison(object sender, RoutedEventArgs e) => rootFrame.Navigate(typeof(ViewBeginGameConjugaison));
         private void Btn_LaunchGameEscape(object sender, RoutedEventArgs e) => rootFrame.Navigate(typeof(EscapeGame));
+        private void Btn_ViewScore(object sender, RoutedEventArgs e) => rootFrame.Navigate(typeof(ViewScoreFinal));
 
 
     }
