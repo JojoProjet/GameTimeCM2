@@ -11,6 +11,8 @@
       <RootProperty Name="EndPoint" />
       <RootProperty Name="StartPoint" />
       <RootProperty Name="GradientStops" />
+      <RootProperty Name="RelativeTransform" />
+      <RootProperty Name="Transform" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.GradientStop">
       <RootProperty Name="Color" />
@@ -23,9 +25,20 @@
       <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Height" />
+      <RootProperty Name="IsTapEnabled" />
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="CornerRadius" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="RequestedTheme" />
+      <RootProperty Name="FocusVisualSecondaryBrush" />
+      <RootProperty Name="FocusVisualPrimaryBrush" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Projection" />
+      <RootProperty Name="RenderTransform" />
+      <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Width" />
@@ -57,13 +70,14 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="FontStyle" />
-      <RootProperty Name="TextDecorations" />
-      <RootProperty Name="TextAlignment" />
       <RootProperty Name="FocusVisualPrimaryBrush" />
       <RootProperty Name="Foreground" />
-      <RootProperty Name="FontWeight" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="TextAlignment" />
+      <RootProperty Name="FontStyle" />
       <RootProperty Name="MaxLines" />
+      <RootProperty Name="TextDecorations" />
+      <RootProperty Name="FontWeight" />
     </RootType>
     <RootType FullName="GameTimeCM2.AccueilGame" />
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension">
@@ -81,6 +95,21 @@
       <RootProperty Name="Duration" />
       <RootProperty Name="From" />
       <RootProperty Name="To" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
+      <RootProperty Name="CenterY" />
+      <RootProperty Name="CenterX" />
+      <RootProperty Name="TranslateX" />
+      <RootProperty Name="ScaleX" />
+      <RootProperty Name="SkewX" />
+      <RootProperty Name="TranslateY" />
+      <RootProperty Name="Rotation" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.PlaneProjection">
+      <RootProperty Name="RotationX" />
+      <RootProperty Name="RotationZ" />
+      <RootProperty Name="RotationY" />
+      <RootProperty Name="CenterOfRotationX" />
     </RootType>
     <RootType FullName="GameTimeCM2.GameConjugaison" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid" />
@@ -112,13 +141,6 @@
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="GameTimeCM2.MainPage" />
-    <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
-      <RootProperty Name="TranslateX" />
-      <RootProperty Name="TranslateY" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Media.PlaneProjection">
-      <RootProperty Name="RotationX" />
-    </RootType>
     <RootType FullName="GameTimeCM2.View.ViewBeginGameConjugaison" />
     <RootType FullName="GameTimeCM2.ViewRegister" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">

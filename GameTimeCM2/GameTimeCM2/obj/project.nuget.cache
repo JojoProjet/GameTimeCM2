@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0rqqh/KpTegVLcBkfscbmMxrrzHV0THSGi0lOir4f5Y611gxsS6SELWIWp/C0ZV1vZoR3sfwOK7v6wvriLSYBA==",
+  "dgSpecHash": "reL4Xpko9WnnT3FZH8lEMwf5I3jXUf8GDl+9Cr5E2BEWv60jqA6G8Epc5ibrADW2eixqHVItCIo+r/UzseZM7A==",
   "success": true,
   "projectFilePath": "C:\\Users\\jonat\\OneDrive\\Bureau\\trunk\\dev\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2.csproj",
   "expectedPackageFiles": [
@@ -63,7 +63,8 @@
     "C:\\Users\\jonat\\.nuget\\packages\\system.text.encodings.web\\5.0.1\\system.text.encodings.web.5.0.1.nupkg.sha512",
     "C:\\Users\\jonat\\.nuget\\packages\\system.text.json\\5.0.2\\system.text.json.5.0.2.nupkg.sha512",
     "C:\\Users\\jonat\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\jonat\\.nuget\\packages\\win2d.uwp\\1.26.0\\win2d.uwp.1.26.0.nupkg.sha512"
+    "C:\\Users\\jonat\\.nuget\\packages\\win2d.uwp\\1.26.0\\win2d.uwp.1.26.0.nupkg.sha512",
+    "C:\\Users\\jonat\\.nuget\\packages\\xamarin.forms\\5.0.0.2244\\xamarin.forms.5.0.0.2244.nupkg.sha512"
   ],
   "logs": [
     {

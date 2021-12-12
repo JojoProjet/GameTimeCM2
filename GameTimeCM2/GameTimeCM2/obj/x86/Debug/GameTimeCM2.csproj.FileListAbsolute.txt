@@ -161,3 +161,12 @@ C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj
 C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\View\ViewBeginGameConjugaison.g.cs
 C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\View\ViewBeginGameConjugaison.xaml
 C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\View\ViewBeginGameConjugaison.xbf
+C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml
+C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Xamarin.Forms.Core.dll
+C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Xamarin.Forms.Core.pdb
+C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Xamarin.Forms.Platform.UAP.dll
+C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Xamarin.Forms.Platform.UAP.pdb
+C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Xamarin.Forms.Platform.dll
+C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml

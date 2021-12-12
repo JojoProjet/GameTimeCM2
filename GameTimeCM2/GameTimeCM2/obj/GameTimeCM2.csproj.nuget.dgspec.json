@@ -68,6 +68,10 @@
             "Win2D.uwp": {
               "target": "Package",
               "version": "[1.26.0, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2244, )"
             }
           },
           "imports": [

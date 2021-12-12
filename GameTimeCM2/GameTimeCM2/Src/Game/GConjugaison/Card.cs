@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -7,8 +9,10 @@ using System.Threading.Tasks;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace GameTimeCM2.Src.Game.GConjugaison
 {
@@ -35,75 +39,121 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             TranslateY = translateY;
         }
 
-        public DoubleAnimation GetDoubleAnimationCard()
-        {
-            Duration duration = new Duration(TimeSpan.FromMilliseconds(3000));
-            DoubleAnimation doubleAnimation = new DoubleAnimation()
-            {
-                From = -10,
-                To = -190,
-                Duration = duration
-            };
-            return doubleAnimation;
-        }
 
-        public StackPanel Init()
+        public PlaneProjection InitPlaneProjection()
         {
-
-            PlaneProjection planeProjection = new PlaneProjection()
+            return new PlaneProjection()
             {
                 RotationX = -10,
                 RotationY = 0,
                 RotationZ = 0,
                 CenterOfRotationX = 1
             };
+        }
 
-            CompositeTransform compositeTransform = new CompositeTransform()
+        public CompositeTransform InitCompositeTransform()
+        {
+            return new CompositeTransform()
             {
                 Rotation = AngleProps,
                 TranslateX = TranslateX,
                 TranslateY = TranslateY,
             };
+        }
 
+        public CornerRadius InitCornerRadius()
+        {
+            return new CornerRadius()
+            {
+                TopRight = 10,
+                TopLeft = 10,
+                BottomRight = 10,
+                BottomLeft = 10
+            };
+        }
+
+        public ImageBrush InitImageBrush()
+        {
+            const string URI_ASSETS_BRIQUE = "ms-appx:///Assets/AGames/brique.jpg";
+
+            Image image = new Image()
+            {
+                Source = new BitmapImage(new Uri(URI_ASSETS_BRIQUE))
+            };
+
+            return new ImageBrush()
+            {
+                ImageSource = image.Source
+            };
+        }
+             
+        public TextBlock InitTextBlock()
+        {
+            return new TextBlock()
+            {
+                Text = Text,
+                Width = Width,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                TextAlignment = TextAlignment.Center,
+                FontSize = 24,
+                FontStyle = Windows.UI.Text.FontStyle.Italic,
+                TextWrapping = TextWrapping.Wrap
+            };
+        }
+
+        public StackPanel InitCard()
+        {
 
             StackPanel stackPanel= new StackPanel()
             {
                 Name = IdName,
                 Width = Width,
                 Height = Height,
+                IsTapEnabled = true,
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 VerticalAlignment = VerticalAlignment.Stretch,
-                Background = new SolidColorBrush(Colors.Aqua),
-                Orientation = Orientation.Horizontal,
-                Margin = new Thickness(0, 50, 50, 0),
-                Projection = planeProjection,
-                RenderTransform = compositeTransform,
+                Background = InitImageBrush(),
+                Orientation = Orientation.Vertical,
+                Margin = new Thickness(0, -150, 50, 0),
+                Padding = new Thickness(0, 50, 0, 0),
+                BorderThickness = new Thickness(5, 5, 5, 5),
+                CornerRadius = InitCornerRadius(),
+                Projection = InitPlaneProjection(),
+                RenderTransform = InitCompositeTransform(),
             };
 
-            TextBlock textBlock = new TextBlock()
-            {
-                Text = Text
-            };
+            stackPanel.Tapped += new TappedEventHandler(Tapped_CardTapped);
 
-
-            DoubleAnimation animation = GetDoubleAnimationCard();
-
-            Storyboard.SetTargetName(animation, stackPanel.Name);
-            Storyboard.SetTargetProperty(animation, new PropertyPath(PlaneProjection.RotationXProperty.ToString()).ToString());
-
-            Storyboard storyboardCard = new Storyboard();
-            storyboardCard.Children.Add(animation);
-
-            /*stackPanel.Click += delegate(object sender, RoutedEventArgs args)
-            {
-                storyboardCard.Begin();
-            };*/
-
-
-            stackPanel.Children.Add(textBlock);
+            stackPanel.Children.Add(InitTextBlock());
 
             return stackPanel;
 
+        }
+
+        private void Tapped_CardTapped(object sender, TappedRoutedEventArgs e)
+        {
+            StackPanel stackPanel = sender as StackPanel;
+
+            Card card;
+
+            if(Application.Current.Resources.ContainsKey("Card")) 
+            {
+                card = (Card)Application.Current.Resources["Card"];
+                if (card.IdName != IdName)
+                {
+                    Application.Current.Resources["Card"] = this;
+                    stackPanel.BorderBrush = new SolidColorBrush(Colors.Red);
+                } else
+                {
+                    stackPanel.BorderBrush = null;
+                }
+            }
+            else
+            {
+                Application.Current.Resources["Card"] = this;
+            }
+            
         }
 
     }
