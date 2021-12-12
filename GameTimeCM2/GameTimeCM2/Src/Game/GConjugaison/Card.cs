@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
@@ -16,15 +18,28 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace GameTimeCM2.Src.Game.GConjugaison
 {
-    class Card
+    class Card : INotifyPropertyChanged
     {
 
         // Props
-        private int Width = 250;
-        private int Height = 300;
+        private readonly int Width = 250;
+        private readonly int Height = 300;
 
         public string IdName { get; set; }
-        public string Text { get; set; }
+
+
+        private string text;
+
+        public string Text
+        {
+            get => text; 
+            set
+            {
+                text = value;
+                OnPropertyChanged("Text");
+            }
+        }
+
 
         public int AngleProps { get; set; }
         public int TranslateX { get; set; }
@@ -33,12 +48,11 @@ namespace GameTimeCM2.Src.Game.GConjugaison
         public Card(string id, string text, int angleProps, int translateX = 0, int translateY = 0)
         {
             IdName = id;
-            Text = text;
+            this.text = text;
             AngleProps = angleProps;
             TranslateX = translateX;
             TranslateY = translateY;
         }
-
 
         public PlaneProjection InitPlaneProjection()
         {
@@ -86,19 +100,35 @@ namespace GameTimeCM2.Src.Game.GConjugaison
                 ImageSource = image.Source
             };
         }
-             
+
         public TextBlock InitTextBlock()
         {
-            return new TextBlock()
+            
+            TextBlock textblock = new TextBlock()
             {
-                Text = Text,
+                Name = $"Text{IdName}",
+                Text = text,
                 Width = Width,
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center,
                 TextAlignment = TextAlignment.Center,
                 FontSize = 24,
                 FontStyle = Windows.UI.Text.FontStyle.Italic,
-                TextWrapping = TextWrapping.Wrap
+                TextWrapping = TextWrapping.Wrap,
+            };
+
+            return textblock;
+
+        }
+
+        public Binding InitBinding()
+        {
+            return new Binding()
+            {
+                Source = this,
+                Path = new PropertyPath("Text"),
+                UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged,
+                Mode = BindingMode.TwoWay
             };
         }
 
@@ -125,10 +155,21 @@ namespace GameTimeCM2.Src.Game.GConjugaison
 
             stackPanel.Tapped += new TappedEventHandler(Tapped_CardTapped);
 
-            stackPanel.Children.Add(InitTextBlock());
+            TextBlock textBlock = InitTextBlock();
+
+            textBlock.SetBinding(TextBlock.TextProperty, InitBinding());
+
+            stackPanel.Children.Add(textBlock);
 
             return stackPanel;
 
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         private void Tapped_CardTapped(object sender, TappedRoutedEventArgs e)

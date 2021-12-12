@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 namespace GameTimeCM2.Src.Game.GConjugaison
@@ -10,25 +11,35 @@ namespace GameTimeCM2.Src.Game.GConjugaison
     class Game
     {
 
-        private Cards LCards { get; set; }
+        private int Score { get; set; }
+        private bool UserFinishGame { get; set; }
 
+        private Cards LCards { get; set; }
+        private Animations Animations { get; set; }
         private StackPanel StackPanelCards { get; set; }
 
         public Game(StackPanel stackPanel)
         {
             StackPanelCards = stackPanel;
+
             // get the json response question
+
             LCards = new Cards(stackPanel, "resp");
+            Animations = new Animations();
+
+            Score = 0;
+            UserFinishGame = false;
         }
 
         public void Init()
         {
             CreateCards();
-            LCards.DoCardAnimation();
+            CreateAnimationCard();
         }
 
         public void CreateCards()
         {
+
             string card = "Card";
 
             int angleLeft = -10;
@@ -55,6 +66,34 @@ namespace GameTimeCM2.Src.Game.GConjugaison
 
         }
 
+        public void CreateAnimationCard()
+        {
+            LCards.ForEach(card =>
+            {
+                Animation animation = new Animation(card, StackPanelCards);
+                Animations.Add(animation);                
+                animation.CreateAnimation();
+            });
+        }
+
+        public void DoAnimationCard(string side)
+        {
+            LCards.ForEach(card => card.Text = "Popo");
+            Animations.ForEach(animation => animation.AnimateCard(side));
+        }
+
+
+        public void CheckReponse(TextBlock textScore)
+        {
+            Card card = (Card)Application.Current.Resources["Card"];
+            if(card.Text == LCards.Response)
+            {
+                textScore.Text += $"{Score++}";
+            } else
+            {
+                textScore.Text += $"{Score}";
+            }
+        }
 
     }
 }

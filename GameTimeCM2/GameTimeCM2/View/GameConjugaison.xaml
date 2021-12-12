@@ -18,7 +18,7 @@
         <ThemeResource ResourceKey="ComboBoxBackgroundThemeBrush"/>
     </Page.Background>
 
-    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,1,0,0">
+    <StackPanel x:Name="GameConju" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
         <StackPanel>
             <Image Width="150" Height="150" Source="/Assets/AGames/robot.png" HorizontalAlignment="Left" Margin="20,0,0,0" />
@@ -26,52 +26,15 @@
             <Button x:Name="btn_" Width="250" Height="75" FontSize="30" Content="Quitter la partie" HorizontalAlignment="Right" VerticalAlignment="Stretch" Click="Btn_QuitGame" Margin="0,-90,0,30" Background="#B2006BD6"/>
         </StackPanel>
 
-        <TextBlock x:Name="TextQuestion" HorizontalAlignment="Center" Margin="0,75,0,0" Text="La question" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="50" FocusVisualPrimaryBrush="#FF5DFF00" Foreground="#FFE2460C"/>
-
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TextBlock x:Name="TextQuestion" HorizontalAlignment="Center" Margin="0,75,0,0" Text="La question" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="50" FocusVisualPrimaryBrush="#FF5DFF00" Foreground="#FFE2460C"/>
+            <TextBlock x:Name="TextScore" Text="Votre score : " HorizontalAlignment="Left" FontSize="24" Margin="30,-20,0,0" />
+        </StackPanel>
+        
         <StackPanel x:Name="Cards" Orientation="Horizontal"  Height="450" VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,100,0,0">
-
-            <StackPanel IsTapEnabled="True" Tapped="Tapped_CardTapped" x:Name="Card1" Orientation="Vertical" Width="250" Height="300" Margin="0,-150,50,0" Background="#FF1CB2B2"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="5,0,5,0" CornerRadius="10,10,10,10" Visibility="Visible" RequestedTheme="Light" FocusVisualSecondaryBrush="#99E40C0C" FocusVisualPrimaryBrush="Red" Padding="0,50,0,0">
-                <StackPanel.BorderBrush>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <LinearGradientBrush.RelativeTransform>
-                            <CompositeTransform CenterY="0.5" CenterX="0.5" TranslateX="0" ScaleX="5" SkewX="5"/>
-                        </LinearGradientBrush.RelativeTransform>
-                        <LinearGradientBrush.Transform>
-                            <CompositeTransform TranslateX="0" TranslateY="0"/>
-                        </LinearGradientBrush.Transform>
-                        <GradientStop Color="Black"/>
-                        <GradientStop Color="#FFEC1919" Offset="1"/>
-                        <GradientStop Color="#FE0D0101" Offset="0.055"/>
-                        <GradientStop Color="#FE0B0000" Offset="0"/>
-                    </LinearGradientBrush>
-                </StackPanel.BorderBrush>
-
-                <TextBlock Width="250" x:Name="Text1" Text="LZAELAZEL ZALE ZALEAZLELAELZALEALZELAZELAZELAZLEAZLE LAZELZALEZAL EAZL ELAZEL AL" FocusVisualPrimaryBrush="Red" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="24" FontStyle="Italic" MaxLines="5" TextWrapping="Wrap" Margin="0,0,0,0" />
-
-                <StackPanel.Projection>
-                    <PlaneProjection RotationX="-10" RotationZ="0" RotationY="0" CenterOfRotationX="1"/>
-                </StackPanel.Projection>
-                <StackPanel.RenderTransform>
-                    <CompositeTransform Rotation="-10" TranslateX="-25" TranslateY="25"/>
-                </StackPanel.RenderTransform>
-
-
-            </StackPanel>
-
         </StackPanel>
 
-        <StackPanel Orientation="Vertical">
-            <!--<StackPanel x:Name="Card333" Orientation="Horizontal" Width="250" Height="300" Margin="0,0,50,0" Background="Chocolate" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                <TextBlock Text="MHH" FocusVisualPrimaryBrush="Red" />
-                <StackPanel.Projection>
-                    <PlaneProjection RotationX="-10" RotationZ="0" RotationY="0" CenterOfRotationX="1" GlobalOffsetY="-315" GlobalOffsetX="-120" GlobalOffsetZ="0"/>
-                </StackPanel.Projection>
-                <StackPanel.RenderTransform>
-                    <CompositeTransform Rotation="-1" SkewX="0"/>
-                </StackPanel.RenderTransform>
-            </StackPanel>-->
-
-        </StackPanel>
+        <Button Click="Btn_CheckReponse" Content="Valide la réponse !" Background="#33020E44" HorizontalAlignment="Center" Width="200" Height="50" FontSize="22" FontStyle="Italic" />
 
     </StackPanel>
 

@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using System.Windows;
+using Windows.UI.Xaml.Media.Imaging;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,26 +27,43 @@ namespace GameTimeCM2
     public sealed partial class GameConjugaison : Page
     {
 
+        private Game Game { get; set; }
+
         public GameConjugaison()
         {
             this.InitializeComponent();
+            InitBackground();
             InitGame();
+        }
+
+        public void InitBackground()
+        {
+            const string URI_ASSETS_BACK_GAMEE = "ms-appx:///Assets/AGames/BackGameConjugaison.jpg";
+            Image image = new Image() { Source = new BitmapImage(new Uri(URI_ASSETS_BACK_GAMEE)) };
+            ImageBrush imageBrush = new ImageBrush() { ImageSource = image.Source };
+            GameConju.Background = imageBrush;
         }
 
         public void InitGame()
         {
-            Game game = new Game(Cards);
-            game.Init();
+            Game = new Game(Cards);
+            Game.Init();
         }
+
 
         private void Btn_QuitGame(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(AccueilGame));
         }
 
-        private void Tapped_CardTapped(object sender, TappedRoutedEventArgs e)
+
+        private bool ResponseInValidate = true;
+
+        private void Btn_CheckReponse(object sender, RoutedEventArgs e)
         {
-            Text1.Text = "nope";
+            Game.DoAnimationCard(ResponseInValidate ? "Front" : "Back");
+            ResponseInValidate = ResponseInValidate ? false : true;
+            Game.CheckReponse(TextScore);
         }
 
     }
