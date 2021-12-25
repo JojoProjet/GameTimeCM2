@@ -86,6 +86,7 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             };
         }
 
+        // Front Card
         public ImageBrush InitImageBrush()
         {
             const string URI_ASSETS_BRIQUE = "ms-appx:///Assets/AGames/brique.jpg";
@@ -196,6 +197,23 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             }
             
         }
+
+        ///// Back Card /////
+        public ImageBrush BackgroundImageBrushBackCard()
+        {
+            const string uri = "ms-appx:///Assets/AGames/img_back_card.png";
+
+            ImageBrush imageBrush = new ImageBrush()
+            {
+                ImageSource = new Image()
+                {
+                    Source = new BitmapImage(new Uri(uri))
+                }.Source
+            };
+
+            return imageBrush;
+        }
+        ///////////////////////
 
     }
 }

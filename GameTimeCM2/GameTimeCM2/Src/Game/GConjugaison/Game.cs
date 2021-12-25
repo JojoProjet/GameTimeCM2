@@ -24,6 +24,7 @@ namespace GameTimeCM2.Src.Game.GConjugaison
 
             // get the json response question
 
+
             LCards = new Cards(stackPanel, "resp");
             Animations = new Animations();
 
@@ -35,6 +36,11 @@ namespace GameTimeCM2.Src.Game.GConjugaison
         {
             CreateCards();
             CreateAnimationCard();
+        }
+
+        public void setDataJson()
+        {
+
         }
 
         public void CreateCards()

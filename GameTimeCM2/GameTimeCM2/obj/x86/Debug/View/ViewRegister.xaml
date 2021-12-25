@@ -8,17 +8,16 @@
     mc:Ignorable="d">
 
     <Page.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="Black"/>
-            <GradientStop Color="White" Offset="1"/>
-            <GradientStop Color="#FE0E0E0E" Offset="0"/>
-        </LinearGradientBrush>
+        <ImageBrush ImageSource="/Assets/AGames/b2.jpg"/>
     </Page.Background>
 
-    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,200,0,0">
-            <Popup x:ConnectionId='2' VerticalOffset="10" HorizontalOffset="250" x:Name="ErrorPopup">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+            <StackPanel Background="#E5000000" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Padding="0,0,0,30" MaxWidth="800" CornerRadius="30,30,30,30" Width="600">
+
+                <Popup x:ConnectionId='2' VerticalOffset="10" HorizontalOffset="250" x:Name="ErrorPopup">
                 <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
                 BorderThickness="2" Width="300" Height="300" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
@@ -27,34 +26,35 @@
                         <Button x:ConnectionId='12' Content="Fermer"                           HorizontalAlignment="Center"/>
                     </StackPanel>
                 </Border>
-            </Popup>
+                </Popup>
 
-            <Popup x:ConnectionId='3' VerticalOffset="10" HorizontalOffset="250" x:Name="SuccessPopup">
-                <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
-                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
-                BorderThickness="2" Width="300" Height="300" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <TextBlock x:ConnectionId='9' x:Name="TextSuccess" FontSize="24.667" HorizontalAlignment="Center"/>
-                        <Button x:ConnectionId='10' Content="Se connectez"                             HorizontalAlignment="Center"/>
-                    </StackPanel>
-                </Border>
-            </Popup>
+                <Popup x:ConnectionId='3' VerticalOffset="10" HorizontalOffset="250" x:Name="SuccessPopup">
+                    <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                    Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                    BorderThickness="2" Width="300" Height="300" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock x:ConnectionId='9' x:Name="TextSuccess" FontSize="24.667" HorizontalAlignment="Center"/>
+                            <Button x:ConnectionId='10' Content="Se connectez"                             HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+                </Popup>
 
-            <StackPanel Width="800" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Black" Padding="0,0,0,30">
-
-                <TextBlock x:ConnectionId='4' x:Name="TitleRegister" Text="Inscription" TextWrapping="Wrap" FontSize="70" Margin="0,0,0,50" FontStyle="Italic" TextDecorations="Underline" TextAlignment="Center" FocusVisualPrimaryBrush="{x:Null}" Foreground="#FF073A83"/>
+                <TextBlock x:ConnectionId='4' x:Name="TitleRegister" Text="Inscription" TextWrapping="Wrap" FontSize="70" Margin="0,0,0,50" FontStyle="Italic" TextDecorations="Underline" TextAlignment="Center" FocusVisualPrimaryBrush="{x:Null}" Foreground="Gray"/>
 
                 <TextBox x:ConnectionId='5' x:Name="IName" PlaceholderText="Nom" Width="500" Height="45" Margin="0,0,0,30" TextAlignment="Justify" TextWrapping="NoWrap" />
                 <TextBox x:ConnectionId='6' x:Name="IMotDePasse" PlaceholderText="Mot de passe" Width="500" Height="45" TextWrapping="NoWrap" />
 
-                <Button x:ConnectionId='7' x:Name="BtnRegister" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="55" FontSize="30" Content="S'inscrire"                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0" FocusVisualPrimaryBrush="#FF00FFF3"/>
-                <Button x:ConnectionId='8' Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="55" FontSize="30" Content="Retour"                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0" FocusVisualPrimaryBrush="#FF00FFF3"/>
+                <Button x:ConnectionId='7' x:Name="BtnRegister" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="500" Height="55" FontSize="30" Content="S'inscrire"                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0" FocusVisualPrimaryBrush="#FF00FFF3"/>
+                <Button x:ConnectionId='8' Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="500" Height="55" FontSize="30" Content="Retour"                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,30,0,0" FocusVisualPrimaryBrush="#FF00FFF3"/>
 
             </StackPanel>
+            
         </StackPanel>
 
-        <Image Width="400" Height="400" Source="/Assets/AGames/robot.png" Margin="0,-60,20,0" HorizontalAlignment="Right" />
-
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+            <Image Source="/Assets/AGames/robot.png" HorizontalAlignment="Left" VerticalAlignment="Stretch" Height="300" />
+        </StackPanel>
+        
     </StackPanel>
 
 </Page>

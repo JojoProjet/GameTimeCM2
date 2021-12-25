@@ -8,6 +8,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace GameTimeCM2.Src.Game.GConjugaison
 {
@@ -78,7 +79,14 @@ namespace GameTimeCM2.Src.Game.GConjugaison
 
                 double rotationX = (double)stackPanel.Projection.GetValue(PlaneProjection.RotationXProperty);
 
-                if (rotationX < -90) stackPanel.Background = new SolidColorBrush(Colors.Red);
+                // Change le background par rapport à la rotationX
+                if (rotationX < -90)
+                {
+                    stackPanel.BorderBrush = new SolidColorBrush(Colors.Black);
+                    stackPanel.Background = new SolidColorBrush(Colors.White);
+                    stackPanel.Background = Card.BackgroundImageBrushBackCard();
+                    Card.Text = "";
+                }
                 else stackPanel.Background = Card.InitImageBrush();
 
                 BoolAnimate = BoolAnimate ? false : true;

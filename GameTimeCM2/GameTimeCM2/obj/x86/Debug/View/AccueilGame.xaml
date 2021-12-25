@@ -1,64 +1,100 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
+    x:Name="AccueilGamePage"
     x:Class="GameTimeCM2.AccueilGame"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:GameTimeCM2"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:Controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d" RenderTransformOrigin="0.5,0.5">
 
     <Page.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="Black"/>
-            <GradientStop Color="White" Offset="1"/>
-            <GradientStop Color="#FE0E0E0E" Offset="0"/>
-        </LinearGradientBrush>
+        <ImageBrush ImageSource="/Assets/AGames/b4.jpg"/>
     </Page.Background>
 
-    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <StackPanel x:ConnectionId='2' x:Name="StackPanelPage" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                     >
 
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <Image Width="150" Height="150" Source="/Assets/AGames/robot.png" HorizontalAlignment="Left" Margin="20,0,0,0" />
-            <Button x:ConnectionId='8' x:Name="btn_" Width="250" Height="75" FontSize="30" Content="Voir les scores" HorizontalAlignment="Right" VerticalAlignment="Stretch"                       Margin="0,-100,0,30"/>
+        <StackPanel.RenderTransform>
+            <CompositeTransform TranslateX="0" TranslateY="0"/>
+        </StackPanel.RenderTransform>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0,0,0,25" RenderTransformOrigin="0.5,0.5">
+
+            <Image x:ConnectionId='8' IsTapEnabled="True"                       Width="150" Height="150" Source="/Assets/AGames/robot.png" HorizontalAlignment="Left" Margin="20,0,0,0" />
+
+            <Image Width="275" Height="150" Source="/Assets/AGames/gametime.png" HorizontalAlignment="Center" Margin="0,-120,0,0" />
+
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Stretch" Margin="0,-180,0,0">
+
+                <TextBlock x:ConnectionId='9' x:Name="Title" />
+
+                <Border x:ConnectionId='10'
+                    x:Name="ImgInfo"
+                    IsTapEnabled="True"
+                    Width="100" Height="100"
+                                              
+                    CornerRadius="5"                                                                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,20,0"
+            >
+                    <Border.Background>
+                        <ImageBrush ImageSource="/Assets/AGames/info.png" />
+                    </Border.Background>
+                </Border>
+
+                <Border x:ConnectionId='11'
+                    x:Name="ImgTopTen"
+                    IsTapEnabled="True"
+                    Width="100" Height="100"
+                    CornerRadius="5"                                                                                                
+            >
+                    <Border.Background>
+                        <ImageBrush ImageSource="/Assets/AGames/top10.png" />
+                    </Border.Background>
+                </Border>
+
+            </StackPanel>
+
         </StackPanel>
-        
-        <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Center">
-            <TextBlock x:ConnectionId='7' x:Name="Title" TextWrapping="Wrap" FontSize="70" Margin="0,0,0,30"/>
-        </StackPanel>
-        
-        <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Center">
-            <TextBlock x:ConnectionId='6' x:Name="ExpainButGame" Text="Expliquez le but du jeu" TextWrapping="Wrap" FontSize="35" Margin="0,0,0,30"/>
-        </StackPanel>
-        
+
         <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Center">
-            
+
+            <Controls:Loading x:ConnectionId='4' x:Name="LoadPbar" IsLoading="False" Margin="-46,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="Azure">
+                <StackPanel Orientation="Horizontal" Padding="12">
+                    <Grid Height="134" Width="76">
+                        <Image Source="Assets/cscorner.png" Height="50" Margin="0,42,0,42" />
+                        <ProgressBar IsIndeterminate="True" Width="200" Foreground="DarkGreen" />
+                    </Grid>
+                    <TextBlock Text="Loading... Please wait.. :)" Foreground="Black" VerticalAlignment="Center" Height="24" Width="202" />
+                </StackPanel>
+            </Controls:Loading>
+
             <StackPanel Margin="30,0,30,0">
                 <Image Width="200" Height="200" Source="/Assets/AGames/pendu.png" />
-                <Button x:ConnectionId='5' x:Name="btn_pendu" Width="250" Height="75" FontSize="30" Content="Pendu" HorizontalAlignment="Center" VerticalAlignment="Bottom"                             Margin="0,0,0,30"/>
+                <Button x:ConnectionId='7' x:Name="btn_pendu" Width="250" Height="75" FontSize="30" Content="Pendu" HorizontalAlignment="Center" VerticalAlignment="Bottom"                             Margin="0,0,0,30"/>
             </StackPanel>
-            
+
             <StackPanel Margin="30,0,30,0">
                 <Image Width="200" Height="200" Source="/Assets/AGames/memoire.png" />
-                <Button x:ConnectionId='4' x:Name="btn_memoire" Width="250" Height="75" FontSize="30" Content="Memoire" HorizontalAlignment="Center" VerticalAlignment="Bottom"                               Margin="0,0,0,30"/>
+                <Button x:ConnectionId='6' x:Name="btn_memoire" Width="250" Height="75" FontSize="30" Content="Memoire" HorizontalAlignment="Center" VerticalAlignment="Bottom"                               Margin="0,0,0,30"/>
             </StackPanel>
-            
+
             <StackPanel Margin="30,0,30,0">
                 <Image Width="200" Height="200" Source="/Assets/AGames/conjugaison.png" />
-                <Button x:ConnectionId='3' x:Name="btn_conjugaison" Width="250" Height="75" FontSize="30" Content="Conjugaison" HorizontalAlignment="Center" VerticalAlignment="Bottom"                                   Margin="0,0,0,30"/>
+                <Button x:ConnectionId='5' x:Name="btn_conjugaison" Width="250" Height="75" FontSize="30" Content="Conjugaison" HorizontalAlignment="Center" VerticalAlignment="Bottom"                                   Margin="0,0,0,30"/>
             </StackPanel>
-            
+
         </StackPanel>
-        
+
         <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Center">
-           
+
             <StackPanel>
                 <Image Width="200" Height="200" Source="/Assets/AGames/escapegame.jpg" />
-                <Button x:ConnectionId='2' x:Name="btn_escape_game" Width="250" Height="75" FontSize="30" Content="Escape Game" HorizontalAlignment="Center" VerticalAlignment="Bottom"                              Margin="0,0,0,30"/>
+                <Button x:ConnectionId='3' x:Name="btn_escape_game" Width="250" Height="75" FontSize="30" Content="Escape Game" HorizontalAlignment="Center" VerticalAlignment="Bottom"                              Margin="0,0,0,30"/>
             </StackPanel>
-            
+
         </StackPanel>
 
     </StackPanel>
-    
+
 </Page>
 

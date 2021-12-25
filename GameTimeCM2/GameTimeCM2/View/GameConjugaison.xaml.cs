@@ -32,17 +32,17 @@ namespace GameTimeCM2
         public GameConjugaison()
         {
             this.InitializeComponent();
-            InitBackground();
+            //InitBackground();
             InitGame();
         }
 
-        public void InitBackground()
-        {
-            const string URI_ASSETS_BACK_GAMEE = "ms-appx:///Assets/AGames/BackGameConjugaison.jpg";
-            Image image = new Image() { Source = new BitmapImage(new Uri(URI_ASSETS_BACK_GAMEE)) };
-            ImageBrush imageBrush = new ImageBrush() { ImageSource = image.Source };
-            GameConju.Background = imageBrush;
-        }
+        //public void InitBackground()
+        //{
+        //    const string URI_ASSETS_BACK_GAMEE = "ms-appx:///Assets/AGames/BackGameConjugaison.jpg";
+        //    Image image = new Image() { Source = new BitmapImage(new Uri(URI_ASSETS_BACK_GAMEE)) };
+        //    ImageBrush imageBrush = new ImageBrush() { ImageSource = image.Source };
+        //    GameConju.Background = imageBrush;
+        //}
 
         public void InitGame()
         {

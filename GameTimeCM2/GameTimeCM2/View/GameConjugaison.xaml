@@ -15,7 +15,7 @@
     </Page.Resources>
 
     <Page.Background>
-        <ThemeResource ResourceKey="ComboBoxBackgroundThemeBrush"/>
+        <ImageBrush ImageSource="/Assets/AGames/backBeginConjuGameInit.jpg" />
     </Page.Background>
 
     <StackPanel x:Name="GameConju" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">

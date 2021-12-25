@@ -40,7 +40,6 @@ namespace GameTimeCM2
             BtnRegister.IsEnabled = enable;
             BtnLaunchGame.IsEnabled = enable;
             ErrorPopup.IsOpen = !enable;
-
         }
 
         private void Btn_Register(object sender, RoutedEventArgs e)
@@ -66,5 +65,12 @@ namespace GameTimeCM2
         {
             UBoolEnable(true);
         }
+
+        private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (Page.ActualHeight < 530) Page.Height = 530;
+            if (Page.ActualWidth < 1020) Page.Width = 1020;
+        }
+
     }
 }

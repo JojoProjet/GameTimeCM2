@@ -123,6 +123,7 @@
     <Compile Include="Src\Game\GConjugaison\Game.cs" />
     <Compile Include="Src\Services\AccountService.cs" />
     <Compile Include="Src\Services\UserService.cs" />
+    <Compile Include="Src\Utils\Animation.cs" />
     <Compile Include="Src\Utils\Component.cs" />
     <Compile Include="View\AccueilGame.xaml.cs">
       <DependentUpon>AccueilGame.xaml</DependentUpon>
@@ -168,14 +169,24 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\AGames\b2.jpg" />
+    <Content Include="Assets\AGames\b3.jpg" />
+    <Content Include="Assets\AGames\b4.jpg" />
+    <Content Include="Assets\AGames\backBeginConjuGame.jpg" />
+    <Content Include="Assets\AGames\backBeginConjuGameInit.jpg" />
     <Content Include="Assets\AGames\BackGameConjugaison.jpg" />
+    <Content Include="Assets\AGames\background_all_1.jpg" />
     <Content Include="Assets\AGames\brique.jpg" />
     <Content Include="Assets\AGames\conjugaison.png" />
     <Content Include="Assets\AGames\escapegame.jpg" />
+    <Content Include="Assets\AGames\gametime.png" />
+    <Content Include="Assets\AGames\img_back_card.png" />
+    <Content Include="Assets\AGames\info.png" />
     <Content Include="Assets\AGames\memoire.png" />
     <Content Include="Assets\AGames\nuage.png" />
     <Content Include="Assets\AGames\pendu.png" />
     <Content Include="Assets\AGames\robot.png" />
+    <Content Include="Assets\AGames\top10.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -190,6 +201,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Ressources\AnimationRessources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AccueilGame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

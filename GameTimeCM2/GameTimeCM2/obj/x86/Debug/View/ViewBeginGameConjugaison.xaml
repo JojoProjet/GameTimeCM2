@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Page.Background>
-        <ThemeResource ResourceKey="ComboBoxBackgroundThemeBrush"/>
+        <ImageBrush ImageSource="/Assets/AGames/backBeginConjuGameInit.jpg" />
     </Page.Background>
 
     <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
@@ -16,22 +16,19 @@
         <TextBlock Text="Jeu De Conjugasion" FontSize="48" FontStyle="Italic" FontWeight="Bold" TextDecorations="Underline" HorizontalAlignment="Center" Margin="0,50,0,50"/>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <StackPanel Orientation="Vertical" Width="500" Margin="0,0,50,0" Padding="10,0,9,0">
-                <StackPanel.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black"/>
-                        <GradientStop Color="White" Offset="1"/>
-                        <GradientStop Color="#FE0E0E0E" Offset="0"/>
-                    </LinearGradientBrush>
-                </StackPanel.Background>
+
+            <StackPanel Orientation="Vertical" Width="500" Margin="0,0,50,0" Padding="10,0,9,0" Background="#CC894105">
+
                 <TextBlock Text="Ah, les verbes, les groupes, les temps, les pronoms,… Des souvenirs du passé remontent à la surface avec leur lot d'émotions agréables ou désagréables selon l'expérience vécue des conjugaisons…" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" MaxLines="5" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" Margin="0,0,0,10" TextAlignment="Justify" />
                 <TextBlock Text="Régles du Jeu :" FontSize="20" FontWeight="Bold" TextDecorations="Underline" Margin="0,0,0,10" />
                 <TextBlock Text="Deux niveaux de jeu. La prépration est la suivante 4 Cartes sont distribuées aux joueurs, le reste des cartes sauf une est retourné et fera office de pioche. La carte supplémentaire est posée face visible à côté de la pioche" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" MaxLines="5" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" Margin="0,0,0,10" TextAlignment="Justify" />
                 <TextBlock Text="Niveau 1 :" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" MaxLines="5" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" Margin="0,0,0,10" />
                 <TextBlock Text="Cette carte a un verbe conju" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" MaxLines="5" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" Margin="0,0,0,10" />
+
             </StackPanel>
-            
+
             <StackPanel Orientation="Vertical" Margin="50,0,0,0">
+
                 <Image Width="400" Height="250" Source="/Assets/AGames/nuage.png" />
                 <Button x:ConnectionId='2' Content="C'est Parti !" HorizontalAlignment="Center" VerticalAlignment="Stretch" RenderTransformOrigin="0.5,0.5" FontSize="36"                        >
                     <Button.RenderTransform>
@@ -42,9 +39,12 @@
                     </Button.Projection>
                 </Button>
                 <Image Width="400" Height="400" Source="/Assets/AGames/robot.png" Margin="0,-50,0,0" />
+
             </StackPanel>
+
         </StackPanel>
 
     </StackPanel>
+
 </Page>
 
