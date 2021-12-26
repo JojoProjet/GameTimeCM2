@@ -101,7 +101,8 @@ namespace GameTimeCM2.Src.Game.GConjugaison
 
         public void DoAnimationCard(string side)
         {
-            IdDataJson++;
+
+            // Value de data < Data.Count Stop it and anim win or loose and set in db
 
             // Nouvelle valeur de text
             LCards.ElementAt(0).Text = Data.Conjugaison1;
@@ -111,24 +112,24 @@ namespace GameTimeCM2.Src.Game.GConjugaison
 
             TextBlockQuestion.Text = Data.Question;
 
-            if("front") 
-                else if ("back") ...
-
             LCards.Response = Data.Response;
 
             Animations.ForEach(animation => animation.AnimateCard(side));
         }
 
 
-        public void CheckReponse(TextBlock textScore)
+        public bool CheckReponse(TextBlock textScore)
         {
+            IdDataJson++;
             Card card = (Card)Application.Current.Resources[Constants.APPLICATION_RESSOURCES_CARD];
             if(card.Text == LCards.Response)
             {
                 textScore.Text += $"{Score++}";
+                return true;
             } else
             {
                 textScore.Text += $"{Score}";
+                return false;
             }
         }
 

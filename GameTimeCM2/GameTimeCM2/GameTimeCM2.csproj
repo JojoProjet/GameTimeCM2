@@ -180,6 +180,7 @@
     <Content Include="Assets\AGames\brique.jpg" />
     <Content Include="Assets\AGames\conjugaison.png" />
     <Content Include="Assets\AGames\escapegame.jpg" />
+    <Content Include="Assets\AGames\faux.png" />
     <Content Include="Assets\AGames\gametime.png" />
     <Content Include="Assets\AGames\img_back_card.png" />
     <Content Include="Assets\AGames\info.png" />
@@ -188,6 +189,7 @@
     <Content Include="Assets\AGames\pendu.png" />
     <Content Include="Assets\AGames\robot.png" />
     <Content Include="Assets\AGames\top10.png" />
+    <Content Include="Assets\AGames\vrai.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

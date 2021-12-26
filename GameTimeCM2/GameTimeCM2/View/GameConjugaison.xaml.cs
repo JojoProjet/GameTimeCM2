@@ -1,4 +1,5 @@
 ﻿using GameTimeCM2.Src.Game.GConjugaison;
+using GameTimeCM2.Src.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,7 +29,7 @@ namespace GameTimeCM2
     public sealed partial class GameConjugaison : Page
     {
 
-        private bool ResponseInValidate = true;
+        private bool ResponseInValidate = false;
 
         private Game Game { get; set; }
 
@@ -52,10 +53,35 @@ namespace GameTimeCM2
 
         private void Btn_CheckReponse(object sender, RoutedEventArgs e)
         {
-            Game.DoAnimationCard(ResponseInValidate ? Constants.ANIMATE_SIDE_FRONT : Constants.ANIMATE_SIDE_BACK);
+            Game.DoAnimationCard(ResponseInValidate ? Constants.ANIMATE_SIDE_BACK : Constants.ANIMATE_SIDE_FRONT);
             // Animation reponse faux ou juste
+
+            if(ResponseInValidate)
+            {
+                TextQuestion.Visibility = Visibility.Visible;
+                Vrai.Visibility = Visibility.Collapsed;
+                Faux.Visibility = Visibility.Collapsed;
+            } 
+            else
+            {
+                TextQuestion.Visibility = Visibility.Collapsed;
+                bool check = Game.CheckReponse(TextScore);
+                if (check)
+                {
+                    Vrai.Visibility = Visibility.Visible;
+                    Faux.Visibility = Visibility.Collapsed;
+                    Src.Utils.Animation.AnimateEmoji(Page, Vrai).Begin();
+                }
+                else
+                {
+                    Vrai.Visibility = Visibility.Collapsed;
+                    Faux.Visibility = Visibility.Visible;
+                    Src.Utils.Animation.AnimateEmoji(Page, Faux).Begin();
+                }
+            }
+
             ResponseInValidate = ResponseInValidate ? false : true;
-            Game.CheckReponse(TextScore);
+
         }
 
     }

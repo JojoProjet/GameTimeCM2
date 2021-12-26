@@ -199,6 +199,9 @@
     <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\conjugaison.png">
       <PackagePath>Assets\AGames\conjugaison.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\faux.png">
+      <PackagePath>Assets\AGames\faux.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\gametime.png">
       <PackagePath>Assets\AGames\gametime.png</PackagePath>
     </AppxPackagedFile>
@@ -222,6 +225,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\top10.png">
       <PackagePath>Assets\AGames\top10.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\vrai.png">
+      <PackagePath>Assets\AGames\vrai.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
