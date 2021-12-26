@@ -5,10 +5,6 @@
     <RootType FullName="Windows.UI.Xaml.ResourceDictionary" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.Storyboard">
       <RootProperty Name="Children" />
-      <RootMethod Name="GetTargetProperty" />
-      <RootMethod Name="SetTargetProperty" />
-      <RootMethod Name="GetTargetName" />
-      <RootMethod Name="SetTargetName" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation">
       <RootProperty Name="TargetName" />
@@ -17,7 +13,6 @@
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
-      <RootProperty Name="Resources" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootEvent Name="SizeChanged" />
@@ -126,11 +121,6 @@
     <RootType FullName="GameTimeCM2.AccueilGame" />
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="GameTimeCM2.EscapeGame" />
-    <RootType FullName="Windows.UI.Xaml.Media.Animation.DoubleAnimation">
-      <RootProperty Name="Duration" />
-      <RootProperty Name="From" />
-      <RootProperty Name="To" />
-    </RootType>
     <RootType FullName="GameTimeCM2.GameConjugaison" />
     <RootType FullName="GameTimeCM2.GameMemoire" />
     <RootType FullName="GameTimeCM2.GamePendu" />

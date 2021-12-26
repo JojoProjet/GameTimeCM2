@@ -7,13 +7,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" d:DesignHeight="1318">
 
-
-    <Page.Resources>
-        <Storyboard x:Name="StoryCard">
-            <DoubleAnimation Duration="0:0:10" From="-10" To="-190" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="Card" d:IsOptimized="True"/>
-        </Storyboard>
-    </Page.Resources>
-
     <Page.Background>
         <ImageBrush ImageSource="/Assets/AGames/backBeginConjuGameInit.jpg" />
     </Page.Background>

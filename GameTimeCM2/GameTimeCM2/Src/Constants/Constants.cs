@@ -25,5 +25,24 @@ namespace GameTimeCM2.Src
         public static string DB_SELECT_USERS = "SELECT * FROM User;";
         public static string DB_INSERT_USER = "INSERT INTO User(Name, Password) VALUES(?name, ?password)";
 
+       
+        ///////////// Card /////////////
+
+        // Ressources Application Card
+        public static string APPLICATION_RESSOURCES_CARD = "Card";
+        private const string RESSOURCES_ANIMATE_CARD_FRONT = "AnimateCardFront";
+        private const string RESSOURCES_ANIMATE_CARD_BACK = "AnimateCardBack";
+
+        // Animate Card
+        public const int ANIMATE_DURATION_MILLI_SECONDES = 1500;
+        public const string ANIMATE_SIDE_FRONT = "Front";
+        public const string ANIMATE_SIDE_BACK = "Back";
+
+        // Target Property Card
+        public const string TARGET_PROPERTY_PROJECTION_PLANE_PROJECTION_ROTATION_X = "(UIElement.Projection).(PlaneProjection.RotationX)";
+
+
+        //////////////////////////////
+
     }
 }

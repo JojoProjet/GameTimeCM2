@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using System.Windows;
 using Windows.UI.Xaml.Media.Imaging;
+using GameTimeCM2.Src;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,26 +28,19 @@ namespace GameTimeCM2
     public sealed partial class GameConjugaison : Page
     {
 
+        private bool ResponseInValidate = true;
+
         private Game Game { get; set; }
 
         public GameConjugaison()
         {
             this.InitializeComponent();
-            //InitBackground();
             InitGame();
         }
 
-        //public void InitBackground()
-        //{
-        //    const string URI_ASSETS_BACK_GAMEE = "ms-appx:///Assets/AGames/BackGameConjugaison.jpg";
-        //    Image image = new Image() { Source = new BitmapImage(new Uri(URI_ASSETS_BACK_GAMEE)) };
-        //    ImageBrush imageBrush = new ImageBrush() { ImageSource = image.Source };
-        //    GameConju.Background = imageBrush;
-        //}
-
         public void InitGame()
         {
-            Game = new Game(Cards);
+            Game = new Game(Cards, TextQuestion);
             Game.Init();
         }
 
@@ -56,12 +50,10 @@ namespace GameTimeCM2
             Frame.Navigate(typeof(AccueilGame));
         }
 
-
-        private bool ResponseInValidate = true;
-
         private void Btn_CheckReponse(object sender, RoutedEventArgs e)
         {
-            Game.DoAnimationCard(ResponseInValidate ? "Front" : "Back");
+            Game.DoAnimationCard(ResponseInValidate ? Constants.ANIMATE_SIDE_FRONT : Constants.ANIMATE_SIDE_BACK);
+            // Animation reponse faux ou juste
             ResponseInValidate = ResponseInValidate ? false : true;
             Game.CheckReponse(TextScore);
         }

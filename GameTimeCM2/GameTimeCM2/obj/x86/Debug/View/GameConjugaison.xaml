@@ -7,34 +7,27 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" d:DesignHeight="1318">
 
-
-    <Page.Resources>
-        <Storyboard x:ConnectionId='2' x:Name="StoryCard">
-            <DoubleAnimation Duration="0:0:10" From="-10" To="-190" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="Card" d:IsOptimized="True"/>
-        </Storyboard>
-    </Page.Resources>
-
     <Page.Background>
         <ImageBrush ImageSource="/Assets/AGames/backBeginConjuGameInit.jpg" />
     </Page.Background>
 
-    <StackPanel x:ConnectionId='3' x:Name="GameConju" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <StackPanel x:ConnectionId='2' x:Name="GameConju" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
         <StackPanel>
             <Image Width="150" Height="150" Source="/Assets/AGames/robot.png" HorizontalAlignment="Left" Margin="20,0,0,0" />
             <TextBlock HorizontalAlignment="Center" Margin="0,-100,0,0" Text="Jeu de conjugaison" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="72" FontStyle="Italic" TextDecorations="Underline" FocusVisualPrimaryBrush="White" Foreground="#FF00B1CD"/>
-            <Button x:ConnectionId='8' x:Name="btn_" Width="250" Height="75" FontSize="30" Content="Quitter la partie" HorizontalAlignment="Right" VerticalAlignment="Stretch"                      Margin="0,-90,0,30" Background="#B2006BD6"/>
+            <Button x:ConnectionId='7' x:Name="btn_" Width="250" Height="75" FontSize="30" Content="Quitter la partie" HorizontalAlignment="Right" VerticalAlignment="Stretch"                      Margin="0,-90,0,30" Background="#B2006BD6"/>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <TextBlock x:ConnectionId='6' x:Name="TextQuestion" HorizontalAlignment="Center" Margin="0,75,0,0" Text="La question" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="50" FocusVisualPrimaryBrush="#FF5DFF00" Foreground="#FFE2460C"/>
-            <TextBlock x:ConnectionId='7' x:Name="TextScore" Text="Votre score : " HorizontalAlignment="Left" FontSize="24" Margin="30,-20,0,0" />
+            <TextBlock x:ConnectionId='5' x:Name="TextQuestion" HorizontalAlignment="Center" Margin="0,75,0,0" Text="La question" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="50" FocusVisualPrimaryBrush="#FF5DFF00" Foreground="#FFE2460C"/>
+            <TextBlock x:ConnectionId='6' x:Name="TextScore" Text="Votre score : " HorizontalAlignment="Left" FontSize="24" Margin="30,-20,0,0" />
         </StackPanel>
         
-        <StackPanel x:ConnectionId='4' x:Name="Cards" Orientation="Horizontal"  Height="450" VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,100,0,0">
+        <StackPanel x:ConnectionId='3' x:Name="Cards" Orientation="Horizontal"  Height="450" VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,100,0,0">
         </StackPanel>
 
-        <Button x:ConnectionId='5'                          Content="Valide la réponse !" Background="#33020E44" HorizontalAlignment="Center" Width="200" Height="50" FontSize="22" FontStyle="Italic" />
+        <Button x:ConnectionId='4'                          Content="Valide la réponse !" Background="#33020E44" HorizontalAlignment="Center" Width="200" Height="50" FontSize="22" FontStyle="Italic" />
 
     </StackPanel>
 

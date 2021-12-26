@@ -28,16 +28,15 @@ namespace GameTimeCM2.Src.Game.GConjugaison
         public const string ANIMATE_SIDE_FRONT = "Front";
         public const string ANIMATE_SIDE_BACK = "Back";
 
-        private bool BoolAnimate { get; set; }
 
         public Animation(Card card, StackPanel stackPanelCards)
         {
             Card = card;
             StackPaneLCards = stackPanelCards;
-            BoolAnimate = true;
         }
 
         private string GetStringAnimationCardFrontIdName() => $"{RESSOURCES_ANIMATE_CARD_FRONT}{Card.IdName}";
+
         private string GetStringAnimationCardBackIdName() => $"{RESSOURCES_ANIMATE_CARD_BACK}{Card.IdName}";
 
         public void CreateAnimation()
@@ -59,7 +58,11 @@ namespace GameTimeCM2.Src.Game.GConjugaison
 
         public void AnimateCard(string animateSide)
         {
-            Storyboard story = StackPaneLCards.Resources[animateSide == ANIMATE_SIDE_FRONT ? GetStringAnimationCardFrontIdName() : GetStringAnimationCardBackIdName()] as Storyboard;
+            Storyboard story = StackPaneLCards.Resources[animateSide == ANIMATE_SIDE_FRONT 
+                ? GetStringAnimationCardFrontIdName() 
+                : GetStringAnimationCardBackIdName()
+            ] as Storyboard;
+
             story.Begin();
         }
 
@@ -68,16 +71,20 @@ namespace GameTimeCM2.Src.Game.GConjugaison
         {
             Duration duration = new Duration(TimeSpan.FromMilliseconds(MilliSecondes));
 
-            DoubleAnimation doubleAnimation = new DoubleAnimation();
+            DoubleAnimation doubleAnimation = new DoubleAnimation()
+            {
+                From = from,
+                To = to,
+                Duration = duration
+            };
 
-            doubleAnimation.From = from;
-            doubleAnimation.To = to;
-            doubleAnimation.Duration = duration;
             doubleAnimation.Completed += (s, e) =>
             {
                 StackPanel stackPanel = (StackPanel)stack.FindName(Card.IdName);
 
                 double rotationX = (double)stackPanel.Projection.GetValue(PlaneProjection.RotationXProperty);
+
+                string cardTextDefaultBackCard = "";
 
                 // Change le background par rapport à la rotationX
                 if (rotationX < -90)
@@ -85,14 +92,9 @@ namespace GameTimeCM2.Src.Game.GConjugaison
                     stackPanel.BorderBrush = new SolidColorBrush(Colors.Black);
                     stackPanel.Background = new SolidColorBrush(Colors.White);
                     stackPanel.Background = Card.BackgroundImageBrushBackCard();
-                    Card.Text = "";
+                    Card.Text = cardTextDefaultBackCard;
                 }
-                else stackPanel.Background = Card.InitImageBrush();
-
-                BoolAnimate = BoolAnimate ? false : true;
-                //boolAnimate == false ? 
-                //    stackPanel.Background = new SolidColorBrush(Colors.Red) : 
-                //    stackPanel.Background = Card.InitImageBrush();
+                else stackPanel.Background = Card.PropertyImageBrush();
             };
 
             return doubleAnimation;
@@ -101,8 +103,8 @@ namespace GameTimeCM2.Src.Game.GConjugaison
 
         public Storyboard GetAnimateCard(DoubleAnimation animation)
         {
-
             Storyboard storyboardCard = new Storyboard();
+
             storyboardCard.Children.Add(animation);
 
             Storyboard.SetTargetName(animation, Card.IdName);
@@ -121,7 +123,6 @@ namespace GameTimeCM2.Src.Game.GConjugaison
                 stackPanel.Background = new SolidColorBrush(Colors.Red);
             }
         }
-
 
     }
 }

@@ -120,6 +120,7 @@
     <Compile Include="Src\Game\GConjugaison\Animations.cs" />
     <Compile Include="Src\Game\GConjugaison\Card.cs" />
     <Compile Include="Src\Game\GConjugaison\Cards.cs" />
+    <Compile Include="Src\Game\GConjugaison\Data.cs" />
     <Compile Include="Src\Game\GConjugaison\Game.cs" />
     <Compile Include="Src\Services\AccountService.cs" />
     <Compile Include="Src\Services\UserService.cs" />
@@ -272,9 +273,15 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Json\" />
     <Folder Include="Src\Game\GEscapeGame\" />
     <Folder Include="Src\Game\GMemoire\" />
     <Folder Include="Src\Game\GPendu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ressources\gameConjugaison.json" />
+    <None Include="Src\Game\GConjugaison\gameConjugaison.json" />
+    <None Include="Src\json\gameConjugaison.json" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

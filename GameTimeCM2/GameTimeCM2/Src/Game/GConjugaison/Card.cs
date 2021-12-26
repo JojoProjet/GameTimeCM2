@@ -27,7 +27,6 @@ namespace GameTimeCM2.Src.Game.GConjugaison
 
         public string IdName { get; set; }
 
-
         private string text;
 
         public string Text
@@ -39,7 +38,6 @@ namespace GameTimeCM2.Src.Game.GConjugaison
                 OnPropertyChanged("Text");
             }
         }
-
 
         public int AngleProps { get; set; }
         public int TranslateX { get; set; }
@@ -54,7 +52,7 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             TranslateY = translateY;
         }
 
-        public PlaneProjection InitPlaneProjection()
+        public PlaneProjection PropertyPlaneProjection()
         {
             return new PlaneProjection()
             {
@@ -65,7 +63,7 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             };
         }
 
-        public CompositeTransform InitCompositeTransform()
+        public CompositeTransform PropertyCompositeTransform()
         {
             return new CompositeTransform()
             {
@@ -75,7 +73,7 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             };
         }
 
-        public CornerRadius InitCornerRadius()
+        public CornerRadius PropertyCornerRadius()
         {
             return new CornerRadius()
             {
@@ -87,25 +85,22 @@ namespace GameTimeCM2.Src.Game.GConjugaison
         }
 
         // Front Card
-        public ImageBrush InitImageBrush()
+        public ImageBrush PropertyImageBrush()
         {
             const string URI_ASSETS_BRIQUE = "ms-appx:///Assets/AGames/brique.jpg";
 
-            Image image = new Image()
-            {
-                Source = new BitmapImage(new Uri(URI_ASSETS_BRIQUE))
-            };
-
             return new ImageBrush()
             {
-                ImageSource = image.Source
+                ImageSource = new Image()
+                {
+                    Source = new BitmapImage(new Uri(URI_ASSETS_BRIQUE))
+                }.Source
             };
         }
 
-        public TextBlock InitTextBlock()
+        public TextBlock PropertyTextBlock()
         {
-            
-            TextBlock textblock = new TextBlock()
+            return new TextBlock()
             {
                 Name = $"Text{IdName}",
                 Text = text,
@@ -117,25 +112,24 @@ namespace GameTimeCM2.Src.Game.GConjugaison
                 FontStyle = Windows.UI.Text.FontStyle.Italic,
                 TextWrapping = TextWrapping.Wrap,
             };
-
-            return textblock;
-
         }
 
-        public Binding InitBinding()
+        public Binding PropertyBinding()
         {
+            const string PROPERTY_PATH_TEXT = "Text";
+
             return new Binding()
             {
                 Source = this,
-                Path = new PropertyPath("Text"),
+                Path = new PropertyPath(PROPERTY_PATH_TEXT),
                 UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged,
                 Mode = BindingMode.TwoWay
             };
         }
 
+        // Initliase Card
         public StackPanel InitCard()
         {
-
             StackPanel stackPanel= new StackPanel()
             {
                 Name = IdName,
@@ -144,21 +138,21 @@ namespace GameTimeCM2.Src.Game.GConjugaison
                 IsTapEnabled = true,
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 VerticalAlignment = VerticalAlignment.Stretch,
-                Background = InitImageBrush(),
+                Background = PropertyImageBrush(),
                 Orientation = Orientation.Vertical,
                 Margin = new Thickness(0, -150, 50, 0),
                 Padding = new Thickness(0, 50, 0, 0),
                 BorderThickness = new Thickness(5, 5, 5, 5),
-                CornerRadius = InitCornerRadius(),
-                Projection = InitPlaneProjection(),
-                RenderTransform = InitCompositeTransform(),
+                CornerRadius = PropertyCornerRadius(),
+                Projection = PropertyPlaneProjection(),
+                RenderTransform = PropertyCompositeTransform(),
             };
 
-            stackPanel.Tapped += new TappedEventHandler(Tapped_CardTapped);
+            stackPanel.Tapped += new TappedEventHandler(Tapped_Card);
 
-            TextBlock textBlock = InitTextBlock();
+            TextBlock textBlock = PropertyTextBlock();
 
-            textBlock.SetBinding(TextBlock.TextProperty, InitBinding());
+            textBlock.SetBinding(TextBlock.TextProperty, PropertyBinding());
 
             stackPanel.Children.Add(textBlock);
 
@@ -173,29 +167,26 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private void Tapped_CardTapped(object sender, TappedRoutedEventArgs e)
+        private void Tapped_Card(object sender, TappedRoutedEventArgs e)
         {
             StackPanel stackPanel = sender as StackPanel;
 
-            Card card;
-
-            if(Application.Current.Resources.ContainsKey("Card")) 
+            Action ThisCard = () =>
             {
-                card = (Card)Application.Current.Resources["Card"];
-                if (card.IdName != IdName)
-                {
-                    Application.Current.Resources["Card"] = this;
-                    stackPanel.BorderBrush = new SolidColorBrush(Colors.Red);
-                } else
-                {
-                    stackPanel.BorderBrush = null;
-                }
+                Application.Current.Resources[Constants.APPLICATION_RESSOURCES_CARD] = this;
+                stackPanel.BorderBrush = new SolidColorBrush(Colors.Red);
+            };
+
+            if (Application.Current.Resources.ContainsKey(Constants.APPLICATION_RESSOURCES_CARD)) 
+            {
+                Card card = (Card)Application.Current.Resources[Constants.APPLICATION_RESSOURCES_CARD];
+                if (card.IdName != IdName) ThisCard();
             }
             else
             {
-                Application.Current.Resources["Card"] = this;
+                ThisCard();
             }
-            
+
         }
 
         ///// Back Card /////
