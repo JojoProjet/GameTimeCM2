@@ -66,6 +66,18 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             story.Begin();
         }
 
+        public static Storyboard AnimateEmoji(Page page, StackPanel image)
+        {
+            Storyboard storyboardEmoji = Utils.Animation.CreateStoryboard_TranslateY_Opacity(image);
+
+            if (!page.Resources.ContainsKey($"Animate{image.Name}"))
+                page.Resources.Add($"Animate{image.Name}", storyboardEmoji);
+
+            Storyboard storyboard = page.Resources[$"Animate{image.Name}"] as Storyboard;
+
+            return storyboard;
+        }
+
 
         public DoubleAnimation GetDoubleAnimationCard(int from, int to, StackPanel stack)
         {

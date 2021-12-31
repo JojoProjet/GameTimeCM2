@@ -275,12 +275,12 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Json\" />
     <Folder Include="Src\Game\GEscapeGame\" />
     <Folder Include="Src\Game\GMemoire\" />
     <Folder Include="Src\Game\GPendu\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Json\gameConjugaison.json" />
     <None Include="Ressources\gameConjugaison.json" />
     <None Include="Src\Game\GConjugaison\gameConjugaison.json" />
     <None Include="Src\json\gameConjugaison.json" />

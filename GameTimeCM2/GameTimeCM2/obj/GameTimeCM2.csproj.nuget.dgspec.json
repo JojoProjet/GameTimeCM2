@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jonat\\OneDrive\\Bureau\\trunk\\dev\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2.csproj": {}
+    "C:\\trunk\\dev\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jonat\\OneDrive\\Bureau\\trunk\\dev\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2.csproj": {
+    "C:\\trunk\\dev\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jonat\\OneDrive\\Bureau\\trunk\\dev\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2.csproj",
+        "projectUniqueName": "C:\\trunk\\dev\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2.csproj",
         "projectName": "GameTimeCM2",
-        "projectPath": "C:\\Users\\jonat\\OneDrive\\Bureau\\trunk\\dev\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2.csproj",
+        "projectPath": "C:\\trunk\\dev\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2.csproj",
         "packagesPath": "C:\\Users\\jonat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jonat\\OneDrive\\Bureau\\trunk\\dev\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2\\obj\\",
+        "outputPath": "C:\\trunk\\dev\\GameTimeCM2\\GameTimeCM2\\GameTimeCM2\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

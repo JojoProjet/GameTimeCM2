@@ -1,5 +1,4 @@
 ﻿using GameTimeCM2.Src.Game.GConjugaison;
-using GameTimeCM2.Src.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -70,13 +69,13 @@ namespace GameTimeCM2
                 {
                     Vrai.Visibility = Visibility.Visible;
                     Faux.Visibility = Visibility.Collapsed;
-                    Src.Utils.Animation.AnimateEmoji(Page, Vrai).Begin();
+                    Animation.AnimateEmoji(Page, Vrai).Begin();
                 }
                 else
                 {
                     Vrai.Visibility = Visibility.Collapsed;
                     Faux.Visibility = Visibility.Visible;
-                    Src.Utils.Animation.AnimateEmoji(Page, Faux).Begin();
+                    Animation.AnimateEmoji(Page, Faux).Begin();
                 }
             }
 

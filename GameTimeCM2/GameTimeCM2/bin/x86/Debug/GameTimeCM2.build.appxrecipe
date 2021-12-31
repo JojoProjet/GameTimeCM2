@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>47816c40-7281-40c3-b715-fb415c945cb7</PackageIdentityName>
     <PackageIdentityPublisher>CN=jonat</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\GameTimeCM2.exe">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\GameTimeCM2.exe">
       <PackagePath>entrypoint\GameTimeCM2.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonat\.nuget\packages\bcrypt\1.0.0\lib\DevOne.Security.Cryptography.BCrypt.dll">
@@ -169,130 +169,130 @@
     <AppxPackagedFile Include="C:\Users\jonat\.nuget\packages\xamarin.forms\5.0.0.2244\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b2.jpg">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b2.jpg">
       <PackagePath>Assets\AGames\b2.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b3.jpg">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b3.jpg">
       <PackagePath>Assets\AGames\b3.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b4.jpg">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b4.jpg">
       <PackagePath>Assets\AGames\b4.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\backBeginConjuGame.jpg">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\backBeginConjuGame.jpg">
       <PackagePath>Assets\AGames\backBeginConjuGame.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\backBeginConjuGameInit.jpg">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\backBeginConjuGameInit.jpg">
       <PackagePath>Assets\AGames\backBeginConjuGameInit.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\BackGameConjugaison.jpg">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\BackGameConjugaison.jpg">
       <PackagePath>Assets\AGames\BackGameConjugaison.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\background_all_1.jpg">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\background_all_1.jpg">
       <PackagePath>Assets\AGames\background_all_1.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\brique.jpg">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\brique.jpg">
       <PackagePath>Assets\AGames\brique.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\escapegame.jpg">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\escapegame.jpg">
       <PackagePath>Assets\AGames\escapegame.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\conjugaison.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\conjugaison.png">
       <PackagePath>Assets\AGames\conjugaison.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\faux.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\faux.png">
       <PackagePath>Assets\AGames\faux.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\gametime.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\gametime.png">
       <PackagePath>Assets\AGames\gametime.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\img_back_card.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\img_back_card.png">
       <PackagePath>Assets\AGames\img_back_card.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\info.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\info.png">
       <PackagePath>Assets\AGames\info.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\memoire.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\memoire.png">
       <PackagePath>Assets\AGames\memoire.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\nuage.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\nuage.png">
       <PackagePath>Assets\AGames\nuage.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\pendu.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\pendu.png">
       <PackagePath>Assets\AGames\pendu.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\robot.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\robot.png">
       <PackagePath>Assets\AGames\robot.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\top10.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\top10.png">
       <PackagePath>Assets\AGames\top10.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\vrai.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\vrai.png">
       <PackagePath>Assets\AGames\vrai.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\GameTimeCM2.xr.xml">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\GameTimeCM2.xr.xml">
       <PackagePath>GameTimeCM2.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Ressources\AnimationRessources.xbf">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Ressources\AnimationRessources.xbf">
       <PackagePath>Ressources\AnimationRessources.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\AccueilGame.xbf">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\AccueilGame.xbf">
       <PackagePath>View\AccueilGame.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\EscapeGame.xbf">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\EscapeGame.xbf">
       <PackagePath>View\EscapeGame.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\GameConjugaison.xbf">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\GameConjugaison.xbf">
       <PackagePath>View\GameConjugaison.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\GameMemoire.xbf">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\GameMemoire.xbf">
       <PackagePath>View\GameMemoire.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\GamePendu.xbf">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\GamePendu.xbf">
       <PackagePath>View\GamePendu.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\ViewBeginGameConjugaison.xbf">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\ViewBeginGameConjugaison.xbf">
       <PackagePath>View\ViewBeginGameConjugaison.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\ViewRegister.xbf">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\ViewRegister.xbf">
       <PackagePath>View\ViewRegister.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\ViewScoreFinal.xbf">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\ViewScoreFinal.xbf">
       <PackagePath>View\ViewScoreFinal.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
@@ -301,10 +301,10 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jonat\OneDrive\Bureau\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Core\GameTimeCM2.exe">
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Core\GameTimeCM2.exe">
       <PackagePath>GameTimeCM2.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonat\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">

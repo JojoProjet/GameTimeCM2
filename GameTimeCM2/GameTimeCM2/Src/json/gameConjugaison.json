@@ -2,6 +2,7 @@
   "data": [
     {
       "id": 1,
+      "question": "azeeaze ?",
       "conjugaison1": "xazeaz",
       "conjugaison2": "zaze",
       "conjugaison3": "c",
@@ -11,6 +12,7 @@
 
     {
       "id": 2,
+      "question": "azeeaze ?",
       "conjugaison1": "x",
       "conjugaison2": "z",
       "conjugaison3": "c",
@@ -20,6 +22,7 @@
 
     {
       "id": 3,
+      "question": "azeeaze ?",
       "conjugaison1": "x",
       "conjugaison2": "z",
       "conjugaison3": "c",
@@ -29,6 +32,7 @@
 
     {
       "id": 4,
+      "question": "azeeaze ?",
       "conjugaison1": "x",
       "conjugaison2": "z",
       "conjugaison3": "c",
@@ -38,6 +42,7 @@
 
     {
       "id": 5,
+      "question": "azeeaze ?",
       "conjugaison1": "x",
       "conjugaison2": "z",
       "conjugaison3": "c",
@@ -47,15 +52,7 @@
 
     {
       "id": 6,
-      "conjugaison1": "x",
-      "conjugaison2": "z",
-      "conjugaison3": "c",
-      "conjugaison4": "d",
-      "response": "x"
-    },
-
-    {
-      "id": 7,
+      "question": "azeeaze ?",
       "conjugaison1": "x",
       "conjugaison2": "z",
       "conjugaison3": "c",
