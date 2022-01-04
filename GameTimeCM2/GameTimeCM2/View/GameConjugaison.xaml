@@ -22,21 +22,34 @@
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
-            <TextBlock x:Name="TextScore" Text="Votre score : " HorizontalAlignment="Stretch" FontSize="24" VerticalAlignment="Stretch" >
-
-            </TextBlock>
+            <StackPanel CornerRadius="15,15,15,15" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="50,25,0,0" Padding="0,0,0,0" Width="200" Height="50">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FFCB1A1A" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <StackPanel.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF0C16E6" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.BorderBrush>
+                <TextBlock x:Name="TextScore" HorizontalAlignment="Stretch" FontSize="24" VerticalAlignment="Stretch" Margin="10,10,0,0" />
+            </StackPanel>
+            
 
             <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Center" Orientation="Horizontal">
-                <TextBlock x:Name="TextQuestion" HorizontalAlignment="Center" Margin="0,75,0,0" Text="La question" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="50" Foreground="#FFE2460C" FontStyle="Italic" FontWeight="Bold"/>
+                <TextBlock x:Name="TextQuestion" HorizontalAlignment="Center" Margin="0,0,0,0" Text="La question" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="50" Foreground="#FFE2460C" FontStyle="Italic" FontWeight="Bold"/>
 
-                <StackPanel x:Name="Vrai" Visibility="Collapsed">
+                <StackPanel x:Name="Vrai" Visibility="Collapsed" Margin="0,-50,0,0">
                     <StackPanel.RenderTransform>
                         <CompositeTransform></CompositeTransform>
                     </StackPanel.RenderTransform>
                     <Image Width="150" Height="150" Source="/Assets/AGames/vrai.png" HorizontalAlignment="Center" VerticalAlignment="Stretch" NineGrid="0,0,0,0" />
                 </StackPanel>
 
-                <StackPanel x:Name="Faux" Visibility="Collapsed">
+                <StackPanel x:Name="Faux" Visibility="Collapsed" Margin="0,-50,0,0">
                     <StackPanel.RenderTransform>
                         <CompositeTransform></CompositeTransform>
                     </StackPanel.RenderTransform>
@@ -47,10 +60,10 @@
 
         </StackPanel>
 
-        <StackPanel x:Name="Cards" Orientation="Horizontal"  Height="450" VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,100,0,0">
+        <StackPanel x:Name="Cards" Orientation="Horizontal"  Height="450" VerticalAlignment="Stretch" HorizontalAlignment="Center" Margin="0,25,0,0">
         </StackPanel>
 
-        <Button Click="Btn_CheckReponse" Content="Valide la réponse !" Background="#33020E44" HorizontalAlignment="Center" Width="200" Height="50" FontSize="22" FontStyle="Italic" />
+        <Button x:Name="BtnCheckReponse" Click="Btn_CheckReponse" Content="Valide la réponse !" Background="#33020E44" HorizontalAlignment="Center" Width="200" Height="50" FontSize="22" FontStyle="Italic" Margin="0,-100,0,0" />
 
     </StackPanel>
 

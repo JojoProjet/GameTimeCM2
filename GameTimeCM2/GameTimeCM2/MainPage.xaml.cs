@@ -72,5 +72,10 @@ namespace GameTimeCM2
             if (Page.ActualWidth < 1020) Page.Width = 1020;
         }
 
+        private void Loaded_Page(object sender, RoutedEventArgs e)
+        {
+            Animation.AnimatePage(Page, StackPanelPage).Begin();
+        }
+
     }
 }

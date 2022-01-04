@@ -122,7 +122,6 @@ namespace GameTimeCM2
         private void Loaded_Page(object sender, RoutedEventArgs e)
         {
             Animation.AnimatePage(AccueilGamePage, StackPanelPage).Begin();
-
         }
 
     }

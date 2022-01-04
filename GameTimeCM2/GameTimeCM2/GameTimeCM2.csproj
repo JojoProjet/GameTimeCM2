@@ -122,6 +122,7 @@
     <Compile Include="Src\Game\GConjugaison\Cards.cs" />
     <Compile Include="Src\Game\GConjugaison\Data.cs" />
     <Compile Include="Src\Game\GConjugaison\Game.cs" />
+    <Compile Include="Src\Game\RessourcesUser.cs" />
     <Compile Include="Src\Services\AccountService.cs" />
     <Compile Include="Src\Services\UserService.cs" />
     <Compile Include="Src\Utils\Animation.cs" />

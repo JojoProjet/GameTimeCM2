@@ -73,5 +73,10 @@ namespace GameTimeCM2
             UBoolEnable(true);
         }
 
+        private void Loaded_Page(object sender, RoutedEventArgs e)
+        {
+            Animation.AnimatePage(ViewRegisterPage, StackPanelPage).Begin();
+        }
+
     }
 }

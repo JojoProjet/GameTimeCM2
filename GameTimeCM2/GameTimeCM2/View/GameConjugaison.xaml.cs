@@ -40,7 +40,7 @@ namespace GameTimeCM2
 
         public void InitGame()
         {
-            Game = new Game(Cards, TextQuestion);
+            Game = new Game(Cards, TextQuestion, TextScore);
             Game.Init();
         }
 
@@ -54,8 +54,10 @@ namespace GameTimeCM2
         {
             Game.DoAnimationCard(ResponseInValidate ? Constants.ANIMATE_SIDE_BACK : Constants.ANIMATE_SIDE_FRONT);
             // Animation reponse faux ou juste
-
-            if(ResponseInValidate)
+            const string TEXT_NEXT = "Suivant !";
+            const string VALIDATE_RES = "Valide la réponse !";
+            
+            if (ResponseInValidate)
             {
                 TextQuestion.Visibility = Visibility.Visible;
                 Vrai.Visibility = Visibility.Collapsed;
@@ -80,6 +82,7 @@ namespace GameTimeCM2
             }
 
             ResponseInValidate = ResponseInValidate ? false : true;
+            BtnCheckReponse.Content = BtnCheckReponse.Content.ToString() == VALIDATE_RES ? TEXT_NEXT : VALIDATE_RES;
 
         }
 

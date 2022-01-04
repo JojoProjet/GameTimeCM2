@@ -16,6 +16,8 @@ namespace GameTimeCM2.Src.Game.GConjugaison
 
         private int IdDataJson = 1;
         private int Score { get; set; }
+        private const string STRING_SCORE = "Votre Score :";
+
         private bool UserFinishGame { get; set; }
 
         private Cards LCards { get; set; }
@@ -30,10 +32,10 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             get => ListData.SingleOrDefault(item => item.Id == IdDataJson);
         }
 
-        public Game(StackPanel stackPanel, TextBlock textBlock)
+        public Game(StackPanel stackPanel, TextBlock textBlockQuestion, TextBlock textBlockScore)
         {
             StackPanelCards = stackPanel;
-            TextBlockQuestion = textBlock;
+            TextBlockQuestion = textBlockQuestion;
 
             // get the json response question
             InitDataJson();
@@ -42,6 +44,7 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             Animations = new Animations();
 
             Score = 0;
+            textBlockScore.Text = $"{STRING_SCORE} {Score}";
             UserFinishGame = false;
             TextBlockQuestion.Text = Data.Question;
         }
@@ -124,11 +127,11 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             Card card = (Card)Application.Current.Resources[Constants.APPLICATION_RESSOURCES_CARD];
             if(card.Text == LCards.Response)
             {
-                textScore.Text += $"{Score++}";
+                textScore.Text = $"{STRING_SCORE} {++Score}";
                 return true;
             } else
             {
-                textScore.Text += $"{Score}";
+                textScore.Text = $"{STRING_SCORE} {Score}";
                 return false;
             }
         }
