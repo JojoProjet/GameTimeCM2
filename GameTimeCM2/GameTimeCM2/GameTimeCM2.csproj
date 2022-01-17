@@ -122,6 +122,11 @@
     <Compile Include="Src\Game\GConjugaison\Cards.cs" />
     <Compile Include="Src\Game\GConjugaison\Data.cs" />
     <Compile Include="Src\Game\GConjugaison\Game.cs" />
+    <Compile Include="Src\Game\GMemoire\Animation.cs" />
+    <Compile Include="Src\Game\GMemoire\Card.cs" />
+    <Compile Include="Src\Game\GMemoire\Cards.cs" />
+    <Compile Include="Src\Game\GMemoire\Data.cs" />
+    <Compile Include="Src\Game\GMemoire\Game.cs" />
     <Compile Include="Src\Game\RessourcesUser.cs" />
     <Compile Include="Src\Services\AccountService.cs" />
     <Compile Include="Src\Services\UserService.cs" />
@@ -178,7 +183,9 @@
     <Content Include="Assets\AGames\backBeginConjuGameInit.jpg" />
     <Content Include="Assets\AGames\BackGameConjugaison.jpg" />
     <Content Include="Assets\AGames\background_all_1.jpg" />
+    <Content Include="Assets\AGames\bc2.jpeg" />
     <Content Include="Assets\AGames\brique.jpg" />
+    <Content Include="Assets\AGames\card_elegantB.jpg" />
     <Content Include="Assets\AGames\conjugaison.png" />
     <Content Include="Assets\AGames\escapegame.jpg" />
     <Content Include="Assets\AGames\faux.png" />
@@ -191,6 +198,12 @@
     <Content Include="Assets\AGames\robot.png" />
     <Content Include="Assets\AGames\top10.png" />
     <Content Include="Assets\AGames\vrai.png" />
+    <Content Include="Assets\GameMemory\dog.png" />
+    <Content Include="Assets\GameMemory\etoile.png" />
+    <Content Include="Assets\GameMemory\fusee.png" />
+    <Content Include="Assets\GameMemory\livre.png" />
+    <Content Include="Assets\GameMemory\lune.png" />
+    <Content Include="Assets\GameMemory\soleil.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -277,13 +290,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Src\Game\GEscapeGame\" />
-    <Folder Include="Src\Game\GMemoire\" />
     <Folder Include="Src\Game\GPendu\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Json\gameConjugaison.json" />
     <None Include="Ressources\gameConjugaison.json" />
     <None Include="Src\Game\GConjugaison\gameConjugaison.json" />
+    <None Include="Src\Game\GMemoire\data.json" />
     <None Include="Src\json\gameConjugaison.json" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

@@ -18,7 +18,7 @@ namespace GameTimeCM2.Src.Game
 
         public RessourcesUser()
         {
-            Application.Current.Resources[""]
+            //Application.Current.Resources[""];
         }
 
 

@@ -9,7 +9,7 @@
     mc:Ignorable="d" d:DesignHeight="1318">
 
     <Page.Background>
-        <ImageBrush ImageSource="/Assets/AGames/backBeginConjuGameInit.jpg" />
+        <ImageBrush ImageSource="/Assets/AGames/bc2.jpeg" />
     </Page.Background>
 
     <StackPanel x:Name="GameConju" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">

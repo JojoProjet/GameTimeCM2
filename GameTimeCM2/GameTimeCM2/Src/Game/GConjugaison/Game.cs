@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
@@ -106,7 +107,7 @@ namespace GameTimeCM2.Src.Game.GConjugaison
         {
 
             // Value de data < Data.Count Stop it and anim win or loose and set in db
-
+            
             // Nouvelle valeur de text
             LCards.ElementAt(0).Text = Data.Conjugaison1;
             LCards.ElementAt(1).Text = Data.Conjugaison2;
@@ -120,20 +121,33 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             Animations.ForEach(animation => animation.AnimateCard(side));
         }
 
+        public void ShowScore(TextBlock textScore)
+        {
+            textScore.Text =  $"{STRING_SCORE} {Score}";
+        }
+
+        public bool Check(Card card)
+        {
+            if (card.Text == LCards.Response) {
+                ++Score;
+                return true;
+            }
+            return false;
+        }
+
+        public void ShowSelectResponse(TextBlock textSelectResponse)
+        {
+            const string STRING_SELECT_RESPONSE = "Sélectionner une carte !";
+            textSelectResponse.Text = STRING_SELECT_RESPONSE;
+        }
 
         public bool CheckReponse(TextBlock textScore)
         {
-            IdDataJson++;
             Card card = (Card)Application.Current.Resources[Constants.APPLICATION_RESSOURCES_CARD];
-            if(card.Text == LCards.Response)
-            {
-                textScore.Text = $"{STRING_SCORE} {++Score}";
-                return true;
-            } else
-            {
-                textScore.Text = $"{STRING_SCORE} {Score}";
-                return false;
-            }
+            bool check = Check(card);
+            IdDataJson++;
+            ShowScore(textScore);
+            return check;
         }
 
     }

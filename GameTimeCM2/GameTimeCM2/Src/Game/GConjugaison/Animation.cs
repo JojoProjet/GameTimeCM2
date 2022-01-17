@@ -101,8 +101,7 @@ namespace GameTimeCM2.Src.Game.GConjugaison
                 // Change le background par rapport à la rotationX
                 if (rotationX < -90)
                 {
-                    stackPanel.BorderBrush = new SolidColorBrush(Colors.Black);
-                    stackPanel.Background = new SolidColorBrush(Colors.White);
+                    stackPanel.BorderBrush = null;
                     stackPanel.Background = Card.BackgroundImageBrushBackCard();
                     Card.Text = cardTextDefaultBackCard;
                 }

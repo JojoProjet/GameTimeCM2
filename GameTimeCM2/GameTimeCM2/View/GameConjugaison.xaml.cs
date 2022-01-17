@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Navigation;
 using System.Windows;
 using Windows.UI.Xaml.Media.Imaging;
 using GameTimeCM2.Src;
+using System.Runtime.InteropServices;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -52,37 +53,46 @@ namespace GameTimeCM2
 
         private void Btn_CheckReponse(object sender, RoutedEventArgs e)
         {
-            Game.DoAnimationCard(ResponseInValidate ? Constants.ANIMATE_SIDE_BACK : Constants.ANIMATE_SIDE_FRONT);
             // Animation reponse faux ou juste
             const string TEXT_NEXT = "Suivant !";
             const string VALIDATE_RES = "Valide la réponse !";
             
-            if (ResponseInValidate)
+            try
             {
-                TextQuestion.Visibility = Visibility.Visible;
-                Vrai.Visibility = Visibility.Collapsed;
-                Faux.Visibility = Visibility.Collapsed;
-            } 
-            else
-            {
-                TextQuestion.Visibility = Visibility.Collapsed;
                 bool check = Game.CheckReponse(TextScore);
-                if (check)
+                
+                Game.DoAnimationCard(ResponseInValidate ? Constants.ANIMATE_SIDE_BACK : Constants.ANIMATE_SIDE_FRONT);
+                
+                if (ResponseInValidate)
                 {
-                    Vrai.Visibility = Visibility.Visible;
+                    TextQuestion.Visibility = Visibility.Visible;
+                    Vrai.Visibility = Visibility.Collapsed;
                     Faux.Visibility = Visibility.Collapsed;
-                    Animation.AnimateEmoji(Page, Vrai).Begin();
                 }
                 else
                 {
-                    Vrai.Visibility = Visibility.Collapsed;
-                    Faux.Visibility = Visibility.Visible;
-                    Animation.AnimateEmoji(Page, Faux).Begin();
+                    TextQuestion.Visibility = Visibility.Collapsed;
+                    if (check)
+                    {
+                        Vrai.Visibility = Visibility.Visible;
+                        Faux.Visibility = Visibility.Collapsed;
+                        Animation.AnimateEmoji(Page, Vrai).Begin();
+                    }
+                    else
+                    {
+                        Vrai.Visibility = Visibility.Collapsed;
+                        Faux.Visibility = Visibility.Visible;
+                        Animation.AnimateEmoji(Page, Faux).Begin();
+                    }
                 }
-            }
 
-            ResponseInValidate = ResponseInValidate ? false : true;
-            BtnCheckReponse.Content = BtnCheckReponse.Content.ToString() == VALIDATE_RES ? TEXT_NEXT : VALIDATE_RES;
+                ResponseInValidate = ResponseInValidate ? false : true;
+                BtnCheckReponse.Content = BtnCheckReponse.Content.ToString() == VALIDATE_RES ? TEXT_NEXT : VALIDATE_RES;
+            }
+            catch (COMException)
+            {
+                Game.ShowSelectResponse(TextScore);
+            }
 
         }
 

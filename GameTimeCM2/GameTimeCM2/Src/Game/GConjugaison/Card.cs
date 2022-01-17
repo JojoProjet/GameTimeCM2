@@ -87,7 +87,7 @@ namespace GameTimeCM2.Src.Game.GConjugaison
         // Front Card
         public ImageBrush PropertyImageBrush()
         {
-            const string URI_ASSETS_BRIQUE = "ms-appx:///Assets/AGames/brique.jpg";
+            const string URI_ASSETS_BRIQUE = "ms-appx:///Assets/AGames/card_elegantB.jpg";
 
             return new ImageBrush()
             {
@@ -180,7 +180,7 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             if (Application.Current.Resources.ContainsKey(Constants.APPLICATION_RESSOURCES_CARD)) 
             {
                 Card card = (Card)Application.Current.Resources[Constants.APPLICATION_RESSOURCES_CARD];
-                if (card.IdName != IdName) ThisCard();
+                if ( card.IdName != IdName && (double)stackPanel.Projection.GetValue(PlaneProjection.RotationXProperty) > -90 ) ThisCard();
             }
             else
             {
