@@ -21,6 +21,7 @@ namespace GameTimeCM2.Src.Game.GMemoire
         public static List<int> TabCardOk { get; set; }
 
         public static StackPanel StackPanelGame { get; set; }
+        public static StackPanel Stack_FinishGame { get; set; }
 
         public Grid Grid { get; set;}
 
@@ -31,11 +32,6 @@ namespace GameTimeCM2.Src.Game.GMemoire
             InitDataJson();
             StackPanelGame = stackPanelGame;
             Grid = grid;
-            Select = 0;
-            TabCardOk = new List<int>
-            {
-                0
-            };
         }
 
         public void InitDataJson()
@@ -46,6 +42,11 @@ namespace GameTimeCM2.Src.Game.GMemoire
 
         public void Init()
         {
+            Select = 0;
+            TabCardOk = new List<int>
+            {
+                0
+            };
             Cards = new Cards(Grid);
             Random rnd = new Random();
             IOrderedEnumerable<Data> listRandomized = ListData.OrderBy(item => rnd.Next());
@@ -63,12 +64,13 @@ namespace GameTimeCM2.Src.Game.GMemoire
                 animation.Create();
             });
 
-            LoadStoryBeginGame();
-
+            
+            // LoadStoryBeginGame();
         }
 
         private void LoadStoryBeginGame()
         {
+            DesactiveTapped();
             for (int i = 1; i <= 12; i++)
             {
                 Storyboard storyVisible = (Storyboard)StackPanelGame.Resources[$"AnimateCardVisile{i}"];
@@ -82,6 +84,8 @@ namespace GameTimeCM2.Src.Game.GMemoire
                             Storyboard storyNotVisible = (Storyboard)StackPanelGame.Resources[$"AnimateCardNotVisible{u}"];
                             storyNotVisible.Begin();
                         }
+                        ActiveTapped();
+                        storyVisible.Completed -= null;
                     };
                 } 
                 storyVisible.Begin();
@@ -101,26 +105,29 @@ namespace GameTimeCM2.Src.Game.GMemoire
             Storyboard story = (Storyboard)StackPanelGame.Resources["Storyboard_StackFinishGame"];
             Cards.ForEach(card =>
             {
-                if(!TabCardOk.Contains(card.Id))
+                if(TabCardOk.Contains(card.Id) == false)
                     card.StackPanel.Tapped += new TappedEventHandler(card.Tapped_CardMemory);
             });
 
             if (TabCardOk.ToArray().Length >= 12)
+            {
+                Stack_FinishGame.Visibility = Visibility.Visible;
                 story.Begin();
+            }
 
-            StackPanelGame.Visibility = Visibility.Visible;
         }
 
         public void SetNewGame(Storyboard Storyboard_StackNewGame, StackPanel Stack_FinishGame)
         {
+            Cards.RemoveElementInGrid();
             Storyboard_StackNewGame.Completed += (o1, s1) =>
             {
                 Stack_FinishGame.Visibility = Visibility.Collapsed;
                 for (int i = 1; i <= 12; i++)
                 {
                     Storyboard story = (Storyboard)StackPanelGame.Resources[$"AnimateCardNotVisible{i}"];
-                    story.Begin();
                     if (i == 12) story.Completed += (o2, s2) => Init();
+                    story.Begin();
                 }
             };
             Storyboard_StackNewGame.Begin();

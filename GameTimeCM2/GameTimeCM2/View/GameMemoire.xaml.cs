@@ -25,10 +25,11 @@ namespace GameTimeCM2
     /// </summary>
     public sealed partial class GameMemoire : Page
     {
-        private Game game;
+        private readonly Game game;
         public GameMemoire()
         {
             this.InitializeComponent();
+            Game.Stack_FinishGame = Stack_FinishGame;
             game = new Game(Memory, grid);
             game.Init();
         }

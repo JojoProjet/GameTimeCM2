@@ -33,5 +33,21 @@ namespace GameTimeCM2.Src.Game.GMemoire
             });
         }
 
+        public void RemoveElementInGrid()
+        {
+            int row = 0;
+            int column = 0;
+            ForEach(card =>
+            {
+                if (column >= 4)
+                {
+                    column = 0;
+                    row++;
+                }
+                Grid.Children.Remove(card.Create(row, column));
+                column++;
+            });
+        }
+
     }
 }

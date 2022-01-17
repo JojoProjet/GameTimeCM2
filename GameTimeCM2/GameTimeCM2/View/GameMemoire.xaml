@@ -68,9 +68,9 @@
         </Grid>
 
         
-        <StackPanel Visibility="Visible" Opacity="0" x:Name="Stack_FinishGame" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="300" Height="220" Orientation="Vertical" BorderThickness="10,10,10,10" CornerRadius="20,20,20,20" BorderBrush="#FF0C8F9C" Background="#CC0DB109" Margin="0,-650,0,0" RenderTransformOrigin="0.5,0.5">
+        <StackPanel Visibility="Collapsed" Opacity="0" x:Name="Stack_FinishGame" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="300" Height="220" Orientation="Vertical" BorderThickness="10,10,10,10" CornerRadius="20,20,20,20" BorderBrush="#FF0C8F9C" Background="#CC0DB109" Margin="0,-650,0,0" RenderTransformOrigin="0.5,0.5">
             <StackPanel.RenderTransform>
-                <CompositeTransform x:Name="RT_FG" TranslateX="0" TranslateY="400"/>
+                <CompositeTransform x:Name="RT_FG" TranslateX="0" TranslateY="425"/>
             </StackPanel.RenderTransform>
             <StackPanel.Projection>
                 <PlaneProjection RotationX="-10" RotationY="0" RotationZ="0"/>

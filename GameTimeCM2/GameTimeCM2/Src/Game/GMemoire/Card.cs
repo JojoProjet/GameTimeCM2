@@ -43,11 +43,12 @@ namespace GameTimeCM2.Src.Game.GMemoire
                 Name = $"{Id}",
                 Width = 200,
                 Height = 150,
-                IsTapEnabled = true,
                 HorizontalAlignment = HorizontalAlignment.Stretch,
                 VerticalAlignment = VerticalAlignment.Stretch,
                 Background = new SolidColorBrush(Colors.Black),
-                Margin = new Thickness(20, 0, 20, 0)
+                Margin = new Thickness(20, 0, 20, 0),
+                IsTapEnabled = true,
+                IsDoubleTapEnabled = false
             };
 
             Grid.SetRow(StackPanel, row);

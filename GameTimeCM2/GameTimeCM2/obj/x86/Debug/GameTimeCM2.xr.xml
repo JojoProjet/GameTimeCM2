@@ -73,7 +73,6 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="Background" />
       <RootProperty Name="FontStyle" />
-      <RootProperty Name="IsTapEnabled" />
       <RootProperty Name="FocusVisualPrimaryBrush" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="RenderTransform" />

@@ -68,17 +68,17 @@
         </Grid>
 
         
-        <StackPanel x:ConnectionId='6' Visibility="Visible" Opacity="0" x:Name="Stack_FinishGame" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="300" Height="220" Orientation="Vertical" BorderThickness="10,10,10,10" CornerRadius="20,20,20,20" BorderBrush="#FF0C8F9C" Background="#CC0DB109" Margin="0,-650,0,0" RenderTransformOrigin="0.5,0.5">
+        <StackPanel x:ConnectionId='6' Visibility="Collapsed" Opacity="0" x:Name="Stack_FinishGame" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="300" Height="220" Orientation="Vertical" BorderThickness="10,10,10,10" CornerRadius="20,20,20,20" BorderBrush="#FF0C8F9C" Background="#CC0DB109" Margin="0,-650,0,0" RenderTransformOrigin="0.5,0.5">
             <StackPanel.RenderTransform>
-                <CompositeTransform x:ConnectionId='7' x:Name="RT_FG" TranslateX="0" TranslateY="400"/>
+                <CompositeTransform x:ConnectionId='7' x:Name="RT_FG" TranslateX="0" TranslateY="425"/>
             </StackPanel.RenderTransform>
             <StackPanel.Projection>
                 <PlaneProjection RotationX="-10" RotationY="0" RotationZ="0"/>
             </StackPanel.Projection>
             <TextBlock HorizontalAlignment="Center" FontSize="44">Bien joué !</TextBlock>
             <TextBlock x:ConnectionId='8' Name="TextNbCoup" FontSize="30" Margin="5,0,0,10">Coup : 22</TextBlock>
-            <Button x:ConnectionId='9' IsTapEnabled="False" Content="Autre jeux"                            HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,0,30,10"/>
-            <Button x:ConnectionId='10' IsTapEnabled="False" Content="Rejouer"                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,0,30,10"/>
+            <Button x:ConnectionId='9' Content="Autre jeux"                            HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,0,30,10"/>
+            <Button x:ConnectionId='10' Content="Rejouer"                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,0,30,10"/>
         </StackPanel>
 
     </StackPanel>
