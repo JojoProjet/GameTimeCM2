@@ -76,7 +76,7 @@
                 <PlaneProjection RotationX="-10" RotationY="0" RotationZ="0"/>
             </StackPanel.Projection>
             <TextBlock HorizontalAlignment="Center" FontSize="44">Bien joué !</TextBlock>
-            <TextBlock Name="TextNbCoup" FontSize="30" Margin="5,0,0,10">Coup : 22</TextBlock>
+            <TextBlock Name="TextNbCoup" FontSize="30" Margin="5,0,0,10"></TextBlock>
             <Button Content="Autre jeux" Click="Click_BtnOtherGame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,0,30,10"/>
             <Button Content="Rejouer" Click="Click_BtnReGame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,0,30,10"/>
         </StackPanel>

@@ -43,6 +43,7 @@ namespace GameTimeCM2
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            
             //user = (User)Application.Current.Resources["User"];
             //Title.Text = $"Bonjour {user.Name}";
         }

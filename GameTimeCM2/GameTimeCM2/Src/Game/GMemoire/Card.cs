@@ -73,7 +73,10 @@ namespace GameTimeCM2.Src.Game.GMemoire
             Game.Select++;
             Application.Current.Resources[$"Card{Game.Select}"] = this;
             if (Game.Select == 2)
+            {
                 Game.DesactiveTapped();
+                Game.ScoreCoupFinal += 1;
+            }
         }
 
     }

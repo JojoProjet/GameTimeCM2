@@ -22,6 +22,8 @@ namespace GameTimeCM2.Src.Game.GMemoire
 
         public static StackPanel StackPanelGame { get; set; }
         public static StackPanel Stack_FinishGame { get; set; }
+        public static TextBlock TextBlock_ScoreCoupFinal { get; set; }
+        public static int ScoreCoupFinal { get; set; }
 
         public Grid Grid { get; set;}
 
@@ -47,6 +49,7 @@ namespace GameTimeCM2.Src.Game.GMemoire
             {
                 0
             };
+            ScoreCoupFinal = 0;
             Cards = new Cards(Grid);
             Random rnd = new Random();
             IOrderedEnumerable<Data> listRandomized = ListData.OrderBy(item => rnd.Next());
@@ -64,20 +67,22 @@ namespace GameTimeCM2.Src.Game.GMemoire
                 animation.Create();
             });
 
-            
-            // LoadStoryBeginGame();
+            LoadStoryBeginGame();
         }
 
         private void LoadStoryBeginGame()
         {
+            EventHandler<object> onComplete = null;
+
             DesactiveTapped();
             for (int i = 1; i <= 12; i++)
             {
                 Storyboard storyVisible = (Storyboard)StackPanelGame.Resources[$"AnimateCardVisile{i}"];
                 if (i == 12)
                 {
-                    storyVisible.Completed += (o, s) =>
+                    onComplete = (s, e) =>
                     {
+                        storyVisible.Completed -= onComplete;
                         Thread.Sleep(2000);
                         for (int u = 1; u <= 12; u++)
                         {
@@ -85,9 +90,9 @@ namespace GameTimeCM2.Src.Game.GMemoire
                             storyNotVisible.Begin();
                         }
                         ActiveTapped();
-                        storyVisible.Completed -= null;
                     };
-                } 
+                    storyVisible.Completed += onComplete;
+                }
                 storyVisible.Begin();
             }
         }
@@ -111,7 +116,9 @@ namespace GameTimeCM2.Src.Game.GMemoire
 
             if (TabCardOk.ToArray().Length >= 12)
             {
+                // When Win is declenched
                 Stack_FinishGame.Visibility = Visibility.Visible;
+                TextBlock_ScoreCoupFinal.Text = $"Coup : {ScoreCoupFinal}";
                 story.Begin();
             }
 
@@ -120,16 +127,31 @@ namespace GameTimeCM2.Src.Game.GMemoire
         public void SetNewGame(Storyboard Storyboard_StackNewGame, StackPanel Stack_FinishGame)
         {
             Cards.RemoveElementInGrid();
-            Storyboard_StackNewGame.Completed += (o1, s1) =>
+
+            EventHandler<object> onComplete = null;
+            EventHandler<object> onComplteAnimate = null;
+
+            onComplete = (s, e) =>
             {
+                Storyboard_StackNewGame.Completed -= onComplete;
                 Stack_FinishGame.Visibility = Visibility.Collapsed;
                 for (int i = 1; i <= 12; i++)
                 {
                     Storyboard story = (Storyboard)StackPanelGame.Resources[$"AnimateCardNotVisible{i}"];
-                    if (i == 12) story.Completed += (o2, s2) => Init();
+                    if (i == 12)
+                    {
+                        onComplteAnimate = (sA, eA) =>
+                        {
+                            story.Completed -= onComplteAnimate;
+                            Init();
+                        };
+                        story.Completed += onComplteAnimate;
+                    }
                     story.Begin();
                 }
             };
+
+            Storyboard_StackNewGame.Completed += onComplete;
             Storyboard_StackNewGame.Begin();
         }
 

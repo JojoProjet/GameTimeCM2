@@ -30,8 +30,17 @@ namespace GameTimeCM2
         {
             this.InitializeComponent();
             Game.Stack_FinishGame = Stack_FinishGame;
+            Game.TextBlock_ScoreCoupFinal = TextNbCoup;
             game = new Game(Memory, grid);
             game.Init();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            //user = (User)Application.Current.Resources["User"];
+            //Title.Text = $"Bonjour {user.Name}";
+
         }
 
         public void Click_BtnOtherGame(object sender, RoutedEventArgs e)
