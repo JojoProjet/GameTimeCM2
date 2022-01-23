@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media.Animation;
 
 namespace GameTimeCM2.Src.Game.GConjugaison
 {
@@ -20,17 +22,22 @@ namespace GameTimeCM2.Src.Game.GConjugaison
         private const string STRING_SCORE = "Votre Score :";
 
         private bool UserFinishGame { get; set; }
+        public static int TWinGame { get; set; }
 
         private Cards LCards { get; set; }
         private Animations Animations { get; set; }
         private StackPanel StackPanelCards { get; set; }
         private TextBlock TextBlockQuestion { get; set; }
 
-        private List<Data> ListData { get; set; }
+        public static TextBlock TextWinOrLoose { get; set; }
+        public static TextBlock TextFinishScore { get; set; }
+        public static Storyboard StoryBoardFinish { get; set; }
 
+        private List<Data> ListData { get; set; }
+        private IOrderedEnumerable<Data> ListRandomized { get; set; }
         public Data Data
         {
-            get => ListData.SingleOrDefault(item => item.Id == IdDataJson);
+            get => ListRandomized.SingleOrDefault(item => item.Id == IdDataJson);
         }
 
         public Game(StackPanel stackPanel, TextBlock textBlockQuestion, TextBlock textBlockScore)
@@ -61,6 +68,13 @@ namespace GameTimeCM2.Src.Game.GConjugaison
         {
             StreamReader file = File.OpenText(Path.Combine(Directory.GetCurrentDirectory(), "Json/gameConjugaison.json"));
             ListData = new JsonSerializer().Deserialize<List<Data>>(new JsonTextReader(file));
+            Random rnd = new Random();
+            ListRandomized = ListData.OrderBy(item => rnd.Next());
+            int index = 1;
+            foreach (Data data in ListRandomized)
+            {
+                data.Id = index++;
+            }
         }
 
         public void CreateCards()
@@ -103,22 +117,53 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             });
         }
 
-        public void DoAnimationCard(string side)
+        public void DoAnimationCard(TextBlock text, StackPanel s1, StackPanel s2, Button b)
         {
-
             // Value de data < Data.Count Stop it and anim win or loose and set in db
-            
-            // Nouvelle valeur de text
-            LCards.ElementAt(0).Text = Data.Conjugaison1;
-            LCards.ElementAt(1).Text = Data.Conjugaison2;
-            LCards.ElementAt(2).Text = Data.Conjugaison3;
-            LCards.ElementAt(3).Text = Data.Conjugaison4;
 
-            TextBlockQuestion.Text = Data.Question;
+            // Hide card front
+            LCards.ForEach(card =>
+            {
+                StackPanel stackPanel = (StackPanel)StackPanelCards.FindName(card.IdName);
+                stackPanel.Background = card.BackgroundImageBrushBackCard();
+                card.Text = "";
+            });
+            Animations.ForEach(animation => animation.AnimateCard(text, s1, s2, b, this));
+        }
 
-            LCards.Response = Data.Response;
+        public void SetNewValueTextCard(Button b)
+        {
+            try
+            {
+                if (IdDataJson > 6) throw new Exception();
+                // Nouvelle valeur de text
+                else
+                {
+                    LCards.ElementAt(0).Text = Data.Conjugaison1;
+                    LCards.ElementAt(1).Text = Data.Conjugaison2;
+                    LCards.ElementAt(2).Text = Data.Conjugaison3;
+                    LCards.ElementAt(3).Text = Data.Conjugaison4;
 
-            Animations.ForEach(animation => animation.AnimateCard(side));
+                    TextBlockQuestion.Text = Data.Question;
+
+                    LCards.Response = Data.Response;
+                }
+            }
+            catch (Exception)
+            {
+                // Affiche popup here
+                b.IsEnabled = false;
+                LCards.ForEach(card =>
+                {
+                    StackPanel stackPanel = (StackPanel)StackPanelCards.FindName(card.IdName);
+                    stackPanel.Tapped -= new TappedEventHandler(card.Tapped_Card);
+                });
+                TextBlockQuestion.Text = "";
+                TWinGame += Score > 1 ? 1 : 0;
+                TextWinOrLoose.Text = Score > 1 ? "Bien joué !" : "Vous avez perdu !";
+                TextFinishScore.Text = $"Votre Score : {Score}";
+                StoryBoardFinish.Begin();
+            }
         }
 
         public void ShowScore(TextBlock textScore)
@@ -146,6 +191,7 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             Card card = (Card)Application.Current.Resources[Constants.APPLICATION_RESSOURCES_CARD];
             bool check = Check(card);
             IdDataJson++;
+            Application.Current.Resources.Remove(Constants.APPLICATION_RESSOURCES_CARD);
             ShowScore(textScore);
             return check;
         }

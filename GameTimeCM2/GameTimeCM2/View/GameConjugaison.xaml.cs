@@ -36,6 +36,11 @@ namespace GameTimeCM2
         public GameConjugaison()
         {
             this.InitializeComponent();
+
+            Game.TextWinOrLoose = TextWinOrLoose;
+            Game.TextFinishScore = TextFinishScore;
+            Game.StoryBoardFinish = Storyboard_StackFinishGame;
+
             InitGame();
         }
 
@@ -48,6 +53,7 @@ namespace GameTimeCM2
 
         private void Btn_QuitGame(object sender, RoutedEventArgs e)
         {
+            Application.Current.Resources["IntWinGameConjugaison"] = Game.TWinGame;
             Frame.Navigate(typeof(AccueilGame));
         }
 
@@ -59,41 +65,46 @@ namespace GameTimeCM2
             
             try
             {
+                if(!Application.Current.Resources.ContainsKey(Constants.APPLICATION_RESSOURCES_CARD)) 
+                    throw new COMException();
+
+                BtnCheckReponse.IsEnabled = false;
+
                 bool check = Game.CheckReponse(TextScore);
                 
-                Game.DoAnimationCard(ResponseInValidate ? Constants.ANIMATE_SIDE_BACK : Constants.ANIMATE_SIDE_FRONT);
-                
-                if (ResponseInValidate)
+                Game.DoAnimationCard(TextQuestion, Vrai, Faux, BtnCheckReponse);
+
+                TextQuestion.Visibility = Visibility.Collapsed;
+                if (check)
                 {
-                    TextQuestion.Visibility = Visibility.Visible;
-                    Vrai.Visibility = Visibility.Collapsed;
+                    Vrai.Visibility = Visibility.Visible;
                     Faux.Visibility = Visibility.Collapsed;
+                    Animation.AnimateEmoji(Page, Vrai).Begin();
                 }
                 else
                 {
-                    TextQuestion.Visibility = Visibility.Collapsed;
-                    if (check)
-                    {
-                        Vrai.Visibility = Visibility.Visible;
-                        Faux.Visibility = Visibility.Collapsed;
-                        Animation.AnimateEmoji(Page, Vrai).Begin();
-                    }
-                    else
-                    {
-                        Vrai.Visibility = Visibility.Collapsed;
-                        Faux.Visibility = Visibility.Visible;
-                        Animation.AnimateEmoji(Page, Faux).Begin();
-                    }
+                    Vrai.Visibility = Visibility.Collapsed;
+                    Faux.Visibility = Visibility.Visible;
+                    Animation.AnimateEmoji(Page, Faux).Begin();
                 }
-
-                ResponseInValidate = ResponseInValidate ? false : true;
-                BtnCheckReponse.Content = BtnCheckReponse.Content.ToString() == VALIDATE_RES ? TEXT_NEXT : VALIDATE_RES;
             }
             catch (COMException)
             {
                 Game.ShowSelectResponse(TextScore);
             }
 
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            Game.TWinGame = (int)Application.Current.Resources["IntWinGameConjugaison"];
+        }
+
+        public void Click_BtnOtherGame(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Resources["IntWinGameConjugaison"] = Game.TWinGame;
+            Frame.Navigate(typeof(AccueilGame));
         }
 
     }

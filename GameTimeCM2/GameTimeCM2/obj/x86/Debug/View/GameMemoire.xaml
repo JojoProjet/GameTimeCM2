@@ -12,7 +12,7 @@
     </Page.Background>
 
 
-    <StackPanel x:ConnectionId='2' Name="Memory" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+    <StackPanel x:ConnectionId='2' Name="Memory" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
 
         <StackPanel.Resources>
             <Storyboard x:ConnectionId='3' x:Name="Storyboard_StackFinishGame">
@@ -49,7 +49,13 @@
             </Storyboard>
         </StackPanel.Resources>
 
-        <TextBlock Text="Jeu de mémoire" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" Margin="0,-100,0,0" />
+
+        <StackPanel>
+            <Image Width="150" Height="150" Source="/Assets/AGames/robot.png" HorizontalAlignment="Left" Margin="20,0,0,0" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,-100,0,0" Text="Jeu de mémoire" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="72" FontStyle="Italic" TextDecorations="Underline" FocusVisualPrimaryBrush="White" Foreground="#FF00B1CD"/>
+            <Button x:ConnectionId='11' x:Name="btn_" Width="250" Height="75" FontSize="30" Content="Quitter la partie" HorizontalAlignment="Right" VerticalAlignment="Stretch"                            Margin="0,-90,0,30" Background="#B2006BD6"/>
+        </StackPanel>
+
 
         <Grid x:ConnectionId='5' Name="grid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="800" Height="500">
 

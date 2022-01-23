@@ -130,7 +130,7 @@ namespace GameTimeCM2.Src.Game.GConjugaison
         // Initliase Card
         public StackPanel InitCard()
         {
-            StackPanel stackPanel= new StackPanel()
+            StackPanel stackPanel = new StackPanel()
             {
                 Name = IdName,
                 Width = Width,
@@ -167,7 +167,7 @@ namespace GameTimeCM2.Src.Game.GConjugaison
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private void Tapped_Card(object sender, TappedRoutedEventArgs e)
+        public void Tapped_Card(object sender, TappedRoutedEventArgs e)
         {
             StackPanel stackPanel = sender as StackPanel;
 

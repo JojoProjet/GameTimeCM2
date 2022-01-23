@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Windows.UI;
 using Windows.UI.Xaml;
@@ -56,14 +57,33 @@ namespace GameTimeCM2.Src.Game.GConjugaison
 
         }
 
-        public void AnimateCard(string animateSide)
+        public void AnimateCard(TextBlock text, StackPanel s1, StackPanel s2, Button b, Game game)
         {
-            Storyboard story = StackPaneLCards.Resources[animateSide == ANIMATE_SIDE_FRONT 
-                ? GetStringAnimationCardFrontIdName() 
-                : GetStringAnimationCardBackIdName()
-            ] as Storyboard;
+            Storyboard storyFront = StackPaneLCards.Resources[GetStringAnimationCardFrontIdName()] as Storyboard;
+            Storyboard storyBack = StackPaneLCards.Resources[GetStringAnimationCardBackIdName()] as Storyboard;
 
-            story.Begin();
+            storyFront.Completed += (e, s) =>
+            {
+                StackPanel stackPanel = (StackPanel)StackPaneLCards.FindName(Card.IdName);
+
+                if (Card.IdName == "Card4")
+                {
+                    Thread.Sleep(1000);
+
+                    storyBack.Completed += (a, r) =>
+                    {
+                        b.IsEnabled = true;
+                        game.SetNewValueTextCard(b);
+                        text.Visibility = Visibility.Visible;
+                        s1.Visibility = Visibility.Collapsed;
+                        s2.Visibility = Visibility.Collapsed;
+                    };
+                }
+                storyBack.Begin();
+
+            };
+
+            storyFront.Begin();
         }
 
         public static Storyboard AnimateEmoji(Page page, StackPanel image)
@@ -105,7 +125,10 @@ namespace GameTimeCM2.Src.Game.GConjugaison
                     stackPanel.Background = Card.BackgroundImageBrushBackCard();
                     Card.Text = cardTextDefaultBackCard;
                 }
-                else stackPanel.Background = Card.PropertyImageBrush();
+                else
+                {
+                    stackPanel.Background = Card.PropertyImageBrush();
+                }
             };
 
             return doubleAnimation;
