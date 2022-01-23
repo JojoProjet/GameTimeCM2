@@ -89,7 +89,7 @@
 
             <StackPanel>
                 <Image Width="200" Height="200" Source="/Assets/AGames/escapegame.jpg" />
-                <Button x:ConnectionId='3' x:Name="btn_escape_game" Width="250" Height="75" FontSize="30" Content="Escape Game" HorizontalAlignment="Center" VerticalAlignment="Bottom"                              Margin="0,0,0,30"/>
+                <Button x:ConnectionId='3' IsEnabled="False" x:Name="btn_escape_game" Width="250" Height="75" FontSize="30" Content="Escape Game" HorizontalAlignment="Center" VerticalAlignment="Bottom"                              Margin="0,0,0,30"/>
             </StackPanel>
 
         </StackPanel>

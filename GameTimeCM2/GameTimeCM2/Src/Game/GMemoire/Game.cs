@@ -19,11 +19,11 @@ namespace GameTimeCM2.Src.Game.GMemoire
 
         public static int Select { get; set; }
         public static List<int> TabCardOk { get; set; }
-
         public static StackPanel StackPanelGame { get; set; }
         public static StackPanel Stack_FinishGame { get; set; }
         public static TextBlock TextBlock_ScoreCoupFinal { get; set; }
         public static int ScoreCoupFinal { get; set; }
+        public static int TWinGame { get; set; }
 
         public Grid Grid { get; set;}
 
@@ -119,9 +119,9 @@ namespace GameTimeCM2.Src.Game.GMemoire
                 // When Win is declenched
                 Stack_FinishGame.Visibility = Visibility.Visible;
                 TextBlock_ScoreCoupFinal.Text = $"Coup : {ScoreCoupFinal}";
+                TWinGame += 1;
                 story.Begin();
             }
-
         }
 
         public void SetNewGame(Storyboard Storyboard_StackNewGame, StackPanel Stack_FinishGame)

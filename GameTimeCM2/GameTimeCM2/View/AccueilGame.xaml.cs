@@ -32,9 +32,23 @@ namespace GameTimeCM2
 
         public User user;
 
+        private const string RESSOURCES_INT_WIN_GAME_PENDU = "IntWinGamePendu";
+        private const string RESSOURCES_INT_WIN_GAME_MEMORY = "IntWinGameMemory";
+        private const string RESSOURCES_INT_WIN_GAME_CONJUGAISON = "IntWinGameConjugaison";
+        private const string RESSOURCES_INT_WIN_GAME_ESCAPE = "IntWinGameEscape";
+
+        private int IndexPenduWinListGame = 1;
+        private int IndexMemoryWinListGame = 2;
+        private int IndexConugaisonWinListGame = 3;
+        private int IndexEscapeWinListGame = 4;
+
+        // 1 -> Pendu, 2 -> Memory, 3 -> Conjugaison, 4 -> Escape Game
+        public List<int> WinListGame { get; set; }
+
         public AccueilGame()
         {
             this.InitializeComponent();
+            Init();
 
             // Disable escape game when only one win in three game
             //btn_escape_game.IsEnabled = false;
@@ -43,21 +57,83 @@ namespace GameTimeCM2
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            
+
+            int winGamePendu = (int)Application.Current.Resources["IntWinGamePendu"];
+            int winGameMemory = (int)Application.Current.Resources["IntWinGameMemory"];
+            int winGameConugaison = (int)Application.Current.Resources["IntWinGameConjugaison"];
+            int winGameEsape = (int)Application.Current.Resources["IntWinGameEscape"];
+
+            CheckCanGameEscape(winGamePendu, winGameMemory, winGameConugaison);
+
+            WinListGame[IndexPenduWinListGame] = winGamePendu;
+            WinListGame[IndexMemoryWinListGame] = winGameMemory;
+            WinListGame[IndexConugaisonWinListGame] = winGameConugaison;
+            WinListGame[IndexEscapeWinListGame] = winGameEsape;
+
             //user = (User)Application.Current.Resources["User"];
             //Title.Text = $"Bonjour {user.Name}";
         }
 
-        public void init()
+        public void SendDataWinListGame(string resources, int index)
         {
-            //InitJson.UJsonTextReader()
+            Application.Current.Resources[resources] = WinListGame[index];
         }
 
-        private void Btn_LaunchGamePendu(object sender, RoutedEventArgs e) => rootFrame.Navigate(typeof(GamePendu));
-        private void Btn_LaunchGameMemoire(object sender, RoutedEventArgs e) => rootFrame.Navigate(typeof(GameMemoire));
-        private void Btn_LaunchGameConjugaison(object sender, RoutedEventArgs e) => rootFrame.Navigate(typeof(ViewBeginGameConjugaison));
-        private void Btn_LaunchGameEscape(object sender, RoutedEventArgs e) => rootFrame.Navigate(typeof(EscapeGame));
-        
+        public void LaunchGamePendu()
+        {
+            SendDataWinListGame(RESSOURCES_INT_WIN_GAME_PENDU, IndexPenduWinListGame);
+            rootFrame.Navigate(typeof(GamePendu));
+        }
+
+        public void LaunchGameMemoire()
+        {
+            SendDataWinListGame(RESSOURCES_INT_WIN_GAME_MEMORY, IndexMemoryWinListGame);
+            rootFrame.Navigate(typeof(GameMemoire));
+        }
+
+        public void LaunchGameConjugaison()
+        {
+            SendDataWinListGame(RESSOURCES_INT_WIN_GAME_CONJUGAISON, IndexConugaisonWinListGame);
+            rootFrame.Navigate(typeof(ViewBeginGameConjugaison));
+        }
+
+        public void LaunchGameEscape()
+        {
+            SendDataWinListGame(RESSOURCES_INT_WIN_GAME_ESCAPE, IndexEscapeWinListGame);
+            rootFrame.Navigate(typeof(EscapeGame));
+        }
+
+        private void CheckCanGameEscape(int winP, int winM, int winC)
+        {
+            if (winP > 0 && winM > 0 && winC > 0) btn_escape_game.IsEnabled = true;
+        }
+
+        public void Init()
+        {
+            //InitJson.UJsonTextReader()
+            WinListGame = new List<int>
+            {
+                0, 0, 0, 0, 0
+            };
+            if (!Application.Current.Resources.ContainsKey(RESSOURCES_INT_WIN_GAME_PENDU) &&
+                !Application.Current.Resources.ContainsKey(RESSOURCES_INT_WIN_GAME_MEMORY) &&
+                !Application.Current.Resources.ContainsKey(RESSOURCES_INT_WIN_GAME_CONJUGAISON) &&
+                !Application.Current.Resources.ContainsKey(RESSOURCES_INT_WIN_GAME_ESCAPE)
+            )
+            {
+                Application.Current.Resources[RESSOURCES_INT_WIN_GAME_PENDU] = 0;
+                Application.Current.Resources[RESSOURCES_INT_WIN_GAME_MEMORY] = 0;
+                Application.Current.Resources[RESSOURCES_INT_WIN_GAME_CONJUGAISON] = 0;
+                Application.Current.Resources[RESSOURCES_INT_WIN_GAME_ESCAPE] = 0;
+            }
+        }
+
+        private void Btn_LaunchGamePendu(object sender, RoutedEventArgs e) => LaunchGamePendu();
+        private void Btn_LaunchGameMemoire(object sender, RoutedEventArgs e) => LaunchGameMemoire();
+        private void Btn_LaunchGameConjugaison(object sender, RoutedEventArgs e) => LaunchGameConjugaison();
+        private void Btn_LaunchGameEscape(object sender, RoutedEventArgs e) => LaunchGameEscape();
+
+
         private void Border_TappedInfo(object sender, RoutedEventArgs e)
         {
 
@@ -67,8 +143,6 @@ namespace GameTimeCM2
         {
             //LoadPbar.IsLoading = true;
             rootFrame.Navigate(typeof(ViewScoreFinal));
-
-
         }
 
 
@@ -125,5 +199,9 @@ namespace GameTimeCM2
             Animation.AnimatePage(AccueilGamePage, StackPanelPage).Begin();
         }
 
+        private void btn_escape_game_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+        }
     }
 }

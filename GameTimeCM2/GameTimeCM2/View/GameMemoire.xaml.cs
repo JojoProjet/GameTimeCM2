@@ -38,13 +38,12 @@ namespace GameTimeCM2
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            //user = (User)Application.Current.Resources["User"];
-            //Title.Text = $"Bonjour {user.Name}";
-
+            Game.TWinGame = (int)Application.Current.Resources["IntWinGameMemory"];
         }
 
         public void Click_BtnOtherGame(object sender, RoutedEventArgs e)
         {
+            Application.Current.Resources["IntWinGameMemory"] = Game.TWinGame;
             Frame.Navigate(typeof(AccueilGame));
         }
 
