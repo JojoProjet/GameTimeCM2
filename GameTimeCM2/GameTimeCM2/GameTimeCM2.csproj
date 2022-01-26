@@ -127,6 +127,7 @@
     <Compile Include="Src\Game\GMemoire\Cards.cs" />
     <Compile Include="Src\Game\GMemoire\Data.cs" />
     <Compile Include="Src\Game\GMemoire\Game.cs" />
+    <Compile Include="Src\Game\GPendu\Game.cs" />
     <Compile Include="Src\Game\RessourcesUser.cs" />
     <Compile Include="Src\Services\AccountService.cs" />
     <Compile Include="Src\Services\UserService.cs" />
@@ -290,7 +291,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Src\Game\GEscapeGame\" />
-    <Folder Include="Src\Game\GPendu\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Json\gameConjugaison.json" />

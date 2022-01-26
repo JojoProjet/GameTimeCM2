@@ -36,7 +36,7 @@
         <StackPanel>
             <Image Width="150" Height="150" Source="/Assets/AGames/robot.png" HorizontalAlignment="Left" Margin="20,0,0,0" />
             <TextBlock HorizontalAlignment="Center" Margin="0,-100,0,0" Text="Jeu de conjugaison" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="72" FontStyle="Italic" TextDecorations="Underline" FocusVisualPrimaryBrush="White" Foreground="#FF00B1CD"/>
-            <Button x:ConnectionId='16' x:Name="btn_" Width="250" Height="75" FontSize="30" Content="Quitter la partie" HorizontalAlignment="Right" VerticalAlignment="Stretch"                      Margin="0,-90,0,30" Background="#B2006BD6"/>
+            <Button x:ConnectionId='15' x:Name="btn_" Width="250" Height="75" FontSize="30" Content="Quitter la partie" HorizontalAlignment="Right" VerticalAlignment="Stretch"                      Margin="0,-90,0,30" Background="#B2006BD6"/>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
@@ -54,20 +54,20 @@
                         <GradientStop Color="#FF0C16E6" Offset="1"/>
                     </LinearGradientBrush>
                 </StackPanel.BorderBrush>
-                <TextBlock x:ConnectionId='15' x:Name="TextScore" HorizontalAlignment="Stretch" FontSize="24" VerticalAlignment="Stretch" Margin="10,10,0,0" />
+                <TextBlock x:ConnectionId='14' x:Name="TextScore" HorizontalAlignment="Stretch" FontSize="24" VerticalAlignment="Stretch" Margin="10,10,0,0" />
             </StackPanel>
             
 
             <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Center" Orientation="Horizontal">
-                <TextBlock x:ConnectionId='12' x:Name="TextQuestion" HorizontalAlignment="Center" Margin="0,0,0,0" Text="La question" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="50" Foreground="#FFE2460C" FontStyle="Italic" FontWeight="Bold"/>
-                <StackPanel x:ConnectionId='13' x:Name="Vrai" Visibility="Collapsed" Margin="0,-50,0,0">
+                <TextBlock x:ConnectionId='11' x:Name="TextQuestion" HorizontalAlignment="Center" Margin="0,0,0,0" Text="La question" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="50" Foreground="#FFE2460C" FontStyle="Italic" FontWeight="Bold"/>
+                <StackPanel x:ConnectionId='12' x:Name="Vrai" Visibility="Collapsed" Margin="0,-50,0,0">
                     <StackPanel.RenderTransform>
                         <CompositeTransform></CompositeTransform>
                     </StackPanel.RenderTransform>
                     <Image Width="150" Height="150" Source="/Assets/AGames/vrai.png" HorizontalAlignment="Center" VerticalAlignment="Stretch" NineGrid="0,0,0,0" />
                 </StackPanel>
 
-                <StackPanel x:ConnectionId='14' x:Name="Faux" Visibility="Collapsed" Margin="0,-50,0,0">
+                <StackPanel x:ConnectionId='13' x:Name="Faux" Visibility="Collapsed" Margin="0,-50,0,0">
                     <StackPanel.RenderTransform>
                         <CompositeTransform></CompositeTransform>
                     </StackPanel.RenderTransform>
@@ -93,8 +93,6 @@
             <TextBlock x:ConnectionId='8' Name="TextWinOrLoose" HorizontalAlignment="Center" FontSize="44"></TextBlock>
             <TextBlock x:ConnectionId='9' Name="TextFinishScore" FontSize="30" Margin="5,0,0,10"></TextBlock>
             <Button x:ConnectionId='10' Content="Autre jeux"                            HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,0,30,10"/>
-            <Button x:ConnectionId='11' Content="Rejouer"                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,0,30,10"/>
-
         </StackPanel>
 
     </StackPanel>
