@@ -6,9 +6,73 @@
     xmlns:local="using:GameTimeCM2"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Background="Black">
+    mc:Ignorable="d">
 
-    <Grid x:ConnectionId='2' x:Name="GameGrid" Width="800" Height="500"></Grid>
+    <Page.Background>
+        <ImageBrush ImageSource="/Assets/AGames/bc2.jpeg" />
+    </Page.Background>
+
+    <Page.Resources>
+        <Storyboard x:ConnectionId='2' x:Name="Storyboard_StackFinishGame">
+            <DoubleAnimation
+                    Storyboard.TargetName="Stack_FinishGame"
+                    Storyboard.TargetProperty="Opacity"
+                    From="0"
+                    To="1"
+                    Duration="0:0:1"
+                    />
+            <DoubleAnimation
+                    Storyboard.TargetName="RT_FG"
+                    Storyboard.TargetProperty="TranslateY"
+                    From="300"
+                    To="-100"
+                    Duration="0:0:1"
+                    />
+        </Storyboard>
+        <Storyboard x:ConnectionId='3' x:Name="Storyboard_StackNewGame">
+            <DoubleAnimation
+                    Storyboard.TargetName="Stack_FinishGame"
+                    Storyboard.TargetProperty="Opacity"
+                    From="1"
+                    To="0"
+                    Duration="0:0:1"
+                    />
+            <DoubleAnimation
+                    Storyboard.TargetName="RT_FG"
+                    Storyboard.TargetProperty="TranslateY"
+                    From="-100"
+                    To="300"
+                    Duration="0:0:1"
+                    />
+        </Storyboard>
+    </Page.Resources>
+
+    <StackPanel>
+        
+        <StackPanel>
+            <Image Width="150" Height="150" Source="/Assets/AGames/robot.png" HorizontalAlignment="Right" Margin="20,0,0,0" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,-100,0,0" Text="Pendu" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="72" FontStyle="Italic" TextDecorations="Underline" FocusVisualPrimaryBrush="White" Foreground="#FF00B1CD"/>
+            <Button x:ConnectionId='11' x:Name="btn_" Width="250" Height="75" FontSize="30" Content="Quitter la partie" HorizontalAlignment="Left" VerticalAlignment="Stretch"                      Margin="0,-90,0,30" Background="#B2006BD6"/>
+        </StackPanel>
+        
+        <StackPanel x:ConnectionId='4' x:Name="GameGrid" Width="1000" Height="700" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        </StackPanel>
+
+        <StackPanel x:ConnectionId='5' Visibility="Visible" Opacity="0" x:Name="Stack_FinishGame" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="300" Height="200" Orientation="Vertical" BorderThickness="10,10,10,10" CornerRadius="20,20,20,20" BorderBrush="#FF0C8F9C" Background="#CC0DB109" Margin="0,-650,0,0" RenderTransformOrigin="0.5,0.5">
+            <StackPanel.RenderTransform>
+                <CompositeTransform x:ConnectionId='6' x:Name="RT_FG" TranslateX="0" TranslateY="425"/>
+            </StackPanel.RenderTransform>
+            <StackPanel.Projection>
+                <PlaneProjection RotationX="-10" RotationY="0" RotationZ="0"/>
+            </StackPanel.Projection>
+            <TextBlock x:ConnectionId='7' Name="TextWinOrLoose" HorizontalAlignment="Center" FontSize="34"></TextBlock>
+            <TextBlock x:ConnectionId='8' Name="TextFinishScore" FontSize="20" Margin="0,0,0,0"></TextBlock>
+            <Button x:ConnectionId='9' Content="Nouvelle Partie"                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,0,30,10"/>
+            <Button x:ConnectionId='10' Content="Autre jeux"                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30,0,30,10"/>
+        </StackPanel>
+
+    </StackPanel>
+
 
 </Page>
 

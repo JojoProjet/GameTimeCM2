@@ -22,7 +22,7 @@ namespace GameTimeCM2.Src.Game.GPendu
             Stage = 0;
             InitializeAlphabet();
         }
-
+         
         private void InitializeAlphabet()
         {
                     Alphabet = new char[] {'A', 'B', 'C', 'D', 'E',
@@ -33,10 +33,13 @@ namespace GameTimeCM2.Src.Game.GPendu
 
         public BitmapImage GetStageImage()
         {
+            const string URI_ASSETS_IMAGES = "ms-appx:///Assets/AGamePendu/";
+            const string EXTENSION_IMAGE = ".png";
+
+
             return new BitmapImage(
-                new Uri(System.IO.Path.Combine(
-                    Environment.CurrentDirectory,
-                    "Images", Stage + ".png")));
+                new Uri(URI_ASSETS_IMAGES + Stage + EXTENSION_IMAGE)
+            );
         }
 
         public int[] TakeCharacter(char ch)
@@ -46,26 +49,20 @@ namespace GameTimeCM2.Src.Game.GPendu
             for (int i = 0; i < Word.Length; i++)
             {
                 if (Word.ToUpper()[i] == ch)
-                {
                     temp[i] = 1;
-                }
                 else
-                {
                     temp[i] = 0;
-                }
             }
 
             if (temp.Count(i => i == 1) == 0)
-            {
-                Stage++;
-            }
+                Stage = Stage == 9 ? Stage : Stage+1;
 
             return temp;
         }
 
         public bool IsGameOver()
         {
-            return Stage == 9 ? true : false;
+            return Stage == 9;
         }
 
     }

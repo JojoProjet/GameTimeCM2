@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,157 +26,287 @@ namespace GameTimeCM2
     {
         private Game HangmanGame { get; set; }
         private List<Button> Buttons { get; set; }
-        private List<TextBlock> Labels { get; set; }
+        private List<Button> Words { get; set; }
         private Image StageImage { get; set; }
+        private StackPanel Stack { get; set; }
+        private StackPanel StackError { get; set; }
+        private int TWinGame { get; set; }
 
         public GamePendu()
         {
             this.InitializeComponent();
-            Labels = new List<TextBlock>();
-            Buttons = new List<Button>();
-            CreateNewGameBtn();
-        }
 
-        private void NewGameBtnClick(object sender, RoutedEventArgs e)
-        {
+            Buttons = new List<Button>();
+            Words = new List<Button>();
+
+            Stack = CreateStackPanelSideRight();
+            StackError = CreateSackPanelError();
+
+            // CreateNewGameBtn();
 
             string[] words = new string[] {
                 "word", "test", "language", "default",
+                "world", "ship", "fleet", "blueprint"
+            };
+
+            InitializeGameField();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            TWinGame = (int)Application.Current.Resources["IntWinGamePendu"];
+        }
+
+        private void Btn_QuitGame(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Resources["IntWinGamePendu"] = TWinGame;
+            Frame.Navigate(typeof(AccueilGame));
+        }
+
+        
+
+        private void NewGameBtnClick(object sender, RoutedEventArgs e)
+        {
+            Storyboard_StackNewGame.Begin();
+            InitializeGameField();
+        }
+
+        private void InitializeGameField()
+        {
+            string[] words = new string[] {
+                "word", "test", "language", "default",
                 "world", "ship", "fleet", "blueprint"};
-            InitializeGameField(words[new Random().Next(0, words.Length)]);
-        }
 
-        private void CharacterBtnClick(object sender, RoutedEventArgs e)
-        {
-            int[] temp = HangmanGame.TakeCharacter((sender as Button).Content.ToString()[0]);
+            HangmanGame = new Game(words[new Random().Next(0, words.Length)]);
 
-            for (int i = 0; i < temp.Length; i++)
-            {
-                if (temp[i] == 1)
-                {
-                    Labels[i].Text = $"{HangmanGame.Word[i]}";
-                }
-            }
-
-            StageImage.Source = HangmanGame.GetStageImage();
-
-            if (Labels.Count(l => l.Text == null) == 0)
-            {
-                FinishGame("You Win!");
-            }
-            else if (HangmanGame.IsGameOver())
-            {
-                FinishGame("You Lose!");
-            }
-            else
-            {
-                (sender as Button).IsEnabled = false;
-            }
-        }
-
-        private void FinishGame(string message)
-        {
-            //MessageBox.Show(message);
-            //Buttons.ForEach(b => b.IsEnabled = false);
-        }
-
-        private void InitializeGameField(string word)
-        {
-            HangmanGame = new Game(word);
-
-            Labels.Clear();
             Buttons.Clear();
+            Words.Clear();
+            Stack.Children.Clear();
+            StackError.Children.Clear();
             GameGrid.Children.Clear();
 
             CreateImage();
             StageImage.Source = HangmanGame.GetStageImage();
 
             CreateNewGameBtn();
-            CreateCharacterBtns(HangmanGame.Alphabet);
+
             CreateCharacterLbl(HangmanGame.Lenght);
+            CreateCharacterBtns(HangmanGame.Alphabet);
+            Stack.Children.Add(StackError);
+
+            GameGrid.Children.Add(Stack);
+        }
+
+        private void CharacterBtnClick(object sender, RoutedEventArgs e)
+        {
+            char character = (sender as Button).Content.ToString()[0];
+            int[] temp = HangmanGame.TakeCharacter(character);
+            bool passed = false;
+
+            for (int i = 0; i < temp.Length; i++)
+            {
+                if (temp[i] == 1)
+                {
+                    passed = true;
+                    Words[i].Content = $"{HangmanGame.Word[i]}";
+                }
+            }
+            if(!passed) 
+                StackError.Children.Add(CreateButton(character.ToString(), new SolidColorBrush(Colors.Red)));
+
+
+            StageImage.Source = HangmanGame.GetStageImage();
+
+            if (Words.Count(l => l.Content == null) == 0)
+            {
+                FinishGame("Vous avez gagné !");
+                TWinGame += 1;
+            }
+            else if (HangmanGame.IsGameOver())
+                FinishGame("Vous avez perdu !");
+            else
+                (sender as Button).IsEnabled = false;
+        }
+
+        private void FinishGame(string message)
+        {
+            //MessageBox.Show(message);
+            Buttons.ForEach(b => b.IsEnabled = false);
+            TextWinOrLoose.Text = message;
+            Storyboard_StackFinishGame.Begin();
         }
 
         #region Game Field Initialization
         private void CreateNewGameBtn()
         {
-            Button button = new Button();
-            button.VerticalAlignment = VerticalAlignment.Center;
-            button.HorizontalAlignment = HorizontalAlignment.Right;
-            button.Width = 150;
-            button.Height = 35;
-
-            button.Content = "New Game";
+            Button button = new Button
+            {
+                VerticalAlignment = VerticalAlignment.Center,
+                HorizontalAlignment = HorizontalAlignment.Right,
+                Width = 150,
+                Height = 35,
+                Content = "New Game"
+            };
             button.Click += new RoutedEventHandler(NewGameBtnClick);
 
-            GameGrid.Children.Add(button);
+           // GameGrid.Children.Add(button);
+        }
+
+        private StackPanel CreateStack()
+        {
+            return new StackPanel
+            {
+                Width = 500,
+                Height = 50,
+                Orientation = Orientation.Horizontal,
+                HorizontalAlignment = HorizontalAlignment.Left
+            };
+        }
+
+        private StackPanel CreateStackPanelImages()
+        {
+            return new StackPanel
+            {
+                Name = "Images",
+                Width = 500,
+                Height = 500,
+            };
+        }
+
+        private StackPanel CreateStackPanelSideRight()
+        {
+            return new StackPanel
+            {
+                Name = "SideRight",
+                Width = 500,
+                Height = 500
+            };
         }
 
         private void CreateImage()
         {
-            StageImage = new Image();
+            StageImage = new Image
+            {
+                Name = "StageImage",
+                VerticalAlignment = VerticalAlignment.Center,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                Width = 400,
+                Height = 400
+            };
 
-            StageImage.Name = "StageImage";
-            StageImage.VerticalAlignment = VerticalAlignment.Center;
-            StageImage.HorizontalAlignment = HorizontalAlignment.Center;
-            StageImage.Width = 150;
-            StageImage.Height = 150;
+            StackPanel stack = CreateStackPanelImages();
+            stack.Children.Add(StageImage);
+            GameGrid.Children.Add(stack);
+        }
 
-            GameGrid.Children.Add(StageImage);
+        private StackPanel CreateStackPanelAlpabet()
+        {
+            return new StackPanel
+            {
+                Name = "Alphabet",
+                Width = 500,
+                Height = 300,
+                Orientation = Orientation.Vertical,
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+            };
+        }
+
+        private StackPanel CreateSackPanelError()
+        {
+            return new StackPanel
+            {
+                Name = "Errors",
+                Width = 500,
+                Height = 50,
+                Orientation = Orientation.Horizontal,
+                HorizontalAlignment = HorizontalAlignment.Stretch,
+            };
         }
 
         private void CreateCharacterLbl(int lenght)
         {
             for (int i = 0; i < lenght; i++)
             {
-                TextBlock label = new TextBlock();
-                label.FontSize = 20;
-                label.FontWeight = FontWeight;
-                label.HorizontalAlignment = HorizontalAlignment.Center;
-                label.VerticalAlignment = VerticalAlignment.Center;
-                label.Height = label.Width = 38;
-                label.HorizontalAlignment = HorizontalAlignment.Left;
-                label.VerticalAlignment = VerticalAlignment.Top;
+                Button button = new Button
+                {
+                    Name = "Character" + i.ToString(),
+                    FontSize = 20,
+                    Height = 38,
+                    Width = 38,
+                    FontWeight = FontWeight,
+                    Content = null,
+                    HorizontalAlignment = HorizontalAlignment.Left,
+                    VerticalAlignment = VerticalAlignment.Bottom,
+                    HorizontalContentAlignment = HorizontalAlignment.Center,
+                    VerticalContentAlignment = VerticalAlignment.Center,
+                    Background = new SolidColorBrush(Colors.LawnGreen),
+                    FocusVisualPrimaryBrush = new SolidColorBrush(Colors.LawnGreen),
+                    Foreground = new SolidColorBrush(Colors.Black),
+                    Margin = new Thickness(5, 5, 5, 5),
+                    IsTapEnabled = false
+                };
 
-                label.Name = "Character" + i.ToString();
-
-                label.Margin = new Thickness(i * label.Width, 0d, 0d, 0d);
-
-                Labels.Add(label);
-
-                GameGrid.Children.Add(label);
+                Words.Add(button);
             }
+
+            StackPanel stack = CreateStack();
+            Words.ForEach(item =>
+            {
+                stack.Children.Add(item);
+            });
+            Stack.Children.Add(stack);
+        }
+
+        private Button CreateButton(string content, SolidColorBrush solidColorBrush)
+        {
+            return new Button
+            {
+                Name = $"Btn{content}",
+                Height = 38,
+                Width = 38,
+                FontSize = 20,
+                FontWeight = FontWeight,
+                HorizontalAlignment = HorizontalAlignment.Left,
+                VerticalAlignment = VerticalAlignment.Bottom,
+                HorizontalContentAlignment = HorizontalAlignment.Center,
+                VerticalContentAlignment = VerticalAlignment.Center,
+                Background = solidColorBrush,
+                Content = content,
+                Margin = new Thickness(5, 5, 5, 5),
+            };
         }
 
         private void CreateCharacterBtns(char[] alph)
         {
-            double bot = 0;
-            int count = 0;
-            for (int i = 0; i < alph.Length; i++, count++)
+            int index = 0;
+            int nAlpabet = 0;
+
+            for (int i = 0; i < alph.Length; i++)
             {
-                Button button = new Button();
-                button.FontSize = 20;
-                button.FontWeight = FontWeight;
-                button.HorizontalContentAlignment = HorizontalAlignment.Center;
-                button.VerticalContentAlignment = VerticalAlignment.Center;
-                button.Height = button.Width = 38;
-                button.HorizontalAlignment = HorizontalAlignment.Left;
-                button.VerticalAlignment = VerticalAlignment.Bottom;
+                Button button = CreateButton(alph[i].ToString(), new SolidColorBrush(Colors.Orange));
 
-                button.Content = alph[i].ToString();
-
-                if ((count + 1) * button.Width > GameGrid.Width)
-                {
-                    count = 0;
-                    bot += button.Height;
-                }
-
-                button.Margin = new Thickness(count * button.Width, 0, 0, bot);
                 button.Click += new RoutedEventHandler(CharacterBtnClick);
 
                 Buttons.Add(button);
-
-                GameGrid.Children.Add(button);
             }
+
+            StackPanel stackAlpa = CreateStackPanelAlpabet();
+            StackPanel stackStock = CreateStack();
+
+            Buttons.ForEach(elm =>
+            {
+                stackStock.Children.Add(elm);
+                index++;
+                nAlpabet++;
+                if (index == 6 || nAlpabet == 26)
+                {
+                    stackAlpa.Children.Add(stackStock);
+                    index = 0;
+                    stackStock = CreateStack();
+                }
+            });
+            Stack.Children.Add(stackAlpa);
         }
         #endregion
 

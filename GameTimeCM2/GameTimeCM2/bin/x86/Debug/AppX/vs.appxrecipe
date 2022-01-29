@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-26T00:07:04.039</Modified>
+      <Modified>2022-01-29T16:36:43.447</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\GameTimeCM2.exe">
       <PackagePath>entrypoint\GameTimeCM2.exe</PackagePath>
-      <Modified>2022-01-26T00:07:01.925</Modified>
+      <Modified>2022-01-29T16:36:40.760</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonat\.nuget\packages\bcrypt\1.0.0\lib\DevOne.Security.Cryptography.BCrypt.dll">
       <PackagePath>DevOne.Security.Cryptography.BCrypt.dll</PackagePath>
@@ -226,49 +226,45 @@
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
       <Modified>2021-11-15T09:15:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b2.jpg">
-      <PackagePath>Assets\AGames\b2.jpg</PackagePath>
-      <Modified>2021-12-25T12:29:23.399</Modified>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGamePendu\0.png">
+      <PackagePath>Assets\AGamePendu\0.png</PackagePath>
+      <Modified>2022-01-28T21:11:09.956</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b3.jpg">
-      <PackagePath>Assets\AGames\b3.jpg</PackagePath>
-      <Modified>2021-12-25T17:05:59.229</Modified>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGamePendu\1.png">
+      <PackagePath>Assets\AGamePendu\1.png</PackagePath>
+      <Modified>2022-01-28T21:11:13.710</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b4.jpg">
-      <PackagePath>Assets\AGames\b4.jpg</PackagePath>
-      <Modified>2021-12-25T17:09:35.364</Modified>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGamePendu\2.png">
+      <PackagePath>Assets\AGamePendu\2.png</PackagePath>
+      <Modified>2022-01-28T21:11:16.836</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\backBeginConjuGame.jpg">
-      <PackagePath>Assets\AGames\backBeginConjuGame.jpg</PackagePath>
-      <Modified>2021-12-25T22:35:27.579</Modified>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGamePendu\3.png">
+      <PackagePath>Assets\AGamePendu\3.png</PackagePath>
+      <Modified>2022-01-28T21:11:19.851</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\backBeginConjuGameInit.jpg">
-      <PackagePath>Assets\AGames\backBeginConjuGameInit.jpg</PackagePath>
-      <Modified>2021-12-25T22:37:38.514</Modified>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGamePendu\4.png">
+      <PackagePath>Assets\AGamePendu\4.png</PackagePath>
+      <Modified>2022-01-28T21:11:23.055</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\BackGameConjugaison.jpg">
-      <PackagePath>Assets\AGames\BackGameConjugaison.jpg</PackagePath>
-      <Modified>2021-12-12T18:03:16.308</Modified>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGamePendu\5.png">
+      <PackagePath>Assets\AGamePendu\5.png</PackagePath>
+      <Modified>2022-01-28T21:11:28.856</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\background_all_1.jpg">
-      <PackagePath>Assets\AGames\background_all_1.jpg</PackagePath>
-      <Modified>2021-12-25T12:06:43.082</Modified>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGamePendu\6.png">
+      <PackagePath>Assets\AGamePendu\6.png</PackagePath>
+      <Modified>2022-01-28T21:11:34.766</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\brique.jpg">
-      <PackagePath>Assets\AGames\brique.jpg</PackagePath>
-      <Modified>2021-12-11T21:42:03.699</Modified>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGamePendu\7.png">
+      <PackagePath>Assets\AGamePendu\7.png</PackagePath>
+      <Modified>2022-01-28T21:11:38.092</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\card_elegantB.jpg">
-      <PackagePath>Assets\AGames\card_elegantB.jpg</PackagePath>
-      <Modified>2022-01-05T23:02:25.269</Modified>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGamePendu\8.png">
+      <PackagePath>Assets\AGamePendu\8.png</PackagePath>
+      <Modified>2022-01-28T21:11:41.200</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\escapegame.jpg">
-      <PackagePath>Assets\AGames\escapegame.jpg</PackagePath>
-      <Modified>2021-12-10T00:07:04.912</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\bc2.jpeg">
-      <PackagePath>Assets\AGames\bc2.jpeg</PackagePath>
-      <Modified>2022-01-05T23:04:30.408</Modified>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGamePendu\9.png">
+      <PackagePath>Assets\AGamePendu\9.png</PackagePath>
+      <Modified>2022-01-28T21:11:44.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\conjugaison.png">
       <PackagePath>Assets\AGames\conjugaison.png</PackagePath>
@@ -372,57 +368,101 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-11-01T10:57:19.469</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b2.jpg">
+      <PackagePath>Assets\AGames\b2.jpg</PackagePath>
+      <Modified>2021-12-25T12:29:23.399</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b3.jpg">
+      <PackagePath>Assets\AGames\b3.jpg</PackagePath>
+      <Modified>2021-12-25T17:05:59.229</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b4.jpg">
+      <PackagePath>Assets\AGames\b4.jpg</PackagePath>
+      <Modified>2021-12-25T17:09:35.364</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\backBeginConjuGame.jpg">
+      <PackagePath>Assets\AGames\backBeginConjuGame.jpg</PackagePath>
+      <Modified>2021-12-25T22:35:27.579</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\backBeginConjuGameInit.jpg">
+      <PackagePath>Assets\AGames\backBeginConjuGameInit.jpg</PackagePath>
+      <Modified>2021-12-25T22:37:38.514</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\BackGameConjugaison.jpg">
+      <PackagePath>Assets\AGames\BackGameConjugaison.jpg</PackagePath>
+      <Modified>2021-12-12T18:03:16.308</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\background_all_1.jpg">
+      <PackagePath>Assets\AGames\background_all_1.jpg</PackagePath>
+      <Modified>2021-12-25T12:06:43.082</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\brique.jpg">
+      <PackagePath>Assets\AGames\brique.jpg</PackagePath>
+      <Modified>2021-12-11T21:42:03.699</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\card_elegantB.jpg">
+      <PackagePath>Assets\AGames\card_elegantB.jpg</PackagePath>
+      <Modified>2022-01-05T23:02:25.269</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\escapegame.jpg">
+      <PackagePath>Assets\AGames\escapegame.jpg</PackagePath>
+      <Modified>2021-12-10T00:07:04.912</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\bc2.jpeg">
+      <PackagePath>Assets\AGames\bc2.jpeg</PackagePath>
+      <Modified>2022-01-05T23:04:30.408</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2021-12-07T08:14:41.622</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\GameTimeCM2.xr.xml">
       <PackagePath>GameTimeCM2.xr.xml</PackagePath>
-      <Modified>2022-01-23T19:54:33.844</Modified>
+      <Modified>2022-01-29T11:33:03.660</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-01-26T00:07:01.803</Modified>
+      <Modified>2022-01-29T16:36:40.607</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Ressources\AnimationRessources.xbf">
       <PackagePath>Ressources\AnimationRessources.xbf</PackagePath>
-      <Modified>2022-01-26T00:07:01.803</Modified>
+      <Modified>2022-01-29T16:36:40.606</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\AccueilGame.xbf">
       <PackagePath>View\AccueilGame.xbf</PackagePath>
-      <Modified>2022-01-26T00:07:01.803</Modified>
+      <Modified>2022-01-29T16:36:40.607</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\EscapeGame.xbf">
       <PackagePath>View\EscapeGame.xbf</PackagePath>
-      <Modified>2022-01-26T00:07:01.804</Modified>
+      <Modified>2022-01-29T16:36:40.607</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\GameConjugaison.xbf">
       <PackagePath>View\GameConjugaison.xbf</PackagePath>
-      <Modified>2022-01-26T00:07:01.804</Modified>
+      <Modified>2022-01-29T16:36:40.607</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\GameMemoire.xbf">
       <PackagePath>View\GameMemoire.xbf</PackagePath>
-      <Modified>2022-01-26T00:07:01.804</Modified>
+      <Modified>2022-01-29T16:36:40.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\GamePendu.xbf">
       <PackagePath>View\GamePendu.xbf</PackagePath>
-      <Modified>2022-01-26T00:07:01.804</Modified>
+      <Modified>2022-01-29T16:36:40.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-01-26T00:07:01.804</Modified>
+      <Modified>2022-01-29T16:36:40.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\ViewBeginGameConjugaison.xbf">
       <PackagePath>View\ViewBeginGameConjugaison.xbf</PackagePath>
-      <Modified>2022-01-26T00:07:01.804</Modified>
+      <Modified>2022-01-29T16:36:40.609</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\ViewRegister.xbf">
       <PackagePath>View\ViewRegister.xbf</PackagePath>
-      <Modified>2022-01-26T00:07:01.804</Modified>
+      <Modified>2022-01-29T16:36:40.609</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\ViewScoreFinal.xbf">
       <PackagePath>View\ViewScoreFinal.xbf</PackagePath>
-      <Modified>2022-01-26T00:07:01.805</Modified>
+      <Modified>2022-01-29T16:36:40.609</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -434,11 +474,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-01-26T00:07:02.759</Modified>
+      <Modified>2022-01-29T16:36:41.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Core\GameTimeCM2.exe">
       <PackagePath>GameTimeCM2.exe</PackagePath>
-      <Modified>2022-01-26T00:07:04.033</Modified>
+      <Modified>2022-01-29T16:36:43.439</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonat\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>

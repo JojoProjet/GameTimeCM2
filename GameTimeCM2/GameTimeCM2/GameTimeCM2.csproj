@@ -177,6 +177,16 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\AGamePendu\0.png" />
+    <Content Include="Assets\AGamePendu\1.png" />
+    <Content Include="Assets\AGamePendu\2.png" />
+    <Content Include="Assets\AGamePendu\3.png" />
+    <Content Include="Assets\AGamePendu\4.png" />
+    <Content Include="Assets\AGamePendu\5.png" />
+    <Content Include="Assets\AGamePendu\6.png" />
+    <Content Include="Assets\AGamePendu\7.png" />
+    <Content Include="Assets\AGamePendu\8.png" />
+    <Content Include="Assets\AGamePendu\9.png" />
     <Content Include="Assets\AGames\b2.jpg" />
     <Content Include="Assets\AGames\b3.jpg" />
     <Content Include="Assets\AGames\b4.jpg" />
@@ -293,6 +303,7 @@
     <Folder Include="Src\Game\GEscapeGame\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Json\data.json" />
     <None Include="Json\gameConjugaison.json" />
     <None Include="Ressources\gameConjugaison.json" />
     <None Include="Src\Game\GConjugaison\gameConjugaison.json" />
