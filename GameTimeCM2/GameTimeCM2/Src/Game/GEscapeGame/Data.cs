@@ -9,6 +9,7 @@ namespace GameTimeCM2.Src.Game.GEscapeGame
     public class Data
     {
         public int Id { get; set; }
+        public string Title { get; set; }
         public string Q1 { get; set; }
         public string Q2 { get; set; }
         public string Q3 { get; set; }
@@ -28,12 +29,13 @@ namespace GameTimeCM2.Src.Game.GEscapeGame
         public string R3_2 { get; set; }
         public string R3_3 { get; set; }
 
-        public Data(int id, string q1, string q2, string q3, 
+        public Data(int id, string title, string q1, string q2, string q3, 
             string r1, string r1_1, string r1_2, string r1_3,
             string r2, string r2_1, string r2_2, string r2_3,
             string r3, string r3_1, string r3_2, string r3_3)
         {
             Id = id;
+            Title = title;
 
             Q1 = q1;
             Q2 = q2;

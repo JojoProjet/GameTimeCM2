@@ -62,6 +62,8 @@ GameTimeCM2.xr.xml
 MainPage.xbf
 Ressources\AnimationRessources.xbf
 View\AccueilGame.xbf
+View\BeginEscapeGame.xbf
+View\EndEscapeGame.xbf
 View\EscapeGame.xbf
 View\GameConjugaison.xbf
 View\GameMemoire.xbf

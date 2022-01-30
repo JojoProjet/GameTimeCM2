@@ -1,62 +1,138 @@
 [
   {
     "id": 1,
-    "question": "azeeaze ?",
-    "conjugaison1": "xazeaz",
-    "conjugaison2": "zaze",
-    "conjugaison3": "c",
-    "conjugaison4": "d",
-    "response": "azex"
+    "question": "quelle est la terminaison des verbes du deuxieme groupe ?",
+    "conjugaison1": "er",
+    "conjugaison2": "ir",
+    "conjugaison3": "oir",
+    "conjugaison4": "ez",
+    "response": "ir"
   },
 
   {
     "id": 2,
-    "question": "azeeaze2 ?",
-    "conjugaison1": "x",
-    "conjugaison2": "z",
-    "conjugaison3": "c",
-    "conjugaison4": "d",
-    "response": "x"
+    "question": "une seule de ces propositions est correctement ecrit. Laquelle ?",
+    "conjugaison1": "Nous percames un trou",
+    "conjugaison2": "Nous perssames un trou",
+    "conjugaison3": "Nous percames un trou",
+    "conjugaison4": "Nous perssames un trou",
+    "response": "Nous percames un trou"
   },
 
   {
     "id": 3,
-    "question": "azeeaze3 ?",
-    "conjugaison1": "x",
-    "conjugaison2": "z",
-    "conjugaison3": "c",
-    "conjugaison4": "d",
-    "response": "x"
+    "question": "Parmi les phrases suivantes, laquelle comprend un verbe conjugue a l'imperatif?",
+    "conjugaison1": "il faut que tu sois sage",
+    "conjugaison2": "Parle-moi du dernier livre que tu as lu",
+    "conjugaison3": "Il ne sert a rien de s'enerver ",
+    "conjugaison4": "aucune de ses phrases ",
+    "response": "Parle-moi du dernier livre que tu as lu"
   },
 
   {
     "id": 4,
-    "question": "azeeaze4 ?",
-    "conjugaison1": "x",
-    "conjugaison2": "z",
-    "conjugaison3": "c",
-    "conjugaison4": "d",
-    "response": "x"
+    "question": " Vous (ecouter) le bruit des oiseaux",
+    "conjugaison1": "ecoutiez",
+    "conjugaison2": "ecoutais",
+    "conjugaison3": "ecoute",
+    "conjugaison4": "ecoutez",
+    "response": "ecoutez"
   },
 
   {
     "id": 5,
-    "question": "azeeaze5 ?",
-    "conjugaison1": "x",
-    "conjugaison2": "z",
-    "conjugaison3": "c",
-    "conjugaison4": "d",
-    "response": "x"
+    "question": "les guirlande ... dans le noir",
+    "conjugaison1": "clignotes",
+    "conjugaison2": "clignotent",
+    "conjugaison3": "clignotras",
+    "conjugaison4": "clignote",
+    "response": "clignotent"
   },
 
   {
     "id": 6,
-    "question": "azeeaze6 ?",
-    "conjugaison1": "x",
-    "conjugaison2": "z",
-    "conjugaison3": "c",
-    "conjugaison4": "d",
-    "response": "x"
+    "question": "je ... la chambre sans bruit",
+    "conjugaison1": "quittes",
+    "conjugaison2": "quittent",
+    "conjugaison3": "quite",
+    "conjugaison4": "quitte",
+    "response": "quitte"
+  },
+
+  {
+    "id": 7,
+    "question": "Nous lui ... son sac ",
+    "conjugaison1": "rendont",
+    "conjugaison2": "rendons ",
+    "conjugaison3": "as rendu",
+    "conjugaison4": "rendon",
+    "response": "rendons"
+  },
+
+  {
+    "id": 8,
+    "question": "Nous ... un gros livre",
+    "conjugaison1": "lisons",
+    "conjugaison2": "lirons",
+    "conjugaison3": "lira",
+    "conjugaison4": "liron",
+    "response": "lirons"
+  },
+
+
+  {
+    "id": 9,
+    "question": "Tu ... les oiseaux",
+    "conjugaison1": "nourrirai",
+    "conjugaison2": "nourrira",
+    "conjugaison3": "nourriras",
+    "conjugaison4": "avez nourri",
+    "response": "nourriras"
+  },
+
+
+  {
+    "id": 10,
+    "question": "Tom eteindra la lumiere.",
+    "conjugaison1": "Imparfait",
+    "conjugaison2": "Futur",
+    "conjugaison3": "Present",
+    "conjugaison4": "Passe compose",
+    "response": "Futur"
+  },
+
+
+
+  {
+    "id": 11,
+    "question": "Elle riait pour un rien",
+    "conjugaison1": "Imparfait",
+    "conjugaison2": "Futur",
+    "conjugaison3": "Passe compose",
+    "conjugaison4": "Present",
+    "response": "Imparfait"
+  },
+
+
+  {
+    "id": 12,
+    "question": "Ils cousent ces vetement avec soin",
+    "conjugaison1": "Imparfait",
+    "conjugaison2": "Futur",
+    "conjugaison3": "Passe compose",
+    "conjugaison4": "Present",
+    "response": "Present"
+  },
+
+
+  {
+    "id": 13,
+    "question": "Mon pere a repasse ses chemises",
+    "conjugaison1": "Present",
+    "conjugaison2": "Imparfait",
+    "conjugaison3": "Passe compose",
+    "conjugaison4": "Futur",
+    "response": "Passe compose"
   }
-  
+
 ]

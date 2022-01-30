@@ -42,13 +42,6 @@ namespace GameTimeCM2
             Stack = CreateStackPanelSideRight();
             StackError = CreateSackPanelError();
 
-            // CreateNewGameBtn();
-
-            string[] words = new string[] {
-                "word", "test", "language", "default",
-                "world", "ship", "fleet", "blueprint"
-            };
-
             InitializeGameField();
         }
 
@@ -75,8 +68,14 @@ namespace GameTimeCM2
         private void InitializeGameField()
         {
             string[] words = new string[] {
-                "word", "test", "language", "default",
-                "world", "ship", "fleet", "blueprint"};
+                "Coq", "Cou", "Cri", "Gel", "Tic",
+                "Beau", "Dame", "Joue", "Rhum", "Yogi",
+                "Aimer", "Capot", "Koala", "Pomme", "Taupe",
+                "Acajou", "Crayon", "Goulot", "Puzzle", "Whisky",
+                "Billard", "Corbeau", "Sifflet", "Tonneau", "Vautour",
+                "Aquarium", "Batterie", "Scorpion", "Triangle", "Tabouret", 
+                "Ascenseur", "Ascension", "Populaire", "Narrateur", "Tambourin"
+            };
 
             HangmanGame = new Game(words[new Random().Next(0, words.Length)]);
 
@@ -88,8 +87,6 @@ namespace GameTimeCM2
 
             CreateImage();
             StageImage.Source = HangmanGame.GetStageImage();
-
-            CreateNewGameBtn();
 
             CreateCharacterLbl(HangmanGame.Lenght);
             CreateCharacterBtns(HangmanGame.Alphabet);
@@ -138,21 +135,6 @@ namespace GameTimeCM2
         }
 
         #region Game Field Initialization
-        private void CreateNewGameBtn()
-        {
-            Button button = new Button
-            {
-                VerticalAlignment = VerticalAlignment.Center,
-                HorizontalAlignment = HorizontalAlignment.Right,
-                Width = 150,
-                Height = 35,
-                Content = "New Game"
-            };
-            button.Click += new RoutedEventHandler(NewGameBtnClick);
-
-           // GameGrid.Children.Add(button);
-        }
-
         private StackPanel CreateStack()
         {
             return new StackPanel

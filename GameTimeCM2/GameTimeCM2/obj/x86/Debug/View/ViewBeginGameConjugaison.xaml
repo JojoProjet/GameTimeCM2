@@ -19,11 +19,22 @@
 
             <StackPanel Orientation="Vertical" Width="500" Margin="0,0,50,0" Padding="10,0,9,0" Background="#CC894105">
 
-                <TextBlock Text="Ah, les verbes, les groupes, les temps, les pronoms,… Des souvenirs du passé remontent à la surface avec leur lot d'émotions agréables ou désagréables selon l'expérience vécue des conjugaisons…" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" MaxLines="5" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" Margin="0,0,0,10" TextAlignment="Justify" />
+                <TextBlock Text="Ah, les verbes, les groupes, les temps, les pronoms,… Des souvenirs du passé remontent à la surface avec leur lot d'émotions agréables ou désagréables selon l'expérience vécue des conjugaisons…" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" MaxLines="5" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" Margin="0,25,0,10" TextAlignment="Justify" />
                 <TextBlock Text="Régles du Jeu :" FontSize="20" FontWeight="Bold" TextDecorations="Underline" Margin="0,0,0,10" />
-                <TextBlock Text="Deux niveaux de jeu. La prépration est la suivante 4 Cartes sont distribuées aux joueurs, le reste des cartes sauf une est retourné et fera office de pioche. La carte supplémentaire est posée face visible à côté de la pioche" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" MaxLines="5" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" Margin="0,0,0,10" TextAlignment="Justify" />
-                <TextBlock Text="Niveau 1 :" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" MaxLines="5" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" Margin="0,0,0,10" />
-                <TextBlock Text="Cette carte a un verbe conju" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" MaxLines="5" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" Margin="0,0,0,10" />
+
+                <TextBlock Text="Complété les pointilles (...) par la carte qui correspond à la bonne grammaire." HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" MaxLines="5" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" Margin="0,0,0,10" TextAlignment="Justify" />
+
+
+                <TextBlock Text="Bonne" FontSize="60" FontStyle="Italic" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0,100,0,0" >
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform Rotation="-30" SkewX="15" SkewY="0" ScaleX="2" TranslateX="-40" TranslateY="20"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <TextBlock Text="Chance !" FontSize="60" FontStyle="Italic" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Margin="0,0,0,0" >
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform Rotation="-30" SkewX="15" SkewY="0" TranslateX="0" ScaleX="2"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
 
             </StackPanel>
 

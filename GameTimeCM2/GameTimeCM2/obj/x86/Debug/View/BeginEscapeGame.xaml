@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="GameTimeCM2.View.BeginEscapeGame"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GameTimeCM2.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Background>
+        <ImageBrush ImageSource="/Assets/AGames/background_all_1.jpg" />
+    </Page.Background>
+
+    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+        <TextBlock Text="Escape Game" FontSize="48" FontStyle="Italic" FontWeight="Bold" TextDecorations="Underline" HorizontalAlignment="Center" Margin="0,50,0,50"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+            <StackPanel Orientation="Vertical" Width="500" Margin="0,0,50,0" Padding="10,0,9,0" Background="#CC894105">
+
+                <TextBlock Text="Régles du Jeu :" FontSize="20" FontWeight="Bold" TextDecorations="Underline" Margin="0,20,0,10" />
+                <TextBlock Text="Le but est simple répondait aux questions le plus vite possible, vous avez à votre disposition plusieurs atouts !" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" MaxLines="5" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" Margin="0,0,0,10" TextAlignment="Justify" />
+                <TextBlock Text="Les atouts que vous disposez sont une image, qui possède une barre Horizontale et Vertical pour la visualiser entiérrement. Vous aurez deux boutons pour zoomer ou dézoomer à vous de voir !" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" MaxLines="5" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" Margin="0,0,0,10" TextAlignment="Justify" />
+                <TextBlock Text="Et bien sûr la règle principale est de s'amuser !" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" MaxLines="5" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" Margin="0,0,0,10" TextAlignment="Justify" />
+
+                <TextBlock Text="Bonne" FontSize="60" FontStyle="Italic" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0,100,0,0" >
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform Rotation="-30" SkewX="15" SkewY="0" ScaleX="2" TranslateX="-40" TranslateY="20"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <TextBlock Text="Chance !" FontSize="60" FontStyle="Italic" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Margin="0,0,0,0" >
+                    <TextBlock.RenderTransform>
+                        <CompositeTransform Rotation="-30" SkewX="15" SkewY="0" TranslateX="0" ScaleX="2"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="50,0,0,0">
+
+                <Image Width="400" Height="250" Source="/Assets/AGames/nuage.png" />
+                <Button x:ConnectionId='2' Content="C'est Parti !" HorizontalAlignment="Center" VerticalAlignment="Stretch" RenderTransformOrigin="0.5,0.5" FontSize="36"                        >
+                    <Button.RenderTransform>
+                        <CompositeTransform TranslateX="0" TranslateY="-200"/>
+                    </Button.RenderTransform>
+                    <Button.Projection>
+                        <PlaneProjection RotationX="0"/>
+                    </Button.Projection>
+                </Button>
+                <Image Width="400" Height="400" Source="/Assets/AGames/robot.png" Margin="0,-50,0,0" />
+
+            </StackPanel>
+
+        </StackPanel>
+
+    </StackPanel>
+
+</Page>
+

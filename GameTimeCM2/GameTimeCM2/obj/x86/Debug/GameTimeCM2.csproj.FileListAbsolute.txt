@@ -348,3 +348,13 @@ C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\ProjectArchitectu
 C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_637214462760000000.json
 C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_637552292420000000.json
 C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885274160000000.json
+C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\BeginEscapeGame.xbf
+C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\EndEscapeGame.xbf
+C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\View\BeginEscapeGame.g.i.cs
+C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\View\BeginEscapeGame.g.cs
+C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\View\EndEscapeGame.g.i.cs
+C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\View\EndEscapeGame.g.cs
+C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\View\EndEscapeGame.xaml
+C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\View\BeginEscapeGame.xaml
+C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\View\EndEscapeGame.xbf
+C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\obj\x86\Debug\View\BeginEscapeGame.xbf

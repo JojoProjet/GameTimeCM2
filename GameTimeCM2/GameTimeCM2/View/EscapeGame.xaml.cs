@@ -1,4 +1,6 @@
 ﻿using GameTimeCM2.Src.Game.GEscapeGame;
+using GameTimeCM2.Src.Utils;
+using GameTimeCM2.View;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -34,6 +36,7 @@ namespace GameTimeCM2
         private List<Button> ListButton { get; set; }
         private List<Data> ListData { get; set; }
         private Data Data => ListData.SingleOrDefault(item => item.Id == IdDataJson);
+        private int TWinGame { get; set; }
 
         public EscapeGame()
         {
@@ -48,6 +51,20 @@ namespace GameTimeCM2
             CheckZoom();
 
 
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            TWinGame = (int)Application.Current.Resources["IntWinGameEscape"];
+        }
+
+        private List<Button> InitNewButton()
+        {
+            return new List<Button>()
+            {
+                new Button(), new Button(), new Button(),
+            };
         }
 
         private void SwapGridGameToGame()
@@ -69,6 +86,7 @@ namespace GameTimeCM2
             Button btn = sender as Button;
             if (btn.Name.Contains($"Game{NumberGame}"))
             {
+                int number = NumberGame;
                 StackPanel stackPanel = (StackPanel)GridGame.FindName($"Game{NumberGame}");
                 ImageBrush imageBrush = (ImageBrush)GridGame.FindName($"ImageGame{NumberGame}");
                 Button buttonNow = (Button)GridGame.FindName($"BtnGame{NumberGame}");
@@ -82,7 +100,8 @@ namespace GameTimeCM2
 
                     story.Completed += (i, o) =>
                     {
-                        buttonAfter = (Button)GridGame.FindName($"BtnGame{++NumberGame}");
+                        NumberGame = number + 1;
+                        buttonAfter = (Button)GridGame.FindName($"BtnGame{NumberGame}");
                         buttonNow.Visibility = Visibility.Collapsed;
                         InitInStoryboard();
                         SwapGridGameToGame();
@@ -91,8 +110,6 @@ namespace GameTimeCM2
 
                     story.Begin();
                 }
-
-                // et après sa affiche
 
             }
 
@@ -112,18 +129,23 @@ namespace GameTimeCM2
             {
                 elm.Background = new SolidColorBrush(Colors.Black);
             });
-            q1.Text = Data.Q1;
-            q2.Text = Data.Q2;
-            q3.Text = Data.Q3;
-            r1_1.Content = Data.R1_1;
-            r1_2.Content = Data.R1_2;
-            r1_3.Content = Data.R1_3;
-            r2_1.Content = Data.R2_1;
-            r2_2.Content = Data.R2_2;
-            r2_3.Content = Data.R2_3;
-            r3_1.Content = Data.R3_1;
-            r3_2.Content = Data.R3_2;
-            r3_3.Content = Data.R3_3;
+
+            if(IdDataJson <= 13)
+            {
+                Title.Text = Data.Title;
+                q1.Text = Data.Q1;
+                q2.Text = Data.Q2;
+                q3.Text = Data.Q3;
+                r1_1.Content = Data.R1_1;
+                r1_2.Content = Data.R1_2;
+                r1_3.Content = Data.R1_3;
+                r2_1.Content = Data.R2_1;
+                r2_2.Content = Data.R2_2;
+                r2_3.Content = Data.R2_3;
+                r3_1.Content = Data.R3_1;
+                r3_2.Content = Data.R3_2;
+                r3_3.Content = Data.R3_3;
+            }
         }
 
         public void Tapped_BtnSuivant(object sender, RoutedEventArgs e)
@@ -176,16 +198,29 @@ namespace GameTimeCM2
 
         private void Tapped_BtnValider(object sender, RoutedEventArgs e)
         {
+            if (IdDataJson == 13)
+            {
+                BtnLeaveEscape.Visibility = Visibility.Visible;
+            }
+
+            int score = 0;
             ListButton.ForEach(elm =>
             {
-                if (elm.Content.ToString() == Data.R1 || elm.Content.ToString() == Data.R2 || elm.Content.ToString() == Data.R3) elm.Background = new SolidColorBrush(Colors.Green);
+                if (elm.Content.ToString() == Data.R1 || elm.Content.ToString() == Data.R2 || elm.Content.ToString() == Data.R3)
+                {
+                    elm.Background = new SolidColorBrush(Colors.Green);
+                    score += 1;
+                }
                 else elm.Background = new SolidColorBrush(Colors.Red);
+            });
+            if(score >= 1)
+            {
                 indexeurNb = 0;
                 Btn_Valider.IsEnabled = false;
                 Btn_Suivant.IsEnabled = true;
-                IdDataJson++;
                 indexeurNb1 = indexeurNb2 = indexeurNb3 = 0;
-            });
+                IdDataJson++;
+            }
         }
 
         private void Tapped_BtnSelectResponse(object sender, RoutedEventArgs e)
@@ -223,6 +258,18 @@ namespace GameTimeCM2
 
             btn.Background = new SolidColorBrush(Colors.Orange);
 
+        }
+
+        private void Btn_LeaveEscape(object sender, RoutedEventArgs e)
+        {
+            TWinGame += 1;
+            Application.Current.Resources["IntWinGameEscape"] = TWinGame;
+            Frame.Navigate(typeof(EndEscapeGame));
+        }
+
+        private void Loaded_Page(object sender, RoutedEventArgs e)
+        {
+            Animation.AnimatePage(main, StackEscapeGame).Begin();
         }
 
     }

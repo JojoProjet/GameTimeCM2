@@ -1,0 +1,45 @@
+﻿<Page x:ConnectionId='1'
+    Name="main"
+    x:Class="GameTimeCM2.View.EndEscapeGame"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GameTimeCM2.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Background>
+        <ImageBrush ImageSource="/Assets/AGames/b4.jpg" />
+    </Page.Background>
+
+    <StackPanel x:ConnectionId='2' Name="StackEnd" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                     >
+
+        <Image Width="400" Height="250" Source="/Assets/AGames/gametime.png" RenderTransformOrigin="0.5,0.5" >
+        </Image>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+            <StackPanel Orientation="Vertical" Width="500" Margin="0,0,50,0" Padding="10,0,9,0" Background="#CC894105">
+                <TextBlock Text="Félicitation vous avez réussi l'Escape Game !" FontSize="40" FontWeight="Bold" Margin="0,20,0,10"  MaxLines="5" TextWrapping="Wrap"  FontStyle="Italic" TextAlignment="Justify"/>
+
+                <TextBlock Text="Revenez à l'accueil pour rejouer à nos jeux !" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" MaxLines="5" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" Margin="0,0,0,10" TextAlignment="Justify" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Stretch">
+                    <Image Width="250" Height="250" Source="/Assets/AGames/robot.png" RenderTransformOrigin="0.5,0.5"></Image>
+                    <Button x:ConnectionId='3' Content="Accueil" HorizontalAlignment="Stretch" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" FontSize="36"                      >
+                        <Button.RenderTransform>
+                            <CompositeTransform TranslateX="-26" TranslateY="70"/>
+                        </Button.RenderTransform>
+                        <Button.Projection>
+                            <PlaneProjection RotationX="0"/>
+                        </Button.Projection>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+
+
+        </StackPanel>
+
+    </StackPanel>
+
+</Page>
+

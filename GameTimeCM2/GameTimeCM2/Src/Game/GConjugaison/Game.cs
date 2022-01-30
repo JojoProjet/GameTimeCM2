@@ -161,6 +161,7 @@ namespace GameTimeCM2.Src.Game.GConjugaison
                 TextBlockQuestion.Text = "";
                 TWinGame += Score > 1 ? 1 : 0;
                 TextWinOrLoose.Text = Score > 1 ? "Bien joué !" : "Vous avez perdu !";
+                TextWinOrLoose.FontSize = TextWinOrLoose.Text == "Vous avez perdu !" ? 34 : 44;
                 TextFinishScore.Text = $"Votre Score : {Score}";
                 StoryBoardFinish.Begin();
             }

@@ -51,7 +51,7 @@ namespace GameTimeCM2
             Init();
 
             // Disable escape game when only one win in three game
-            //btn_escape_game.IsEnabled = false;
+            btn_escape_game.IsEnabled = false;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -60,24 +60,24 @@ namespace GameTimeCM2
             Db db = new Db();
 
 
-            //user = (User)Application.Current.Resources["User"];
+            user = (User)Application.Current.Resources["User"];
 
             int winGamePendu = (int)Application.Current.Resources["IntWinGamePendu"];
             int winGameMemory = (int)Application.Current.Resources["IntWinGameMemory"];
             int winGameConugaison = (int)Application.Current.Resources["IntWinGameConjugaison"];
             int winGameEsape = (int)Application.Current.Resources["IntWinGameEscape"];
 
-            CheckCanGameEscape(winGamePendu, winGameMemory, winGameConugaison);
+            CheckCanGameEscape(winGamePendu, winGameMemory, winGameConugaison, user);
 
             WinListGame[IndexPenduWinListGame] = winGamePendu;
             WinListGame[IndexMemoryWinListGame] = winGameMemory;
             WinListGame[IndexConugaisonWinListGame] = winGameConugaison;
             WinListGame[IndexEscapeWinListGame] = winGameEsape;
 
-            //int newScore = user.Score + winGameConugaison + winGameMemory + winGameConugaison + winGameEsape;
-            //db.UpdateScoreUser(newScore, user);
+            int newScore = user.Score + winGameConugaison + winGameMemory + winGameConugaison + winGameEsape;
+            db.UpdateScoreUser(newScore, user);
 
-            // Title.Text = $"Bonjour {user.Name}";
+            //Title.Text = $"Bonjour {user.Name}";
         }
 
         public void SendDataWinListGame(string resources, int index)
@@ -106,13 +106,13 @@ namespace GameTimeCM2
         public void LaunchGameEscape()
         {
             SendDataWinListGame(RESSOURCES_INT_WIN_GAME_ESCAPE, IndexEscapeWinListGame);
-            rootFrame.Navigate(typeof(EscapeGame));
+            rootFrame.Navigate(typeof(BeginEscapeGame));
         }
 
-        private void CheckCanGameEscape(int winP, int winM, int winC)
+        private void CheckCanGameEscape(int winP, int winM, int winC, User user)
         {
-            if (winP > 0 && winM > 0 && winC > 0) btn_escape_game.IsEnabled = true;
-            //if (winP > 0 && winM > 0 && winC > 0 || user.Score >= 3) btn_escape_game.IsEnabled = true;
+            // if (winP > 0 && winM > 0 && winC > 0) btn_escape_game.IsEnabled = true;
+            if (winP > 0 && winM > 0 && winC > 0 || user.Score >= 3) btn_escape_game.IsEnabled = true;
         }
 
         public void Init()

@@ -1,266 +1,314 @@
 [
   {
     "id": 1,
-    "q1": "aze",
-    "q2": "azezeza",
-    "q3": "azeae",
+    "title": "PERSOBAS",
 
-    "r1": "aze",
-    "r1_1": "aze",
-    "r1_2": "aze",
-    "r1_3": "aze",
+    "q1": "Combien ya t'il de personnes dans cette piece ?",
+    "q2": "Ou se situe la lampe ?",
+    "q3": "Nombre de tableaux presents ?",
 
-    "r2": "aze",
-    "r2_1": "aze",
-    "r2_2": "aze",
-    "r2_3": "aze",
+    "r1": "3",
+    "r1_1": "2",
+    "r1_2": "4",
+    "r1_3": "3",
 
-    "r3": "aze",
-    "r3_1": "aze",
-    "r3_2": "aze",
-    "r3_3": "aze"
+    "r2": "Au fond",
+    "r2_1": "Au fond",
+    "r2_2": "A gauche",
+    "r2_3": "Autre",
+
+    "r3": "4",
+    "r3_1": "4",
+    "r3_2": "7",
+    "r3_3": "0"
   },
 
   {
     "id": 2,
-    "q1": "aze",
-    "q2": "azezeza",
-    "q3": "azeae",
+    "title": "MEMOIRE",
 
-    "r1": "aze",
-    "r1_1": "aze",
-    "r1_2": "aze",
-    "r1_3": "aze",
+    "q1": "Couleurs presentes ?",
+    "q2": "Nombre de materiaux Roses ?",
+    "q3": "Nombre de materiaux Noir ?",
 
-    "r2": "aze",
-    "r2_1": "aze",
-    "r2_2": "aze",
-    "r2_3": "aze",
+    "r1": "5",
+    "r1_1": "19",
+    "r1_2": "5",
+    "r1_3": "11",
 
-    "r3": "aze",
-    "r3_1": "aze",
-    "r3_2": "aze",
-    "r3_3": "aze"
+    "r2": "4",
+    "r2_1": "4",
+    "r2_2": "8",
+    "r2_3": "2",
+
+    "r3": "0",
+    "r3_1": "3",
+    "r3_2": "0",
+    "r3_3": "7"
   },
 
   {
     "id": 3,
-    "q1": "aze",
-    "q2": "azezeza",
-    "q3": "azeae",
+    "title": "LAMPAS",
 
-    "r1": "aze",
-    "r1_1": "aze",
-    "r1_2": "aze",
-    "r1_3": "aze",
+    "q1": "Un echiquier est present dans cette salle ?",
+    "q2": "Ou se trouve la lampe ?",
+    "q3": "Combien de livres sont poses au sol",
 
-    "r2": "aze",
-    "r2_1": "aze",
-    "r2_2": "aze",
-    "r2_3": "aze",
+    "r1": "Oui",
+    "r1_1": "Je ne sais pas",
+    "r1_2": "Non",
+    "r1_3": "Oui",
 
-    "r3": "aze",
-    "r3_1": "aze",
-    "r3_2": "aze",
-    "r3_3": "aze"
+    "r2": "Bureau",
+    "r2_1": "Bureau",
+    "r2_2": "Au sol",
+    "r2_3": "Mur",
+
+    "r3": "9",
+    "r3_1": "12",
+    "r3_2": "9",
+    "r3_3": "4"
   },
 
   {
     "id": 4,
-    "q1": "aze",
-    "q2": "azezeza",
-    "q3": "azeae",
+    "title": "MATH",
 
-    "r1": "aze",
-    "r1_1": "aze",
-    "r1_2": "aze",
-    "r1_3": "aze",
+    "q1": "Symbole mathematique de 'egal' ?",
+    "q2": "Addition : 9+7+6+21 = ? ",
+    "q3": "Multiplication : 7*4*3 = ? ",
 
-    "r2": "aze",
-    "r2_1": "aze",
-    "r2_2": "aze",
-    "r2_3": "aze",
+    "r1": "=",
+    "r1_1": "+",
+    "r1_2": "==",
+    "r1_3": "=",
 
-    "r3": "aze",
-    "r3_1": "aze",
-    "r3_2": "aze",
-    "r3_3": "aze"
+    "r2": "43",
+    "r2_1": "53",
+    "r2_2": "43",
+    "r2_3": "38",
+
+    "r3": "84",
+    "r3_1": "74",
+    "r3_2": "94",
+    "r3_3": "84"
   },
 
   {
     "id": 5,
-    "q1": "aze",
-    "q2": "azezeza",
-    "q3": "azeae",
+    "title": "EMPREINTUS",
 
-    "r1": "aze",
-    "r1_1": "aze",
-    "r1_2": "aze",
-    "r1_3": "aze",
+    "q1": "Ou se situe l'empreinte ?",
+    "q2": "Combiens de livres sont visibles ?",
+    "q3": "La categorie de l'arme ? ",
 
-    "r2": "aze",
-    "r2_1": "aze",
-    "r2_2": "aze",
-    "r2_3": "aze",
+    "r1": "En bas a gauche",
+    "r1_1": "En bas a gauche",
+    "r1_2": "En haut",
+    "r1_3": "Au centre",
 
-    "r3": "aze",
-    "r3_1": "aze",
-    "r3_2": "aze",
-    "r3_3": "aze"
+    "r2": "4",
+    "r2_1": "9",
+    "r2_2": "4",
+    "r2_3": "2",
+
+    "r3": "Pistolet",
+    "r3_1": "Couteau",
+    "r3_2": "Pistolet",
+    "r3_3": "Mitrailette"
   },
 
   {
     "id": 6,
-    "q1": "aze",
-    "q2": "azezeza",
-    "q3": "azeae",
+    "title": "G CONJUGAISON",
 
-    "r1": "aze",
-    "r1_1": "aze",
-    "r1_2": "aze",
-    "r1_3": "aze",
+    "q1": "Qu'est ce que l'imperatif ?",
+    "q2": "Combien existe t il de temps simple ?",
+    "q3": "La conjugaison est utilise ?",
 
-    "r2": "aze",
-    "r2_1": "aze",
-    "r2_2": "aze",
-    "r2_3": "aze",
+    "r1": "Ordre absolu",
+    "r1_1": "Ordre nefaste",
+    "r1_2": "Une action",
+    "r1_3": "Ordre absolu",
 
-    "r3": "aze",
-    "r3_1": "aze",
-    "r3_2": "aze",
-    "r3_3": "aze"
+    "r2": "4",
+    "r2_1": "1",
+    "r2_2": "4",
+    "r2_3": "8",
+
+    "r3": "De partout",
+    "r3_1": "Jamais ",
+    "r3_2": "De partout",
+    "r3_3": "Je sais pas"
   },
 
   {
     "id": 7,
-    "q1": "aze",
-    "q2": "azezeza",
-    "q3": "azeae",
+    "title": "CHIMIMATE",
 
-    "r1": "aze",
-    "r1_1": "aze",
-    "r1_2": "aze",
-    "r1_3": "aze",
+    "q1": "Le Dioxygene correspond a ",
+    "q2": "Combien d'ecran sont visibles ?",
+    "q3": "Un masque a oxygene est-il present dans la piece ?",
 
-    "r2": "aze",
-    "r2_1": "aze",
-    "r2_2": "aze",
-    "r2_3": "aze",
+    "r1": "O2",
+    "r1_1": "NA",
+    "r1_2": "O2",
+    "r1_3": "C",
 
-    "r3": "aze",
-    "r3_1": "aze",
-    "r3_2": "aze",
-    "r3_3": "aze"
+    "r2": "4",
+    "r2_1": "4",
+    "r2_2": "0",
+    "r2_3": "1",
+
+    "r3": "Non",
+    "r3_1": "Oui a droite",
+    "r3_2": "Sur un ecran",
+    "r3_3": "Non"
   },
 
   {
     "id": 8,
-    "q1": "aze",
-    "q2": "azezeza",
-    "q3": "azeae",
+    "title": "CONGUSTE",
 
-    "r1": "aze",
-    "r1_1": "aze",
-    "r1_2": "aze",
-    "r1_3": "aze",
+    "q1": "Elle riait pour un rien",
+    "q2": "Ils cousent ces vetement avec soin",
+    "q3": "Mon pere a repasse ses chemises",
 
-    "r2": "aze",
-    "r2_1": "aze",
-    "r2_2": "aze",
-    "r2_3": "aze",
+    "r1": "Imparfait",
+    "r1_1": "Futur",
+    "r1_2": "Imparfait",
+    "r1_3": "Present",
 
-    "r3": "aze",
-    "r3_1": "aze",
-    "r3_2": "aze",
-    "r3_3": "aze"
+    "r2": "Present",
+    "r2_1": "Present",
+    "r2_2": "Imparfait",
+    "r2_3": "Futur",
+
+    "r3": "Passe Compose",
+    "r3_1": "Passe Compose",
+    "r3_2": "Futur",
+    "r3_3": "Present"
   },
 
   {
     "id": 9,
-    "q1": "aze",
-    "q2": "azezeza",
-    "q3": "azeae",
+    "title": "GEOGLAPHIE",
 
-    "r1": "aze",
-    "r1_1": "aze",
-    "r1_2": "aze",
-    "r1_3": "aze",
+    "q1": "Comment se nomme l'objet au milieu ?",
+    "q2": "Quel est le plus long fleuve francais ?",
+    "q3": "Quel est le plus grand pays du monde",
 
-    "r2": "aze",
-    "r2_1": "aze",
-    "r2_2": "aze",
-    "r2_3": "aze",
+    "r1": "Boussole",
+    "r1_1": "Radar",
+    "r1_2": "Boussole",
+    "r1_3": "Gps",
 
-    "r3": "aze",
-    "r3_1": "aze",
-    "r3_2": "aze",
-    "r3_3": "aze"
+    "r2": "La Loire",
+    "r2_1": "La Seine",
+    "r2_2": "La Loire",
+    "r2_3": "La Garonne",
+
+    "r3": "Russie",
+    "r3_1": "Russie",
+    "r3_2": "Chine",
+    "r3_3": "L'australie"
   },
 
   {
     "id": 10,
-    "q1": "aze",
-    "q2": "azezeza",
-    "q3": "azeae",
+    "title": "PENDU",
 
-    "r1": "aze",
-    "r1_1": "aze",
-    "r1_2": "aze",
-    "r1_3": "aze",
+    "q1": "La pendaison est-elle un meurte ?",
+    "q2": "Quel objet est utilise pour une pendaison ?",
+    "q3": "Peux ont survivre d'une pendaison ?",
 
-    "r2": "aze",
-    "r2_1": "aze",
-    "r2_2": "aze",
-    "r2_3": "aze",
+    "r1": "Bien Sur",
+    "r1_1": "Bien Sur",
+    "r1_2": "Non",
+    "r1_3": "Jamais",
 
-    "r3": "aze",
-    "r3_1": "aze",
-    "r3_2": "aze",
-    "r3_3": "aze"
+    "r2": "Une Corde",
+    "r2_1": "Un Ruban",
+    "r2_2": "Un Verre",
+    "r2_3": "Une Corde",
+
+    "r3": "Non",
+    "r3_1": "Non",
+    "r3_2": "Oui",
+    "r3_3": "Une Chance"
   },
 
   {
     "id": 11,
-    "q1": "aze",
-    "q2": "azezeza",
-    "q3": "azeae",
+    "title": "GLOBOLUS",
 
-    "r1": "aze",
-    "r1_1": "aze",
-    "r1_2": "aze",
-    "r1_3": "aze",
+    "q1": "Ou se situe le globe ?",
+    "q2": "Quel est le temps affiche ?",
+    "q3": "Combiens de tableaux ya t'il ?",
 
-    "r2": "aze",
-    "r2_1": "aze",
-    "r2_2": "aze",
-    "r2_3": "aze",
+    "r1": "Au milieu",
+    "r1_1": "A gauche",
+    "r1_2": "Au milieu",
+    "r1_3": "Au fond",
 
-    "r3": "aze",
-    "r3_1": "aze",
-    "r3_2": "aze",
-    "r3_3": "aze"
+    "r2": "1:00:00",
+    "r2_1": "2:56:30",
+    "r2_2": "1:00:00",
+    "r2_3": "0:59:59",
+
+    "r3": "7",
+    "r3_1": "7",
+    "r3_2": "6",
+    "r3_3": "11"
   },
 
   {
     "id": 12,
-    "q1": "aze",
-    "q2": "azezeza",
-    "q3": "azeae",
+    "title": "TABLAUDES",
 
-    "r1": "aze",
-    "r1_1": "aze",
-    "r1_2": "aze",
-    "r1_3": "aze",
+    "q1": "Combiens de portaits ya t'il ?",
+    "q2": "Un livre est depose sur la  table ?",
+    "q3": "Nombre de chaises visibles ?",
 
-    "r2": "aze",
-    "r2_1": "aze",
-    "r2_2": "aze",
-    "r2_3": "aze",
+    "r1": "14",
+    "r1_1": "14",
+    "r1_2": "9",
+    "r1_3": "19",
 
-    "r3": "aze",
-    "r3_1": "aze",
-    "r3_2": "aze",
-    "r3_3": "aze"
+    "r2": "Non",
+    "r2_1": "Non",
+    "r2_2": "Oui au fond",
+    "r2_3": "Sur la chaise",
+
+    "r3": "6",
+    "r3_1": "3",
+    "r3_2": "6",
+    "r3_3": "8"
+  },
+
+  {
+    "id": 13,
+    "title": "ESCAPE GAME",
+
+    "q1": "Notez notre jeu",
+    "q2": "Qu'avez vous pensez du design ?",
+    "q3": "S'enfuir !",
+
+    "r1": "5 / 5",
+    "r1_1": "5 / 5",
+    "r1_2": "2.5 / 5",
+    "r1_3": "0 / 5",
+
+    "r2": "Excellent",
+    "r2_1": "Excellent",
+    "r2_2": "Mediocre",
+    "r2_3": "Moyen",
+
+    "r3": "GO",
+    "r3_1": "GO",
+    "r3_2": "GO",
+    "r3_3": "GO"
   }
 
 ]
