@@ -6,14 +6,319 @@
     xmlns:local="using:GameTimeCM2"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    >
 
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <TextBlock Text="Escape Game" />
-            <Button x:Name="BtnLaunchGameSolo" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="75" FontSize="30" Content="Solo" Click="Btn_LaunchGameSolo" Margin="0,30,0,0"/>
-            <Button x:Name="BtnLaunchGameMultiPlayer" Foreground="{ThemeResource FocusVisualWhiteStrokeThemeBrush}" Background="{ThemeResource TextSelectionHighlightColorThemeBrush}" Width="250" Height="75" FontSize="30" Content="MultiJoueur" Click="Btn_LaunchGameMultiPlayer" Margin="0,30,0,0"/>
+    <Page.Background>
+        <ImageBrush ImageSource="/Assets/AGames/escapegame.jpg"/>
+    </Page.Background>
+    <Page.Resources>
+
+        <Storyboard x:Name="StoryboardGame0ToGame1">
+            <DoubleAnimation Storyboard.TargetName="MoveRobot" Storyboard.TargetProperty="TranslateY" From="0" To="-260" Duration="0:0:1"/>
+        </Storyboard>
+
+        <Storyboard x:Name="StoryboardGame1ToGame2">
+            <DoubleAnimation Storyboard.TargetName="MoveRobot" Storyboard.TargetProperty="TranslateY" From="-260" To="-525" Duration="0:0:1"/>
+        </Storyboard>
+
+        <Storyboard x:Name="StoryboardGame2ToGame3">
+            <DoubleAnimation Storyboard.TargetName="MoveRobot" Storyboard.TargetProperty="TranslateX" From="0" To="200" Duration="0:0:1"/>
+        </Storyboard>
+
+        <Storyboard x:Name="StoryboardGame3ToGame4">
+            <DoubleAnimation Storyboard.TargetName="MoveRobot" Storyboard.TargetProperty="TranslateX" From="200" To="400" Duration="0:0:1"/>
+        </Storyboard>
+
+        <Storyboard x:Name="StoryboardGame4ToGame5">
+            <DoubleAnimation Storyboard.TargetName="MoveRobot" Storyboard.TargetProperty="TranslateX" From="400" To="600" Duration="0:0:1"/>
+        </Storyboard>
+
+        <Storyboard x:Name="StoryboardGame5ToGame6">
+            <DoubleAnimation Storyboard.TargetName="MoveRobot" Storyboard.TargetProperty="TranslateX" From="600" To="800" Duration="0:0:1"/>
+        </Storyboard>
+
+        <Storyboard x:Name="StoryboardGame6ToGame7">
+            <DoubleAnimation Storyboard.TargetName="MoveRobot" Storyboard.TargetProperty="TranslateY" From="-525" To="-260" Duration="0:0:1"/>
+        </Storyboard>
+
+        <Storyboard x:Name="StoryboardGame7ToGame8">
+            <DoubleAnimation Storyboard.TargetName="MoveRobot" Storyboard.TargetProperty="TranslateY" From="-260" To="0" Duration="0:0:1"/>
+        </Storyboard>
+
+        <Storyboard x:Name="StoryboardGame8ToGame9">
+            <DoubleAnimation Storyboard.TargetName="MoveRobot" Storyboard.TargetProperty="TranslateX" From="800" To="600" Duration="0:0:1"/>
+        </Storyboard>
+
+        <Storyboard x:Name="StoryboardGame9ToGame10">
+            <DoubleAnimation Storyboard.TargetName="MoveRobot" Storyboard.TargetProperty="TranslateX" From="600" To="400" Duration="0:0:1"/>
+        </Storyboard>
+
+        <Storyboard x:Name="StoryboardGame10ToGame11">
+            <DoubleAnimation Storyboard.TargetName="MoveRobot" Storyboard.TargetProperty="TranslateX" From="400" To="200" Duration="0:0:1"/>
+        </Storyboard>
+
+        <Storyboard x:Name="StoryboardGame11ToGame12">
+            <DoubleAnimation Storyboard.TargetName="MoveRobot" Storyboard.TargetProperty="TranslateY" From="0" To="-250" Duration="0:0:1"/>
+        </Storyboard>
+
+        <Storyboard x:Name="StoryboardGame12ToGame13">
+            <DoubleAnimation Storyboard.TargetName="MoveRobot" Storyboard.TargetProperty="TranslateX" From="200" To="500" Duration="0:0:1"/>
+        </Storyboard>
+
+
+
+        <Storyboard x:Name="Storyboard_GridToGame">
+            <DoubleAnimation
+                    Storyboard.TargetName="GridGame"
+                    Storyboard.TargetProperty="Opacity"
+                    From="1"
+                    To="0"
+                    Duration="0:0:1"
+                    />
+            <DoubleAnimation
+                    Storyboard.TargetName="GridGame"
+                    Storyboard.TargetProperty="Width"
+                    From="1500"
+                    To="0"
+                    Duration="0:0:1"
+                    />
+            <DoubleAnimation
+                    Storyboard.TargetName="Game"
+                    Storyboard.TargetProperty="Opacity"
+                    From="0"
+                    To="1"
+                    Duration="0:0:1"
+                    />
+            <DoubleAnimation
+                    Storyboard.TargetName="Game"
+                    Storyboard.TargetProperty="Width"
+                    From="0"
+                    To="1500"
+                    Duration="0:0:1"
+                    />
+        </Storyboard>
+
+        <Storyboard x:Name="Storyboard_GameToGrid">
+            <DoubleAnimation
+                    Storyboard.TargetName="GridGame"
+                    Storyboard.TargetProperty="Opacity"
+                    From="0"
+                    To="1"
+                    Duration="0:0:1"
+                    />
+            <DoubleAnimation
+                    Storyboard.TargetName="GridGame"
+                    Storyboard.TargetProperty="Width"
+                    From="0"
+                    To="1500"
+                    Duration="0:0:1"
+                    />
+            <DoubleAnimation
+                    Storyboard.TargetName="Game"
+                    Storyboard.TargetProperty="Opacity"
+                    From="1"
+                    To="0"
+                    Duration="0:0:1"
+                    />
+            <DoubleAnimation
+                    Storyboard.TargetName="Game"
+                    Storyboard.TargetProperty="Width"
+                    From="1500"
+                    To="0"
+                    Duration="0:0:1"
+                    />
+        </Storyboard>
+
+    </Page.Resources>
+
+
+    <StackPanel Width="1000" Height="800" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+        <Grid Visibility="Collapsed" Name="GridGame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="1000" Height="800">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel x:Name="Game2" Width="200" Height="250" Grid.Row="0" Grid.Column="0" Margin="10,10,10,10" Canvas.ZIndex="0" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <StackPanel.Background>
+                    <ImageBrush x:Name="ImageGame2" ImageSource="/Assets/AGameEscape/Memoire.jpg"/>
+                </StackPanel.Background>
+                <Button Visibility="Collapsed" x:Name="BtnGame2" Tapped="Btn_EnterGame" Content="Entrez" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Margin="0,0,0,0" Background="#FF555502" BorderBrush="#FFB22F09" FocusVisualPrimaryBrush="#FF91540A" Foreground="#FFE65B0C" FontSize="26" />
+            </StackPanel>
+
+            <StackPanel x:Name="Game3" Width="200" Height="250" Grid.Row="0" Grid.Column="1" Margin="10,10,10,10" Canvas.ZIndex="0" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <StackPanel.Background>
+                    <ImageBrush x:Name="ImageGame3" ImageSource="/Assets/AGameEscape/Lampas.jpg"/>
+                </StackPanel.Background>
+                <Button Visibility="Collapsed" x:Name="BtnGame3" Tapped="Btn_EnterGame" Content="Entrez" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Margin="0,0,0,0" Background="#FF555502" BorderBrush="#FFB22F09" FocusVisualPrimaryBrush="#FF91540A" Foreground="#FFE65B0C" FontSize="26" />
+            </StackPanel>
+
+            <StackPanel x:Name="Game4" Width="200" Height="250" Grid.Row="0" Grid.Column="2" Margin="10,10,10,10" Canvas.ZIndex="0" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <StackPanel.Background>
+                    <ImageBrush x:Name="ImageGame4" ImageSource="/Assets/AGameEscape/Math.jpg"/>
+                </StackPanel.Background>
+                <Button Visibility="Collapsed" x:Name="BtnGame4" Tapped="Btn_EnterGame" Content="Entrez" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Margin="0,0,0,0" Background="#FF555502" BorderBrush="#FFB22F09" FocusVisualPrimaryBrush="#FF91540A" Foreground="#FFE65B0C" FontSize="26" />
+            </StackPanel>
+
+            <StackPanel x:Name="Game5" Width="200" Height="250" Grid.Row="0" Grid.Column="3" Margin="10,10,10,10" Canvas.ZIndex="0" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <StackPanel.Background>
+                    <ImageBrush x:Name="ImageGame5" ImageSource="/Assets/AGameEscape/Empreintus.jpg"/>
+                </StackPanel.Background>
+                <Button Visibility="Collapsed" x:Name="BtnGame5" Tapped="Btn_EnterGame" Content="Entrez" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Margin="0,0,0,0" Background="#FF555502" BorderBrush="#FFB22F09" FocusVisualPrimaryBrush="#FF91540A" Foreground="#FFE65B0C" FontSize="26" />
+            </StackPanel>
+
+            <StackPanel x:Name="Game6" Width="200" Height="250" Grid.Row="0" Grid.Column="4" Margin="10,10,10,10" Canvas.ZIndex="0" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <StackPanel.Background>
+                    <ImageBrush x:Name="ImageGame6" ImageSource="/Assets/AGameEscape/GameConjugaison.jpg"/>
+                </StackPanel.Background>
+                <Button Visibility="Collapsed" x:Name="BtnGame6" Tapped="Btn_EnterGame" Content="Entrez" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Margin="0,0,0,0" Background="#FF555502" BorderBrush="#FFB22F09" FocusVisualPrimaryBrush="#FF91540A" Foreground="#FFE65B0C" FontSize="26" />
+            </StackPanel>
+
+
+            <StackPanel x:Name="Game1"  Width="200" Height="250" Grid.Row="1" Grid.Column="0" Margin="10,10,10,10" Canvas.ZIndex="0" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <StackPanel.Background>
+                    <ImageBrush x:Name="ImageGame1" ImageSource="/Assets/AGameEscape/Persobas.jpg"/>
+                </StackPanel.Background>
+                <Button x:Name="BtnGame1" Tapped="Btn_EnterGame" Content="Entrez" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Margin="0,0,0,0" Background="#FF555502" BorderBrush="#FFB22F09" FocusVisualPrimaryBrush="#FF91540A" Foreground="#FFE65B0C" FontSize="26" />
+            </StackPanel>
+
+
+            <StackPanel x:Name="Game12" Width="200" Height="250" Grid.Row="1" Grid.Column="1" Margin="10,10,10,10" Canvas.ZIndex="0" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <StackPanel.Background>
+                    <ImageBrush x:Name="ImageGame12" ImageSource="/Assets/AGameEscape/Tablaudes.jpg"/>
+                </StackPanel.Background>
+                <Button Visibility="Collapsed" x:Name="BtnGame12" Tapped="Btn_EnterGame" Content="Entrez" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Margin="0,0,0,0" Background="#FF555502" BorderBrush="#FFB22F09" FocusVisualPrimaryBrush="#FF91540A" Foreground="#FFE65B0C" FontSize="26" />
+            </StackPanel>
+
+            <StackPanel x:Name="Game13" Width="400" Height="250" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="10,10,10,10" Canvas.ZIndex="0" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <StackPanel.Background>
+                    <ImageBrush x:Name="ImageGame13" ImageSource="/Assets/AGameEscape/FinishEscapeGame.jpg"/>
+                </StackPanel.Background>
+                <Button Visibility="Collapsed" x:Name="BtnGame13" Tapped="Btn_EnterGame" Content="Fini !" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Margin="0,0,0,0" Background="#FF555502" BorderBrush="#FFB22F09" FocusVisualPrimaryBrush="#FF91540A" Foreground="#FFE65B0C" FontSize="26" />
+            </StackPanel>
+
+            <StackPanel x:Name="Game7" Width="200" Height="250" Grid.Row="1" Grid.Column="4" Margin="10,10,10,10" Canvas.ZIndex="0" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <StackPanel.Background>
+                    <ImageBrush x:Name="ImageGame7" ImageSource="/Assets/AGameEscape/Chimimate.jpg"/>
+                </StackPanel.Background>
+                <Button Visibility="Collapsed" x:Name="BtnGame7" Tapped="Btn_EnterGame" Content="Entrez" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Margin="0,0,0,0" Background="#FF555502" BorderBrush="#FFB22F09" FocusVisualPrimaryBrush="#FF91540A" Foreground="#FFE65B0C" FontSize="26" />
+            </StackPanel>
+
+            <StackPanel x:Name="Game0" Grid.Row="2" Grid.Column="0" Margin="10,10,10,10" Canvas.ZIndex="0" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" >
+                <Image Source="/Assets/AGames/robot.png" HorizontalAlignment="Stretch" Margin="0,30,0,0" VerticalAlignment="Stretch" RenderTransformOrigin="0.5,0.5" Canvas.ZIndex="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Width="170" Height="200" >
+                    <Image.RenderTransform>
+                        <CompositeTransform x:Name="MoveRobot" SkewX="0" TranslateY="0" SkewY="0" TranslateX="0"/>
+                    </Image.RenderTransform>
+                </Image>
+            </StackPanel>
+
+            <StackPanel x:Name="Game11" Width="200" Height="250" Grid.Row="2" Grid.Column="1" Margin="10,10,10,10" Canvas.ZIndex="-1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <StackPanel.Background>
+                    <ImageBrush x:Name="ImageGame11" ImageSource="/Assets/AGameEscape/Globolus.jpg"/>
+                </StackPanel.Background>
+                <Button Visibility="Collapsed" x:Name="BtnGame11" Tapped="Btn_EnterGame" Content="Entrez" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Margin="0,0,0,0" Background="#FF555502" BorderBrush="#FFB22F09" FocusVisualPrimaryBrush="#FF91540A" Foreground="#FFE65B0C" FontSize="26" />
+            </StackPanel>
+
+            <StackPanel x:Name="Game10" Width="200" Height="250" Grid.Row="2" Grid.Column="2" Margin="10,10,10,10" Canvas.ZIndex="-1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <StackPanel.Background>
+                    <ImageBrush x:Name="ImageGame10" ImageSource="/Assets/AGameEscape/Pendu.png"/>
+                </StackPanel.Background>
+                <Button Visibility="Collapsed" x:Name="BtnGame10" Tapped="Btn_EnterGame" Content="Entrez" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Margin="0,0,0,0" Background="#FF555502" BorderBrush="#FFB22F09" FocusVisualPrimaryBrush="#FF91540A" Foreground="#FFE65B0C" FontSize="26" />
+            </StackPanel>
+
+            <StackPanel x:Name="Game9" Width="200" Height="250" Grid.Row="2" Grid.Column="3" Margin="10,10,10,10" Canvas.ZIndex="-1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <StackPanel.Background>
+                    <ImageBrush x:Name="ImageGame9" ImageSource="/Assets/AGameEscape/Geographie.jpg"/>
+                </StackPanel.Background>
+                <Button Visibility="Collapsed" x:Name="BtnGame9" Tapped="Btn_EnterGame" Content="Entrez" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Margin="0,0,0,0" Background="#FF555502" BorderBrush="#FFB22F09" FocusVisualPrimaryBrush="#FF91540A" Foreground="#FFE65B0C" FontSize="26" />
+            </StackPanel>
+
+            <StackPanel x:Name="Game8" Width="200" Height="250" Grid.Row="2" Grid.Column="4" Margin="10,10,10,10" Canvas.ZIndex="-1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <StackPanel.Background>
+                    <ImageBrush x:Name="ImageGame8" ImageSource="/Assets/AGameEscape/Conjugaison.jpg"/>
+                </StackPanel.Background>
+                <Button Visibility="Collapsed" x:Name="BtnGame8" Tapped="Btn_EnterGame" Content="Entrez" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="100" Margin="0,0,0,0" Background="#FF555502" BorderBrush="#FFB22F09" FocusVisualPrimaryBrush="#FF91540A" Foreground="#FFE65B0C" FontSize="26" />
+            </StackPanel>
+
+        </Grid>
+
+        <StackPanel Visibility="Visible" Name="Game" Opacity="1" Background="#FF6B88EC" Width="1000" Height="800" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="#FF05877B" CornerRadius="10,10,10,10" BorderThickness="10,10,10,10" Padding="10,0,10,10">
+
+            <TextBlock x:Name="TitleArea" Text="LE TITRE" FontSize="60" TextDecorations="Underline" FontStyle="Italic" FontWeight="Normal" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+
+            <StackPanel Orientation="Horizontal">
+
+                <StackPanel Width="600" Height="700" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+                    <ScrollViewer Width="600" Height="700" x:Name="NameImageScroller" MinZoomFactor="1" ZoomMode="Enabled" HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Auto" VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Image Name="ImgVisualizer" Source="/Assets/AGameEscape/Conjugaison.jpg"  RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MaxWidth="970" MaxHeight="545">
+                            <Image.Projection>
+                                <PlaneProjection GlobalOffsetX="0"/>
+                            </Image.Projection>
+                            <Image.RenderTransform>
+                                <CompositeTransform ScaleX="1" ScaleY="1"/>
+                            </Image.RenderTransform>
+                        </Image>
+                    </ScrollViewer>
+
+                </StackPanel>
+
+                <StackPanel x:Name="SideQuestion" Width="350" Height="700" Margin="10,0,0,0" >
+
+                    <StackPanel Orientation="Vertical" Margin="0,15,0,75">
+                        <TextBlock x:Name="q1" Text="" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0,0,0,20" TextAlignment="Left" MaxLines="3" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" OpticalMarginAlignment="None" Foreground="#FFEEA200" />
+                        <StackPanel x:Name="r1" Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Center">
+                            <Button Tapped="Tapped_BtnSelectResponse" x:Name="r1_1" Margin="20,0,20,0" Width="100" Height="40" Background="#000000"/>
+                            <Button Tapped="Tapped_BtnSelectResponse" x:Name="r1_2" Margin="10,0,20,0" Width="100" Height="40" Background="#000000"/>
+                            <Button Tapped="Tapped_BtnSelectResponse" x:Name="r1_3" Margin="10,0,20,0" Width="100" Height="40" Background="#000000"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="0,0,0,75">
+                        <TextBlock x:Name="q2" Text="" Foreground="#FFEEA200" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0,0,0,20" TextAlignment="Left" MaxLines="3" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" OpticalMarginAlignment="None" />
+                        <StackPanel x:Name="r2" Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Center">
+                            <Button Tapped="Tapped_BtnSelectResponse" x:Name="r2_1" Margin="20,0,20,0" Width="100" Height="40" Background="#000000"/>
+                            <Button Tapped="Tapped_BtnSelectResponse" x:Name="r2_2" Margin="10,0,20,0" Width="100" Height="40" Background="#000000"/>
+                            <Button Tapped="Tapped_BtnSelectResponse" x:Name="r2_3" Margin="10,0,20,0" Width="100" Height="40" Background="#000000"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="0,0,0,75">
+                        <TextBlock x:Name="q3" Text="" Foreground="#FFEEA200" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0,0,0,20" TextAlignment="Left" MaxLines="3" TextWrapping="Wrap" FontWeight="Normal" FontStyle="Italic" OpticalMarginAlignment="None" />
+                        <StackPanel x:Name="r3" Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Center">
+                            <Button Tapped="Tapped_BtnSelectResponse" x:Name="r3_1" Margin="20,0,20,0" Width="100" Height="40" Background="#000000"/>
+                            <Button Tapped="Tapped_BtnSelectResponse" x:Name="r3_2" Margin="10,0,20,0" Width="100" Height="40" Background="#000000"/>
+                            <Button Tapped="Tapped_BtnSelectResponse" x:Name="r3_3" Margin="10,0,20,0" Width="100" Height="40" Background="#000000"/>
+                        </StackPanel>
+                    </StackPanel>
+
+
+                    <StackPanel Orientation="Vertical" Margin="0,0,0,75" HorizontalAlignment="Center" VerticalAlignment="Stretch">
+                        <Button x:Name="Btn_Valider" Tapped="Tapped_BtnValider" Content="Valider" Margin="0,0,0,20" Width="200" Height="50" FontSize="26" Background="#CC027E67"/>
+                        <Button x:Name="Btn_Suivant" Tapped="Tapped_BtnSuivant" Content="Suivant" Margin="0,0,0,20" Width="200" Height="50" FontSize="26" Background="#CC027E67"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,-65,0,0">
+                <Button Content="Zoom +" Name="ZoomIn" Tapped="Tapped_ZoomScrollViewer"  Width="100" Height="30" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0,0,10,0" />
+                <Button Content="Zoom -" Name="ZoomOut" Tapped="Tapped_DeZoomScrollViewer" Width="100" Height="30" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+            </StackPanel>
+
         </StackPanel>
+
     </StackPanel>
 
 </Page>

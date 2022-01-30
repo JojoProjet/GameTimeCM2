@@ -169,6 +169,75 @@
     <AppxPackagedFile Include="C:\Users\jonat\.nuget\packages\xamarin.forms\5.0.0.2244\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGameEscape\Chimimate.jpg">
+      <PackagePath>Assets\AGameEscape\Chimimate.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGameEscape\Conjugaison.jpg">
+      <PackagePath>Assets\AGameEscape\Conjugaison.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGameEscape\Empreintus.jpg">
+      <PackagePath>Assets\AGameEscape\Empreintus.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGameEscape\FinishEscapeGame.jpg">
+      <PackagePath>Assets\AGameEscape\FinishEscapeGame.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGameEscape\GameConjugaison.jpg">
+      <PackagePath>Assets\AGameEscape\GameConjugaison.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGameEscape\Geographie.jpg">
+      <PackagePath>Assets\AGameEscape\Geographie.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGameEscape\Globolus.jpg">
+      <PackagePath>Assets\AGameEscape\Globolus.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGameEscape\Lampas.jpg">
+      <PackagePath>Assets\AGameEscape\Lampas.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGameEscape\Math.jpg">
+      <PackagePath>Assets\AGameEscape\Math.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGameEscape\Memoire.jpg">
+      <PackagePath>Assets\AGameEscape\Memoire.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGameEscape\Persobas.jpg">
+      <PackagePath>Assets\AGameEscape\Persobas.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGameEscape\Tablaudes.jpg">
+      <PackagePath>Assets\AGameEscape\Tablaudes.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b2.jpg">
+      <PackagePath>Assets\AGames\b2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b3.jpg">
+      <PackagePath>Assets\AGames\b3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b4.jpg">
+      <PackagePath>Assets\AGames\b4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\backBeginConjuGame.jpg">
+      <PackagePath>Assets\AGames\backBeginConjuGame.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\backBeginConjuGameInit.jpg">
+      <PackagePath>Assets\AGames\backBeginConjuGameInit.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\BackGameConjugaison.jpg">
+      <PackagePath>Assets\AGames\BackGameConjugaison.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\background_all_1.jpg">
+      <PackagePath>Assets\AGames\background_all_1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\brique.jpg">
+      <PackagePath>Assets\AGames\brique.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\card_elegantB.jpg">
+      <PackagePath>Assets\AGames\card_elegantB.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\escapegame.jpg">
+      <PackagePath>Assets\AGames\escapegame.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGameEscape\Pendu.png">
+      <PackagePath>Assets\AGameEscape\Pendu.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGamePendu\0.png">
       <PackagePath>Assets\AGamePendu\0.png</PackagePath>
     </AppxPackagedFile>
@@ -276,36 +345,6 @@
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b2.jpg">
-      <PackagePath>Assets\AGames\b2.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b3.jpg">
-      <PackagePath>Assets\AGames\b3.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\b4.jpg">
-      <PackagePath>Assets\AGames\b4.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\backBeginConjuGame.jpg">
-      <PackagePath>Assets\AGames\backBeginConjuGame.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\backBeginConjuGameInit.jpg">
-      <PackagePath>Assets\AGames\backBeginConjuGameInit.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\BackGameConjugaison.jpg">
-      <PackagePath>Assets\AGames\BackGameConjugaison.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\background_all_1.jpg">
-      <PackagePath>Assets\AGames\background_all_1.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\brique.jpg">
-      <PackagePath>Assets\AGames\brique.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\card_elegantB.jpg">
-      <PackagePath>Assets\AGames\card_elegantB.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\escapegame.jpg">
-      <PackagePath>Assets\AGames\escapegame.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\bc2.jpeg">
       <PackagePath>Assets\AGames\bc2.jpeg</PackagePath>

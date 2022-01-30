@@ -57,6 +57,10 @@ namespace GameTimeCM2
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            Db db = new Db();
+
+
+            //user = (User)Application.Current.Resources["User"];
 
             int winGamePendu = (int)Application.Current.Resources["IntWinGamePendu"];
             int winGameMemory = (int)Application.Current.Resources["IntWinGameMemory"];
@@ -70,8 +74,10 @@ namespace GameTimeCM2
             WinListGame[IndexConugaisonWinListGame] = winGameConugaison;
             WinListGame[IndexEscapeWinListGame] = winGameEsape;
 
-            //user = (User)Application.Current.Resources["User"];
-            //Title.Text = $"Bonjour {user.Name}";
+            //int newScore = user.Score + winGameConugaison + winGameMemory + winGameConugaison + winGameEsape;
+            //db.UpdateScoreUser(newScore, user);
+
+            // Title.Text = $"Bonjour {user.Name}";
         }
 
         public void SendDataWinListGame(string resources, int index)
@@ -106,6 +112,7 @@ namespace GameTimeCM2
         private void CheckCanGameEscape(int winP, int winM, int winC)
         {
             if (winP > 0 && winM > 0 && winC > 0) btn_escape_game.IsEnabled = true;
+            //if (winP > 0 && winM > 0 && winC > 0 || user.Score >= 3) btn_escape_game.IsEnabled = true;
         }
 
         public void Init()

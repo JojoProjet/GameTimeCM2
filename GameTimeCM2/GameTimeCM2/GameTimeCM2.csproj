@@ -122,6 +122,7 @@
     <Compile Include="Src\Game\GConjugaison\Cards.cs" />
     <Compile Include="Src\Game\GConjugaison\Data.cs" />
     <Compile Include="Src\Game\GConjugaison\Game.cs" />
+    <Compile Include="Src\Game\GEscapeGame\Data.cs" />
     <Compile Include="Src\Game\GMemoire\Animation.cs" />
     <Compile Include="Src\Game\GMemoire\Card.cs" />
     <Compile Include="Src\Game\GMemoire\Cards.cs" />
@@ -177,6 +178,19 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\AGameEscape\Chimimate.jpg" />
+    <Content Include="Assets\AGameEscape\Conjugaison.jpg" />
+    <Content Include="Assets\AGameEscape\Empreintus.jpg" />
+    <Content Include="Assets\AGameEscape\FinishEscapeGame.jpg" />
+    <Content Include="Assets\AGameEscape\GameConjugaison.jpg" />
+    <Content Include="Assets\AGameEscape\Geographie.jpg" />
+    <Content Include="Assets\AGameEscape\Globolus.jpg" />
+    <Content Include="Assets\AGameEscape\Lampas.jpg" />
+    <Content Include="Assets\AGameEscape\Math.jpg" />
+    <Content Include="Assets\AGameEscape\Memoire.jpg" />
+    <Content Include="Assets\AGameEscape\Pendu.png" />
+    <Content Include="Assets\AGameEscape\Persobas.jpg" />
+    <Content Include="Assets\AGameEscape\Tablaudes.jpg" />
     <Content Include="Assets\AGamePendu\0.png" />
     <Content Include="Assets\AGamePendu\1.png" />
     <Content Include="Assets\AGamePendu\2.png" />
@@ -299,11 +313,10 @@
       <Version>5.0.0.2244</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Src\Game\GEscapeGame\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Json\data.json" />
+    <None Include="Json\dataEscapeGame.json" />
     <None Include="Json\gameConjugaison.json" />
     <None Include="Ressources\gameConjugaison.json" />
     <None Include="Src\Game\GConjugaison\gameConjugaison.json" />

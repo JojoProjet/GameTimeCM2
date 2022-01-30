@@ -98,5 +98,15 @@ namespace GameTimeCM2.Src.Utils
             MysqlCon.Close();
         }
 
+        public void UpdateScoreUser(int score, User user)
+        {
+            MysqlCon.Open();
+            MySqlCommand mysqlCom = SetCommandDb(Constants.DB_UPDATE_SCORE_USER);
+            mysqlCom.Parameters.Add("?score", MySqlDbType.Int32).Value = score;
+            mysqlCom.Parameters.Add("?name", MySqlDbType.VarChar).Value = user.Name;
+            mysqlCom.ExecuteNonQuery();
+            MysqlCon.Close();
+        }
+
     }
 }

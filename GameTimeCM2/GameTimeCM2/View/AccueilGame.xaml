@@ -27,8 +27,6 @@
 
             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Stretch" Margin="0,-180,0,0">
 
-                <TextBlock x:Name="Title" />
-
                 <Border
                     x:Name="ImgInfo"
                     IsTapEnabled="True"
@@ -89,7 +87,7 @@
 
             <StackPanel>
                 <Image Width="200" Height="200" Source="/Assets/AGames/escapegame.jpg" />
-                <Button IsEnabled="False" x:Name="btn_escape_game" Width="250" Height="75" FontSize="30" Content="Escape Game" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Btn_LaunchGameEscape" Margin="0,0,0,30"/>
+                <Button IsEnabled="True" x:Name="btn_escape_game" Width="250" Height="75" FontSize="30" Content="Escape Game" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Btn_LaunchGameEscape" Margin="0,0,0,30"/>
             </StackPanel>
 
         </StackPanel>

@@ -24,6 +24,7 @@ namespace GameTimeCM2.Src
         public static string DB_SELECT_USER = "SELECT * FROM User WHERE Name = ?name";
         public static string DB_SELECT_USERS = "SELECT * FROM User;";
         public static string DB_INSERT_USER = "INSERT INTO User(Name, Password) VALUES(?name, ?password)";
+        public static string DB_UPDATE_SCORE_USER = "UPDATE User SET Score = ?score WHERE Name = ?name";
 
        
         ///////////// Card /////////////
