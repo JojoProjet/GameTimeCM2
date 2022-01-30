@@ -53,11 +53,10 @@ namespace GameTimeCM2
 
         private void Btn_QuitGame(object sender, RoutedEventArgs e)
         {
+            TWinGame += 15;
             Application.Current.Resources["IntWinGamePendu"] = TWinGame;
             Frame.Navigate(typeof(AccueilGame));
         }
-
-        
 
         private void NewGameBtnClick(object sender, RoutedEventArgs e)
         {
@@ -118,7 +117,6 @@ namespace GameTimeCM2
             if (Words.Count(l => l.Content == null) == 0)
             {
                 FinishGame("Vous avez gagné !");
-                TWinGame += 1;
             }
             else if (HangmanGame.IsGameOver())
                 FinishGame("Vous avez perdu !");

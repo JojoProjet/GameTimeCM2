@@ -119,7 +119,7 @@ namespace GameTimeCM2.Src.Game.GMemoire
                 // When Win is declenched
                 Stack_FinishGame.Visibility = Visibility.Visible;
                 TextBlock_ScoreCoupFinal.Text = $"Coup : {ScoreCoupFinal}";
-                TWinGame += 1;
+                TWinGame += 5;
                 story.Begin();
             }
         }

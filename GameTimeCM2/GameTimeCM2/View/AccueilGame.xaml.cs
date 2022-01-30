@@ -59,7 +59,6 @@ namespace GameTimeCM2
             base.OnNavigatedTo(e);
             Db db = new Db();
 
-
             user = (User)Application.Current.Resources["User"];
 
             int winGamePendu = (int)Application.Current.Resources["IntWinGamePendu"];
@@ -112,7 +111,7 @@ namespace GameTimeCM2
         private void CheckCanGameEscape(int winP, int winM, int winC, User user)
         {
             // if (winP > 0 && winM > 0 && winC > 0) btn_escape_game.IsEnabled = true;
-            if (winP > 0 && winM > 0 && winC > 0 || user.Score >= 3) btn_escape_game.IsEnabled = true;
+            if ( (winP > 0 && winM > 0 && winC > 0) || user.Score >= 3) btn_escape_game.IsEnabled = true;
         }
 
         public void Init()

@@ -262,7 +262,7 @@ namespace GameTimeCM2
 
         private void Btn_LeaveEscape(object sender, RoutedEventArgs e)
         {
-            TWinGame += 1;
+            TWinGame += 50;
             Application.Current.Resources["IntWinGameEscape"] = TWinGame;
             Frame.Navigate(typeof(EndEscapeGame));
         }
