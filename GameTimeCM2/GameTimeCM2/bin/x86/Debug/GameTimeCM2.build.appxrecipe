@@ -301,23 +301,23 @@
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\AGames\vrai.png">
       <PackagePath>Assets\AGames\vrai.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\GameMemory\dog.png">
-      <PackagePath>Assets\GameMemory\dog.png</PackagePath>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\GameMemory\img1.png">
+      <PackagePath>Assets\GameMemory\img1.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\GameMemory\etoile.png">
-      <PackagePath>Assets\GameMemory\etoile.png</PackagePath>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\GameMemory\img2.png">
+      <PackagePath>Assets\GameMemory\img2.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\GameMemory\fusee.png">
-      <PackagePath>Assets\GameMemory\fusee.png</PackagePath>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\GameMemory\img3.png">
+      <PackagePath>Assets\GameMemory\img3.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\GameMemory\livre.png">
-      <PackagePath>Assets\GameMemory\livre.png</PackagePath>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\GameMemory\img4.png">
+      <PackagePath>Assets\GameMemory\img4.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\GameMemory\lune.png">
-      <PackagePath>Assets\GameMemory\lune.png</PackagePath>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\GameMemory\img5.png">
+      <PackagePath>Assets\GameMemory\img5.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\GameMemory\soleil.png">
-      <PackagePath>Assets\GameMemory\soleil.png</PackagePath>
+    <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\GameMemory\img6.png">
+      <PackagePath>Assets\GameMemory\img6.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
