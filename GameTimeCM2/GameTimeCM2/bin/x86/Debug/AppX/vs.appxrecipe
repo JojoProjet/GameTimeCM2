@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-30T20:26:50.108</Modified>
+      <Modified>2022-01-30T20:49:45.865</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\GameTimeCM2.exe">
       <PackagePath>entrypoint\GameTimeCM2.exe</PackagePath>
-      <Modified>2022-01-30T20:26:47.897</Modified>
+      <Modified>2022-01-30T20:49:43.939</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonat\.nuget\packages\bcrypt\1.0.0\lib\DevOne.Security.Cryptography.BCrypt.dll">
       <PackagePath>DevOne.Security.Cryptography.BCrypt.dll</PackagePath>
@@ -474,55 +474,55 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-01-30T20:26:47.731</Modified>
+      <Modified>2022-01-30T20:49:43.796</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Ressources\AnimationRessources.xbf">
       <PackagePath>Ressources\AnimationRessources.xbf</PackagePath>
-      <Modified>2022-01-30T20:26:47.731</Modified>
+      <Modified>2022-01-30T20:49:43.796</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\AccueilGame.xbf">
       <PackagePath>View\AccueilGame.xbf</PackagePath>
-      <Modified>2022-01-30T20:26:47.731</Modified>
+      <Modified>2022-01-30T20:49:43.796</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\BeginEscapeGame.xbf">
       <PackagePath>View\BeginEscapeGame.xbf</PackagePath>
-      <Modified>2022-01-30T20:26:47.732</Modified>
+      <Modified>2022-01-30T20:49:43.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\EndEscapeGame.xbf">
       <PackagePath>View\EndEscapeGame.xbf</PackagePath>
-      <Modified>2022-01-30T20:26:47.732</Modified>
+      <Modified>2022-01-30T20:49:43.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\EscapeGame.xbf">
       <PackagePath>View\EscapeGame.xbf</PackagePath>
-      <Modified>2022-01-30T20:26:47.713</Modified>
+      <Modified>2022-01-30T20:49:43.781</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\GameConjugaison.xbf">
       <PackagePath>View\GameConjugaison.xbf</PackagePath>
-      <Modified>2022-01-30T20:26:47.733</Modified>
+      <Modified>2022-01-30T20:49:43.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\GameMemoire.xbf">
       <PackagePath>View\GameMemoire.xbf</PackagePath>
-      <Modified>2022-01-30T20:26:47.733</Modified>
+      <Modified>2022-01-30T20:49:43.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\GamePendu.xbf">
       <PackagePath>View\GamePendu.xbf</PackagePath>
-      <Modified>2022-01-30T20:26:47.733</Modified>
+      <Modified>2022-01-30T20:49:43.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-01-30T20:26:47.733</Modified>
+      <Modified>2022-01-30T20:49:43.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\ViewBeginGameConjugaison.xbf">
       <PackagePath>View\ViewBeginGameConjugaison.xbf</PackagePath>
-      <Modified>2022-01-30T20:26:47.733</Modified>
+      <Modified>2022-01-30T20:49:43.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\ViewRegister.xbf">
       <PackagePath>View\ViewRegister.xbf</PackagePath>
-      <Modified>2022-01-30T20:26:47.734</Modified>
+      <Modified>2022-01-30T20:49:43.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\View\ViewScoreFinal.xbf">
       <PackagePath>View\ViewScoreFinal.xbf</PackagePath>
-      <Modified>2022-01-30T20:26:47.734</Modified>
+      <Modified>2022-01-30T20:49:43.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -538,7 +538,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\trunk\dev\GameTimeCM2\GameTimeCM2\GameTimeCM2\bin\x86\Debug\Core\GameTimeCM2.exe">
       <PackagePath>GameTimeCM2.exe</PackagePath>
-      <Modified>2022-01-30T20:26:50.097</Modified>
+      <Modified>2022-01-30T20:49:45.859</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jonat\.nuget\packages\microsoft.ui.xaml\2.7.0\buildTransitive\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>Microsoft.UI.Xaml.winmd</PackagePath>

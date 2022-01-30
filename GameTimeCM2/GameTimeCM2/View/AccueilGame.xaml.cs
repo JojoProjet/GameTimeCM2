@@ -66,15 +66,16 @@ namespace GameTimeCM2
             int winGameConugaison = (int)Application.Current.Resources["IntWinGameConjugaison"];
             int winGameEsape = (int)Application.Current.Resources["IntWinGameEscape"];
 
-            CheckCanGameEscape(winGamePendu, winGameMemory, winGameConugaison, user);
 
             WinListGame[IndexPenduWinListGame] = winGamePendu;
             WinListGame[IndexMemoryWinListGame] = winGameMemory;
             WinListGame[IndexConugaisonWinListGame] = winGameConugaison;
             WinListGame[IndexEscapeWinListGame] = winGameEsape;
 
-            int newScore = user.Score + winGameConugaison + winGameMemory + winGameConugaison + winGameEsape;
-            db.UpdateScoreUser(newScore, user);
+            user.Score += winGameConugaison + winGameMemory + winGameConugaison + winGameEsape;
+            db.UpdateScoreUser(user.Score, user);
+            
+            CheckCanGameEscape(winGamePendu, winGameMemory, winGameConugaison, user);
 
             //Title.Text = $"Bonjour {user.Name}";
         }
